@@ -85,8 +85,8 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			this.tabPage2 = (new System.Windows.Forms.TabPage());
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
-			((this.pictureBox2) as System.ComponentModel.ISupportInitialize).BeginInit();
-			((this.pictureBox1 as System.ComponentModel.ISupportInitialize)).BeginInit();
+			((System.ComponentModel.ISupportInitialize) this.pictureBox2).BeginInit();
+			((System.ComponentModel.ISupportInitialize) this.pictureBox1).BeginInit();
 			this.SuspendLayout();
 			// 
 			// imageList1
@@ -184,7 +184,7 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			// 
 			// pictureBox2
 			// 
-			this.pictureBox2.Image = (resources.GetObject("pictureBox2.Image")) as System.Drawing.Image;
+			this.pictureBox2.Image = (System.Drawing.Image) resources.GetObject("pictureBox2.Image");
 			this.pictureBox2.Location = new System.Drawing.Point(18, 114);
 			this.pictureBox2.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
 			this.pictureBox2.Name = "pictureBox2";
@@ -237,7 +237,7 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Image = (resources.GetObject("pictureBox1.Image")) as System.Drawing.Image;
+			this.pictureBox1.Image = (System.Drawing.Image) resources.GetObject("pictureBox1.Image");
 			this.pictureBox1.Location = new System.Drawing.Point(18, 28);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(12, 3, 3, 3);
 			this.pictureBox1.Name = "pictureBox1";
@@ -315,7 +315,7 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			this.Controls.Add(this.buttonCancel);
 			this.Controls.Add(this.buttonApply);
 			this.HelpButton = true;
-			this.Icon = (resources.GetObject("$this.Icon")) as System.Drawing.Icon;
+			this.Icon = (System.Drawing.Icon) resources.GetObject("$this.Icon");
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(278, 300);
@@ -327,8 +327,8 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();
-			(this.pictureBox2 as System.ComponentModel.ISupportInitialize).EndInit();
-			(this.pictureBox1 as System.ComponentModel.ISupportInitialize).EndInit();
+			((System.ComponentModel.ISupportInitialize) this.pictureBox2).EndInit();
+			((System.ComponentModel.ISupportInitialize) this.pictureBox1).EndInit();
 			this.ResumeLayout(false);
 
 		}
