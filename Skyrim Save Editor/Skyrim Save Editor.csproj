@@ -89,6 +89,13 @@
     <Compile Include="Forms\Main\ValueChangeHandling.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Settings\LocaleComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\LocaleComboBox.Designer.cs">
+      <DependentUpon>LocaleComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\LocaleComboBoxItem.cs" />
     <Compile Include="Forms\Settings\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +115,18 @@
     <Compile Include="Saves\SaveManager.cs" />
     <Compile Include="SkyrimSaveEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\KeyEdit\KeyEditForm.resx">
+      <DependentUpon>KeyEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\LocaleComboBox.resx">
+      <DependentUpon>LocaleComboBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +159,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.ico" />
+    <None Include="Resources\flag_germany.png" />
+    <None Include="Resources\world.png" />
+    <None Include="Resources\flag_spain.png" />
+    <None Include="Resources\flag_russia.png" />
+    <None Include="Resources\flag_italy.png" />
+    <None Include="Resources\flag_great_britain.png" />
+    <None Include="Resources\flag_japan.png" />
+    <None Include="Resources\flag_usa.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

@@ -9,10 +9,10 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 
 		private ListViewItem selectedItem;
 
-		private System.Windows.Forms.TextBox  textBoxValue;
+		private System.Windows.Forms.TextBox  value;
 		private System.Windows.Forms.Label  label1;
 		private System.Windows.Forms.Label  label2;
-		private System.Windows.Forms.TextBox  textBoxKey;
+		private System.Windows.Forms.TextBox  key;
 		private System.Windows.Forms.Button  buttonSet;
 		private System.Windows.Forms.Button  buttonCancel;
 
@@ -24,23 +24,20 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
-			this.textBoxValue = (new System.Windows.Forms.TextBox());
-			this.label1 = (new System.Windows.Forms.Label());
-			this.label2 = (new System.Windows.Forms.Label());
-			this.textBoxKey = (new System.Windows.Forms.TextBox());
-			this.buttonSet = (new System.Windows.Forms.Button());
-			this.buttonCancel = (new System.Windows.Forms.Button());
+			this.value = new System.Windows.Forms.TextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
+			this.key = new System.Windows.Forms.TextBox();
+			this.buttonSet = new System.Windows.Forms.Button();
+			this.buttonCancel = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// textBoxValue
+			// value
 			// 
-			this.textBoxValue.Location = new System.Drawing.Point(12, 67);
-			this.textBoxValue.Name = "textBoxValue";
-			this.textBoxValue.Size = new System.Drawing.Size(343, 20);
-			this.textBoxValue.TabIndex = 0;
+			this.value.Location = new System.Drawing.Point(12, 67);
+			this.value.Name = "value";
+			this.value.Size = new System.Drawing.Size(343, 20);
+			this.value.TabIndex = 0;
 			// 
 			// label1
 			// 
@@ -60,14 +57,14 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Key:";
 			// 
-			// textBoxKey
+			// key
 			// 
-			this.textBoxKey.Location = new System.Drawing.Point(12, 25);
-			this.textBoxKey.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
-			this.textBoxKey.Name = "textBoxKey";
-			this.textBoxKey.ReadOnly = true;
-			this.textBoxKey.Size = new System.Drawing.Size(343, 20);
-			this.textBoxKey.TabIndex = 3;
+			this.key.Location = new System.Drawing.Point(12, 25);
+			this.key.Margin = new System.Windows.Forms.Padding(3, 3, 3, 6);
+			this.key.Name = "key";
+			this.key.ReadOnly = true;
+			this.key.Size = new System.Drawing.Size(343, 20);
+			this.key.TabIndex = 3;
 			// 
 			// buttonSet
 			// 
@@ -77,7 +74,7 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 			this.buttonSet.TabIndex = 4;
 			this.buttonSet.Text = "Set";
 			this.buttonSet.UseVisualStyleBackColor = true;
-			this.buttonSet.Click += new System.EventHandler(buttonSet_Click);
+			this.buttonSet.Click += new System.EventHandler(this.buttonSet_Click);
 			// 
 			// buttonCancel
 			// 
@@ -92,16 +89,16 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 			// KeyEditForm
 			// 
 			this.AcceptButton = this.buttonSet;
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6, 13);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.buttonCancel;
 			this.ClientSize = new System.Drawing.Size(367, 131);
 			this.Controls.Add(this.buttonCancel);
 			this.Controls.Add(this.buttonSet);
-			this.Controls.Add(this.textBoxKey);
+			this.Controls.Add(this.key);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.textBoxValue);
+			this.Controls.Add(this.value);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;

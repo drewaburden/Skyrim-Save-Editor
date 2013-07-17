@@ -14,8 +14,8 @@ namespace Skyrim_Save_Editor.Forms.KeyEdit {
 			InitializeComponent();
 
 			this.selectedItem = selectedItem;
-			textBoxKey.Text = selectedItem.Text;
-			textBoxValue.Text = selectedItem.SubItems[1].Text;
+			key.Text = selectedItem.Text;
+			value.Text = selectedItem.SubItems[1].Text;
 		}
 
 		/// <summary>
