@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Skyrim_Save_Editor.Saves;
+using Skyrim_Save_Editor.Forms.About;
 
 namespace Skyrim_Save_Editor.Forms.Main {
 	public partial class MainForm {
@@ -54,6 +55,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			tabControl.Visible = false;
 
 			resetControls();
+		}
+
+		private void showAboutForm(object sender, EventArgs e) {
+			AboutForm aboutForm = new AboutForm();
+			aboutForm.ShowDialog(this);
 		}
 	}
 }
