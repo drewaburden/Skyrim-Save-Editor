@@ -50,6 +50,9 @@
     <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ObjectListView">
+      <HintPath>References\ObjectListView.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -104,15 +107,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Saves\Load\loadFileLocationTable.cs" />
-    <Compile Include="Saves\Load\loadHeader.cs" />
-    <Compile Include="Saves\Load\loadMiscStats.cs" />
-    <Compile Include="Saves\Load\loadPlayerLocation.cs" />
-    <Compile Include="Saves\Load\loadPluginInfo.cs" />
-    <Compile Include="Saves\Load\loadTES.cs" />
+    <Compile Include="Saves\Data Types\FileLocationTable.cs" />
+    <Compile Include="Saves\Data Types\MiscStat.cs" />
+    <Compile Include="Saves\Data Types\MiscStats.cs" />
+    <Compile Include="Saves\Data Types\PlayerLocation.cs" />
+    <Compile Include="Saves\Data Types\PluginInfo.cs" />
+    <Compile Include="Saves\Data Types\RefID.cs" />
+    <Compile Include="Saves\SaveBlock.cs" />
+    <Compile Include="Saves\SaveField.cs" />
+    <Compile Include="Saves\SaveReader.cs" />
+    <Compile Include="Saves\Data Types\ScreenshotData.cs" />
+    <Compile Include="Saves\Data Types\Header.cs" />
     <Compile Include="Saves\SaveFile.cs" />
     <Compile Include="Saves\SaveFileDataTypes.cs" />
-    <Compile Include="Saves\SaveManager.cs" />
     <Compile Include="SkyrimSaveEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\KeyEdit\KeyEditForm.resx">
@@ -142,7 +149,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\Skyrim_Save_Editor.Saves.Header.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -159,14 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.ico" />
-    <None Include="Resources\flag_germany.png" />
-    <None Include="Resources\world.png" />
-    <None Include="Resources\flag_spain.png" />
-    <None Include="Resources\flag_russia.png" />
-    <None Include="Resources\flag_italy.png" />
-    <None Include="Resources\flag_great_britain.png" />
-    <None Include="Resources\flag_japan.png" />
-    <None Include="Resources\flag_usa.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -185,7 +183,10 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Saves\Converters\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -24,12 +24,28 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			listViewItems = new ArrayList();
 			removedListViewItems = new ArrayList();
 
-			// headerSize
-			/*ListViewItem headerSize = new ListViewItem(
+			int numFields = calcNumFields(activeSave.GetType());
+			Console.WriteLine(numFields);
+
+			/*Object[] olvObjects = new Object[numFields];
+
+			for (int x = 0; x < numFields; ++x) {
+				olvObjects[x] = 
+			}*/
+
+			List<Object> fields = activeSave.header.GetType()
+					 .GetFields()
+					 .Select(field => field.GetValue(activeSave.header))
+					 .ToList();
+
+			objectListView1.AddObjects(fields);
+
+			/*// headerSize
+			ListViewItem headerSize = new ListViewItem(
 				new String[2] {"headerSize", Convert.ToString(activeSave.headerSize)}, -1);
 			headerSize.Group = listView1.Groups[HEADER];
 			listViewItems.Add(headerSize);
-			listView1.Items.Add((ListViewItem)headerSize.Clone());*/
+			listView1.Items.Add((ListViewItem)headerSize.Clone());
 
 			// version
 			ListViewItem versionItem = new ListViewItem(
@@ -194,11 +210,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			advancedKeyValues.Items.Add((ListViewItem)formVersion.Clone());
 
 			// pluginInfoSize
-			/*ListViewItem pluginInfoSize = new ListViewItem(
+			ListViewItem pluginInfoSize = new ListViewItem(
 				new String[2] {"pluginInfoSize", Convert.ToString(activeSave.pluginInfoSize)}, -1);
 			pluginInfoSize.Group = listView1.Groups[PLUGIN_INFO];
 			listViewItems.Add(pluginInfoSize);
-			listView1.Items.Add((ListViewItem)pluginInfoSize.Clone());*/
+			listView1.Items.Add((ListViewItem)pluginInfoSize.Clone());
 
 			// pluginCount
 			ListViewItem pluginCount = new ListViewItem(
@@ -302,11 +318,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			////////////////
 
 			// count
-			/*ListViewItem count = new ListViewItem(
+			ListViewItem count = new ListViewItem(
 				new String[2] {"count", Convert.ToString(activeSave.miscStatsCount)}, -1);
 			count.Group = listView1.Groups[MISC_STATS];
 			listViewItems.Add(count);
-			listView1.Items.Add((ListViewItem)count.Clone());*/
+			listView1.Items.Add((ListViewItem)count.Clone());
 
 			foreach (MiscStat miscStat in activeSave.miscStats.statData) {
 				// name
@@ -315,20 +331,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				name.Group = advancedKeyValues.Groups[ListViewGroups.MISC_STATS];
 				listViewItems.Add(name);
 				advancedKeyValues.Items.Add((ListViewItem)name.Clone());
-
-				// category
-				/*ListViewItem category = new ListViewItem(
-					new String[2] {"category", Convert.ToString(miscStat.category)}, -1);
-				category.Group = listView1.Groups[MISC_STATS];
-				listViewItems.Add(category);
-				listView1.Items.Add((ListViewItem)category.Clone());
-
-				// value
-				ListViewItem value = new ListViewItem(
-					new String[2] {"value", Convert.ToString(miscStat.value)}, -1);
-				value.Group = listView1.Groups[MISC_STATS];
-				listViewItems.Add(value);
-				listView1.Items.Add((ListViewItem)value.Clone());*/
 			}
 
 			/////////////////////
@@ -336,11 +338,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			/////////////////////
 
 			// unknown
-			/*ListViewItem unknown = new ListViewItem(
+			ListViewItem unknown = new ListViewItem(
 				new String[2] {"unknown", Convert.ToString(activeSave.unknown)}, -1);
 			unknown.Group = listView1.Groups[PLAYER_LOCATION];
 			listViewItems.Add(unknown);
-			listView1.Items.Add((ListViewItem)unknown.Clone());*/
+			listView1.Items.Add((ListViewItem)unknown.Clone());
 
 			// worldSpace1
 			// type
@@ -410,7 +412,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				new String[2] {"unk", Convert.ToString(activeSave.playerLocation.unk)}, -1);
 			unk.Group = advancedKeyValues.Groups[ListViewGroups.PLAYER_LOCATION];
 			listViewItems.Add(unk);
-			advancedKeyValues.Items.Add((ListViewItem)unk.Clone());
+			advancedKeyValues.Items.Add((ListViewItem)unk.Clone());*/
 		}
 
 		private void resetControls() {
@@ -437,6 +439,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					item.Remove();
 				}
 			}
+			activeSave = new SaveFile();
 			saveDiff = new SaveFile();
 		}
 	}

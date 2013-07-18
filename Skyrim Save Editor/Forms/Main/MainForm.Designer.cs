@@ -96,41 +96,67 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Header", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Save Information", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Plugin Info", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("File Location Table", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Misc Stats (0)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Player Location (1)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("TES (2)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Global Variables (3)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Created Objects (4)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Effects (5)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Weather (6)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Audio (7)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Sky Cells (8)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Process Lists (100)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Combat (101)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Interface (102)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Actor Causes (103)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Unknown (104)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup19 = new System.Windows.Forms.ListViewGroup("Detection Manager (105)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup20 = new System.Windows.Forms.ListViewGroup("Location MetaData (106)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup21 = new System.Windows.Forms.ListViewGroup("Quest Static Data (107)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup22 = new System.Windows.Forms.ListViewGroup("StoryTeller (108)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup23 = new System.Windows.Forms.ListViewGroup("Magic Favorites (109)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup24 = new System.Windows.Forms.ListViewGroup("PlayerControls (110)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup25 = new System.Windows.Forms.ListViewGroup("Story Event Manager (111)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup26 = new System.Windows.Forms.ListViewGroup("Ingredient Shared (112)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup27 = new System.Windows.Forms.ListViewGroup("MenuControls (113)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup28 = new System.Windows.Forms.ListViewGroup("MenuTopicManager (114)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup29 = new System.Windows.Forms.ListViewGroup("Temp Effects (1000)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup30 = new System.Windows.Forms.ListViewGroup("Papyrus (1001)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup31 = new System.Windows.Forms.ListViewGroup("Anim Objects (1002)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup32 = new System.Windows.Forms.ListViewGroup("Timer (1003)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup33 = new System.Windows.Forms.ListViewGroup("Synchronized Animations (1004)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup34 = new System.Windows.Forms.ListViewGroup("Main (1005)", System.Windows.Forms.HorizontalAlignment.Left);
-			System.Windows.Forms.ListViewGroup listViewGroup35 = new System.Windows.Forms.ListViewGroup("Change Form", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup36 = new System.Windows.Forms.ListViewGroup("Header", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup37 = new System.Windows.Forms.ListViewGroup("Save Information", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup38 = new System.Windows.Forms.ListViewGroup("Plugin Info", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup39 = new System.Windows.Forms.ListViewGroup("File Location Table", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup40 = new System.Windows.Forms.ListViewGroup("Misc Stats (0)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup41 = new System.Windows.Forms.ListViewGroup("Player Location (1)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup42 = new System.Windows.Forms.ListViewGroup("TES (2)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup43 = new System.Windows.Forms.ListViewGroup("Global Variables (3)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup44 = new System.Windows.Forms.ListViewGroup("Created Objects (4)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup45 = new System.Windows.Forms.ListViewGroup("Effects (5)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup46 = new System.Windows.Forms.ListViewGroup("Weather (6)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup47 = new System.Windows.Forms.ListViewGroup("Audio (7)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup48 = new System.Windows.Forms.ListViewGroup("Sky Cells (8)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup49 = new System.Windows.Forms.ListViewGroup("Process Lists (100)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup50 = new System.Windows.Forms.ListViewGroup("Combat (101)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup51 = new System.Windows.Forms.ListViewGroup("Interface (102)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup52 = new System.Windows.Forms.ListViewGroup("Actor Causes (103)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup53 = new System.Windows.Forms.ListViewGroup("Unknown (104)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup54 = new System.Windows.Forms.ListViewGroup("Detection Manager (105)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup55 = new System.Windows.Forms.ListViewGroup("Location MetaData (106)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup56 = new System.Windows.Forms.ListViewGroup("Quest Static Data (107)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup57 = new System.Windows.Forms.ListViewGroup("StoryTeller (108)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup58 = new System.Windows.Forms.ListViewGroup("Magic Favorites (109)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup59 = new System.Windows.Forms.ListViewGroup("PlayerControls (110)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup60 = new System.Windows.Forms.ListViewGroup("Story Event Manager (111)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup61 = new System.Windows.Forms.ListViewGroup("Ingredient Shared (112)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup62 = new System.Windows.Forms.ListViewGroup("MenuControls (113)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup63 = new System.Windows.Forms.ListViewGroup("MenuTopicManager (114)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup64 = new System.Windows.Forms.ListViewGroup("Temp Effects (1000)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup65 = new System.Windows.Forms.ListViewGroup("Papyrus (1001)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup66 = new System.Windows.Forms.ListViewGroup("Anim Objects (1002)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup67 = new System.Windows.Forms.ListViewGroup("Timer (1003)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup68 = new System.Windows.Forms.ListViewGroup("Synchronized Animations (1004)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup69 = new System.Windows.Forms.ListViewGroup("Main (1005)", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.ListViewGroup listViewGroup70 = new System.Windows.Forms.ListViewGroup("Change Form", System.Windows.Forms.HorizontalAlignment.Left);
+			System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Node4");
+			System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Node5");
+			System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Node6", 8, 9);
+			System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Header", new System.Windows.Forms.TreeNode[] {
+            treeNode12,
+            treeNode13,
+            treeNode14});
+			System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("File Properties");
+			System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Plugin Info");
+			System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("File Location Table");
+			System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Node3");
+			System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Misc Stats", new System.Windows.Forms.TreeNode[] {
+            treeNode19});
+			System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Player Location");
+			System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Save File", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode20,
+            treeNode21});
+			System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "test",
+            "test",
+            "test",
+            "test"}, -1);
 			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
 			this.newMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -196,7 +222,24 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.advancedValueHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.advancedFilterClear = new System.Windows.Forms.Button();
 			this.advancedFilter = new System.Windows.Forms.TextBox();
-			this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.treeView1 = new System.Windows.Forms.TreeView();
+			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+			this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+			this.typeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+			this.listView1 = new System.Windows.Forms.ListView();
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.button1 = new System.Windows.Forms.Button();
+			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			this.pluginsTab.SuspendLayout();
@@ -212,7 +255,12 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			((System.ComponentModel.ISupportInitialize)(this.playerExperienceBox)).BeginInit();
 			this.tabControl.SuspendLayout();
 			this.advancedTab.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+			this.tabPage1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+			this.splitContainer1.Panel1.SuspendLayout();
+			this.splitContainer1.Panel2.SuspendLayout();
+			this.splitContainer1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// menuStrip
@@ -369,7 +417,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsMenuItem.ShortcutKeyDisplayString = "Ctrl+P";
 			this.settingsMenuItem.Size = new System.Drawing.Size(157, 22);
 			this.settingsMenuItem.Text = "&Settings";
-			this.settingsMenuItem.Click += new System.EventHandler(openSettings);
+			this.settingsMenuItem.Click += new System.EventHandler(this.openSettings);
 			// 
 			// helpMenu
 			// 
@@ -495,7 +543,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsToolButton.Name = "settingsToolButton";
 			this.settingsToolButton.Size = new System.Drawing.Size(23, 22);
 			this.settingsToolButton.Text = "Settings";
-			this.settingsToolButton.Click += new System.EventHandler(openSettings);
+			this.settingsToolButton.Click += new System.EventHandler(this.openSettings);
 			// 
 			// aboutToolButton
 			// 
@@ -749,7 +797,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "playerName", true));
 			this.playerName.Location = new System.Drawing.Point(78, 6);
 			this.playerName.Name = "playerName";
 			this.playerName.Size = new System.Drawing.Size(244, 20);
@@ -832,6 +879,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.tabControl.Controls.Add(this.generalTab);
 			this.tabControl.Controls.Add(this.pluginsTab);
 			this.tabControl.Controls.Add(this.advancedTab);
+			this.tabControl.Controls.Add(this.tabPage1);
 			this.tabControl.Location = new System.Drawing.Point(0, 52);
 			this.tabControl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
 			this.tabControl.Name = "tabControl";
@@ -864,112 +912,112 @@ namespace Skyrim_Save_Editor.Forms.Main {
             this.advancedValueHeader});
 			this.advancedKeyValues.FullRowSelect = true;
 			this.advancedKeyValues.GridLines = true;
-			listViewGroup1.Header = "Header";
-			listViewGroup1.Name = null;
-			listViewGroup2.Header = "Save Information";
-			listViewGroup2.Name = null;
-			listViewGroup3.Header = "Plugin Info";
-			listViewGroup3.Name = null;
-			listViewGroup4.Header = "File Location Table";
-			listViewGroup4.Name = null;
-			listViewGroup5.Header = "Misc Stats (0)";
-			listViewGroup5.Name = null;
-			listViewGroup6.Header = "Player Location (1)";
-			listViewGroup6.Name = null;
-			listViewGroup7.Header = "TES (2)";
-			listViewGroup7.Name = null;
-			listViewGroup8.Header = "Global Variables (3)";
-			listViewGroup8.Name = null;
-			listViewGroup9.Header = "Created Objects (4)";
-			listViewGroup9.Name = null;
-			listViewGroup10.Header = "Effects (5)";
-			listViewGroup10.Name = null;
-			listViewGroup11.Header = "Weather (6)";
-			listViewGroup11.Name = null;
-			listViewGroup12.Header = "Audio (7)";
-			listViewGroup12.Name = null;
-			listViewGroup13.Header = "Sky Cells (8)";
-			listViewGroup13.Name = null;
-			listViewGroup14.Header = "Process Lists (100)";
-			listViewGroup14.Name = null;
-			listViewGroup15.Header = "Combat (101)";
-			listViewGroup15.Name = null;
-			listViewGroup16.Header = "Interface (102)";
-			listViewGroup16.Name = null;
-			listViewGroup17.Header = "Actor Causes (103)";
-			listViewGroup17.Name = null;
-			listViewGroup18.Header = "Unknown (104)";
-			listViewGroup18.Name = null;
-			listViewGroup19.Header = "Detection Manager (105)";
-			listViewGroup19.Name = null;
-			listViewGroup20.Header = "Location MetaData (106)";
-			listViewGroup20.Name = null;
-			listViewGroup21.Header = "Quest Static Data (107)";
-			listViewGroup21.Name = null;
-			listViewGroup22.Header = "StoryTeller (108)";
-			listViewGroup22.Name = null;
-			listViewGroup23.Header = "Magic Favorites (109)";
-			listViewGroup23.Name = null;
-			listViewGroup24.Header = "PlayerControls (110)";
-			listViewGroup24.Name = null;
-			listViewGroup25.Header = "Story Event Manager (111)";
-			listViewGroup25.Name = null;
-			listViewGroup26.Header = "Ingredient Shared (112)";
-			listViewGroup26.Name = null;
-			listViewGroup27.Header = "MenuControls (113)";
-			listViewGroup27.Name = null;
-			listViewGroup28.Header = "MenuTopicManager (114)";
-			listViewGroup28.Name = null;
-			listViewGroup29.Header = "Temp Effects (1000)";
-			listViewGroup29.Name = null;
-			listViewGroup30.Header = "Papyrus (1001)";
-			listViewGroup30.Name = null;
-			listViewGroup31.Header = "Anim Objects (1002)";
-			listViewGroup31.Name = null;
-			listViewGroup32.Header = "Timer (1003)";
-			listViewGroup32.Name = null;
-			listViewGroup33.Header = "Synchronized Animations (1004)";
-			listViewGroup33.Name = null;
-			listViewGroup34.Header = "Main (1005)";
-			listViewGroup34.Name = null;
-			listViewGroup35.Header = "Change Form";
-			listViewGroup35.Name = null;
+			listViewGroup36.Header = "Header";
+			listViewGroup36.Name = null;
+			listViewGroup37.Header = "Save Information";
+			listViewGroup37.Name = null;
+			listViewGroup38.Header = "Plugin Info";
+			listViewGroup38.Name = null;
+			listViewGroup39.Header = "File Location Table";
+			listViewGroup39.Name = null;
+			listViewGroup40.Header = "Misc Stats (0)";
+			listViewGroup40.Name = null;
+			listViewGroup41.Header = "Player Location (1)";
+			listViewGroup41.Name = null;
+			listViewGroup42.Header = "TES (2)";
+			listViewGroup42.Name = null;
+			listViewGroup43.Header = "Global Variables (3)";
+			listViewGroup43.Name = null;
+			listViewGroup44.Header = "Created Objects (4)";
+			listViewGroup44.Name = null;
+			listViewGroup45.Header = "Effects (5)";
+			listViewGroup45.Name = null;
+			listViewGroup46.Header = "Weather (6)";
+			listViewGroup46.Name = null;
+			listViewGroup47.Header = "Audio (7)";
+			listViewGroup47.Name = null;
+			listViewGroup48.Header = "Sky Cells (8)";
+			listViewGroup48.Name = null;
+			listViewGroup49.Header = "Process Lists (100)";
+			listViewGroup49.Name = null;
+			listViewGroup50.Header = "Combat (101)";
+			listViewGroup50.Name = null;
+			listViewGroup51.Header = "Interface (102)";
+			listViewGroup51.Name = null;
+			listViewGroup52.Header = "Actor Causes (103)";
+			listViewGroup52.Name = null;
+			listViewGroup53.Header = "Unknown (104)";
+			listViewGroup53.Name = null;
+			listViewGroup54.Header = "Detection Manager (105)";
+			listViewGroup54.Name = null;
+			listViewGroup55.Header = "Location MetaData (106)";
+			listViewGroup55.Name = null;
+			listViewGroup56.Header = "Quest Static Data (107)";
+			listViewGroup56.Name = null;
+			listViewGroup57.Header = "StoryTeller (108)";
+			listViewGroup57.Name = null;
+			listViewGroup58.Header = "Magic Favorites (109)";
+			listViewGroup58.Name = null;
+			listViewGroup59.Header = "PlayerControls (110)";
+			listViewGroup59.Name = null;
+			listViewGroup60.Header = "Story Event Manager (111)";
+			listViewGroup60.Name = null;
+			listViewGroup61.Header = "Ingredient Shared (112)";
+			listViewGroup61.Name = null;
+			listViewGroup62.Header = "MenuControls (113)";
+			listViewGroup62.Name = null;
+			listViewGroup63.Header = "MenuTopicManager (114)";
+			listViewGroup63.Name = null;
+			listViewGroup64.Header = "Temp Effects (1000)";
+			listViewGroup64.Name = null;
+			listViewGroup65.Header = "Papyrus (1001)";
+			listViewGroup65.Name = null;
+			listViewGroup66.Header = "Anim Objects (1002)";
+			listViewGroup66.Name = null;
+			listViewGroup67.Header = "Timer (1003)";
+			listViewGroup67.Name = null;
+			listViewGroup68.Header = "Synchronized Animations (1004)";
+			listViewGroup68.Name = null;
+			listViewGroup69.Header = "Main (1005)";
+			listViewGroup69.Name = null;
+			listViewGroup70.Header = "Change Form";
+			listViewGroup70.Name = null;
 			this.advancedKeyValues.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3,
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9,
-            listViewGroup10,
-            listViewGroup11,
-            listViewGroup12,
-            listViewGroup13,
-            listViewGroup14,
-            listViewGroup15,
-            listViewGroup16,
-            listViewGroup17,
-            listViewGroup18,
-            listViewGroup19,
-            listViewGroup20,
-            listViewGroup21,
-            listViewGroup22,
-            listViewGroup23,
-            listViewGroup24,
-            listViewGroup25,
-            listViewGroup26,
-            listViewGroup27,
-            listViewGroup28,
-            listViewGroup29,
-            listViewGroup30,
-            listViewGroup31,
-            listViewGroup32,
-            listViewGroup33,
-            listViewGroup34,
-            listViewGroup35});
+            listViewGroup36,
+            listViewGroup37,
+            listViewGroup38,
+            listViewGroup39,
+            listViewGroup40,
+            listViewGroup41,
+            listViewGroup42,
+            listViewGroup43,
+            listViewGroup44,
+            listViewGroup45,
+            listViewGroup46,
+            listViewGroup47,
+            listViewGroup48,
+            listViewGroup49,
+            listViewGroup50,
+            listViewGroup51,
+            listViewGroup52,
+            listViewGroup53,
+            listViewGroup54,
+            listViewGroup55,
+            listViewGroup56,
+            listViewGroup57,
+            listViewGroup58,
+            listViewGroup59,
+            listViewGroup60,
+            listViewGroup61,
+            listViewGroup62,
+            listViewGroup63,
+            listViewGroup64,
+            listViewGroup65,
+            listViewGroup66,
+            listViewGroup67,
+            listViewGroup68,
+            listViewGroup69,
+            listViewGroup70});
 			this.advancedKeyValues.LabelWrap = false;
 			this.advancedKeyValues.Location = new System.Drawing.Point(4, 29);
 			this.advancedKeyValues.MultiSelect = false;
@@ -1022,9 +1070,260 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.advancedFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.advancedFilter_KeyUp);
 			this.advancedFilter.Leave += new System.EventHandler(this.advancedFilter_Leave);
 			// 
-			// bindingSource1
+			// tabPage1
 			// 
-			this.bindingSource1.DataSource = typeof(Skyrim_Save_Editor.Saves.Header);
+			this.tabPage1.Controls.Add(this.splitContainer1);
+			this.tabPage1.Controls.Add(this.button1);
+			this.tabPage1.Controls.Add(this.textBox1);
+			this.tabPage1.Location = new System.Drawing.Point(4, 22);
+			this.tabPage1.Name = "tabPage1";
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage1.Size = new System.Drawing.Size(658, 285);
+			this.tabPage1.TabIndex = 3;
+			this.tabPage1.Text = "Advanced";
+			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// splitContainer1
+			// 
+			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.splitContainer1.Location = new System.Drawing.Point(3, 29);
+			this.splitContainer1.Name = "splitContainer1";
+			// 
+			// splitContainer1.Panel1
+			// 
+			this.splitContainer1.Panel1.Controls.Add(this.treeView1);
+			// 
+			// splitContainer1.Panel2
+			// 
+			this.splitContainer1.Panel2.Controls.Add(this.objectListView1);
+			this.splitContainer1.Panel2.Controls.Add(this.listView1);
+			this.splitContainer1.Size = new System.Drawing.Size(652, 253);
+			this.splitContainer1.SplitterDistance = 150;
+			this.splitContainer1.TabIndex = 6;
+			// 
+			// treeView1
+			// 
+			this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.treeView1.ImageIndex = 6;
+			this.treeView1.ImageList = this.imageList1;
+			this.treeView1.Location = new System.Drawing.Point(0, 0);
+			this.treeView1.Name = "treeView1";
+			treeNode12.ImageIndex = 8;
+			treeNode12.Name = "Node4";
+			treeNode12.SelectedImageKey = "brick_go.png";
+			treeNode12.Text = "Node4";
+			treeNode13.ImageIndex = 8;
+			treeNode13.Name = "Node5";
+			treeNode13.SelectedImageKey = "brick_go.png";
+			treeNode13.Text = "Node5";
+			treeNode14.ImageIndex = 8;
+			treeNode14.Name = "Node6";
+			treeNode14.SelectedImageIndex = 9;
+			treeNode14.Text = "Node6";
+			treeNode15.ImageIndex = 1;
+			treeNode15.Name = "Node0";
+			treeNode15.SelectedImageKey = "bricks.png";
+			treeNode15.Text = "Header";
+			treeNode16.ImageKey = "bricks.png";
+			treeNode16.Name = "Node2";
+			treeNode16.SelectedImageKey = "bricks.png";
+			treeNode16.Text = "File Properties";
+			treeNode17.ImageIndex = 1;
+			treeNode17.Name = "Node1";
+			treeNode17.SelectedImageKey = "bricks.png";
+			treeNode17.Text = "Plugin Info";
+			treeNode18.ImageIndex = 1;
+			treeNode18.Name = "Node2";
+			treeNode18.SelectedImageKey = "bricks.png";
+			treeNode18.Text = "File Location Table";
+			treeNode19.ImageKey = "brick.png";
+			treeNode19.Name = "Node3";
+			treeNode19.SelectedImageKey = "brick_go.png";
+			treeNode19.Text = "Node3";
+			treeNode20.ImageIndex = 1;
+			treeNode20.Name = "Node3";
+			treeNode20.SelectedImageKey = "bricks.png";
+			treeNode20.Text = "Misc Stats";
+			treeNode21.ImageIndex = 1;
+			treeNode21.Name = "Node4";
+			treeNode21.SelectedImageKey = "bricks.png";
+			treeNode21.Text = "Player Location";
+			treeNode22.ImageKey = "box_closed.png";
+			treeNode22.Name = "Node0";
+			treeNode22.SelectedImageKey = "box_closed.png";
+			treeNode22.Text = "Save File";
+			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode22});
+			this.treeView1.SelectedImageIndex = 0;
+			this.treeView1.Size = new System.Drawing.Size(150, 253);
+			this.treeView1.TabIndex = 1;
+			// 
+			// imageList1
+			// 
+			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+			this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList1.Images.SetKeyName(0, "tree_red.png");
+			this.imageList1.Images.SetKeyName(1, "bricks.png");
+			this.imageList1.Images.SetKeyName(2, "scull.png");
+			this.imageList1.Images.SetKeyName(3, "tower.png");
+			this.imageList1.Images.SetKeyName(4, "toilet.png");
+			this.imageList1.Images.SetKeyName(5, "bow.png");
+			this.imageList1.Images.SetKeyName(6, "box_closed.png");
+			this.imageList1.Images.SetKeyName(7, "box_open.png");
+			this.imageList1.Images.SetKeyName(8, "brick.png");
+			this.imageList1.Images.SetKeyName(9, "brick_go.png");
+			// 
+			// objectListView1
+			// 
+			this.objectListView1.AllColumns.Add(this.typeColumn);
+			this.objectListView1.AllColumns.Add(this.olvColumn2);
+			this.objectListView1.AllColumns.Add(this.olvColumn1);
+			this.objectListView1.AllColumns.Add(this.olvColumn3);
+			this.objectListView1.AllColumns.Add(this.olvColumn4);
+			this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.typeColumn,
+            this.olvColumn2,
+            this.olvColumn1,
+            this.olvColumn3,
+            this.olvColumn4});
+			this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.objectListView1.FullRowSelect = true;
+			this.objectListView1.Location = new System.Drawing.Point(0, 0);
+			this.objectListView1.Name = "objectListView1";
+			this.objectListView1.RowHeight = 20;
+			this.objectListView1.ShowGroups = false;
+			this.objectListView1.Size = new System.Drawing.Size(498, 253);
+			this.objectListView1.SmallImageList = this.imageList2;
+			this.objectListView1.TabIndex = 7;
+			this.objectListView1.UseCompatibleStateImageBehavior = false;
+			this.objectListView1.View = System.Windows.Forms.View.Details;
+			// 
+			// typeColumn
+			// 
+			this.typeColumn.Hideable = false;
+			this.typeColumn.IsEditable = false;
+			this.typeColumn.MaximumWidth = 20;
+			this.typeColumn.MinimumWidth = 20;
+			this.typeColumn.Searchable = false;
+			this.typeColumn.ShowTextInHeader = false;
+			this.typeColumn.Text = "";
+			this.typeColumn.UseFiltering = false;
+			this.typeColumn.Width = 20;
+			// 
+			// olvColumn2
+			// 
+			this.olvColumn2.AspectName = "Type";
+			this.olvColumn2.Text = "Type";
+			// 
+			// olvColumn1
+			// 
+			this.olvColumn1.AspectName = "Key";
+			this.olvColumn1.Hideable = false;
+			this.olvColumn1.Text = "Key";
+			this.olvColumn1.Width = 113;
+			// 
+			// olvColumn3
+			// 
+			this.olvColumn3.AspectName = "Value";
+			this.olvColumn3.Hideable = false;
+			this.olvColumn3.Sortable = false;
+			this.olvColumn3.Text = "Value";
+			this.olvColumn3.Width = 149;
+			// 
+			// olvColumn4
+			// 
+			this.olvColumn4.AspectName = "Description";
+			this.olvColumn4.FillsFreeSpace = true;
+			this.olvColumn4.IsEditable = false;
+			this.olvColumn4.Sortable = false;
+			this.olvColumn4.Text = "Description";
+			this.olvColumn4.Width = 440;
+			// 
+			// imageList2
+			// 
+			this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+			this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList2.Images.SetKeyName(0, "String");
+			this.imageList2.Images.SetKeyName(1, "Unknown");
+			this.imageList2.Images.SetKeyName(2, "Byte");
+			this.imageList2.Images.SetKeyName(3, "Image");
+			this.imageList2.Images.SetKeyName(4, "Byte");
+			this.imageList2.Images.SetKeyName(5, "Int");
+			this.imageList2.Images.SetKeyName(6, "RefID");
+			this.imageList2.Images.SetKeyName(7, "calculator_black.png");
+			this.imageList2.Images.SetKeyName(8, "radiobutton_group.png");
+			this.imageList2.Images.SetKeyName(9, "Filetime");
+			this.imageList2.Images.SetKeyName(10, "Single");
+			// 
+			// listView1
+			// 
+			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.listView1.FullRowSelect = true;
+			this.listView1.GridLines = true;
+			this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem2});
+			this.listView1.Location = new System.Drawing.Point(0, 0);
+			this.listView1.Name = "listView1";
+			this.listView1.ShowGroups = false;
+			this.listView1.Size = new System.Drawing.Size(498, 253);
+			this.listView1.TabIndex = 0;
+			this.listView1.UseCompatibleStateImageBehavior = false;
+			this.listView1.View = System.Windows.Forms.View.Details;
+			// 
+			// columnHeader1
+			// 
+			this.columnHeader1.Text = "Key";
+			this.columnHeader1.Width = 110;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Type";
+			this.columnHeader2.Width = 41;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "Value";
+			this.columnHeader3.Width = 80;
+			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "Description";
+			this.columnHeader4.Width = 206;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.button1.Enabled = false;
+			this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+			this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
+			this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+			this.button1.Location = new System.Drawing.Point(635, 3);
+			this.button1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(20, 20);
+			this.button1.TabIndex = 5;
+			this.button1.UseVisualStyleBackColor = false;
+			// 
+			// textBox1
+			// 
+			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.textBox1.Location = new System.Drawing.Point(3, 3);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+			this.textBox1.Name = "textBox1";
+			this.textBox1.Size = new System.Drawing.Size(633, 20);
+			this.textBox1.TabIndex = 4;
+			this.textBox1.Text = "Filter...";
 			// 
 			// MainForm
 			// 
@@ -1064,7 +1363,13 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.tabControl.ResumeLayout(false);
 			this.advancedTab.ResumeLayout(false);
 			this.advancedTab.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+			this.tabPage1.ResumeLayout(false);
+			this.tabPage1.PerformLayout();
+			this.splitContainer1.Panel1.ResumeLayout(false);
+			this.splitContainer1.Panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+			this.splitContainer1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1072,7 +1377,37 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 		#endregion
 
-		private BindingSource bindingSource1;
+		private TabPage tabPage1;
+		private SplitContainer splitContainer1;
+		private Button button1;
+		private TextBox textBox1;
+		private TreeView treeView1;
+		private ListView listView1;
+		private ColumnHeader columnHeader1;
+		private ColumnHeader columnHeader2;
+		private ColumnHeader columnHeader3;
+		private ColumnHeader columnHeader4;
+		private ImageList imageList1;
+		private BrightIdeasSoftware.ObjectListView objectListView1;
+		private BrightIdeasSoftware.OLVColumn olvColumn1;
+		private BrightIdeasSoftware.OLVColumn olvColumn2;
+		private BrightIdeasSoftware.OLVColumn olvColumn3;
+		private BrightIdeasSoftware.OLVColumn olvColumn4;
+
+		private int calcNumFields(Type type) {
+			int num = 0;
+
+			foreach (System.Reflection.FieldInfo field in type.GetFields()) {
+				Console.WriteLine(field.Name);
+				num += Math.Max(1, calcNumFields(field.FieldType));
+			}
+
+			return num;
+		}
+
+		private ImageList imageList2;
+		private BrightIdeasSoftware.OLVColumn typeColumn;
+
 	}
 }
 
