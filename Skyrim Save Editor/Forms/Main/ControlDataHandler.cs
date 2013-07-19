@@ -7,6 +7,7 @@ using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
 using Skyrim_Save_Editor.Saves;
+using Skyrim_Save_Editor.Forms.Main.Advanced;
 
 namespace Skyrim_Save_Editor.Forms.Main {
 	public partial class MainForm {
@@ -24,8 +25,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			listViewItems = new ArrayList();
 			removedListViewItems = new ArrayList();
 
-			int numFields = calcNumFields(activeSave.GetType());
-			Console.WriteLine(numFields);
+			//int numFields = calcNumFields(activeSave.GetType());
+			//Console.WriteLine(numFields);
 
 			/*Object[] olvObjects = new Object[numFields];
 
@@ -33,12 +34,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				olvObjects[x] = 
 			}*/
 
-			List<Object> fields = activeSave.header.GetType()
-					 .GetFields()
-					 .Select(field => field.GetValue(activeSave.header))
-					 .ToList();
+			List<Object> fields = new List<Object>();
+			foreach (SaveFile.SaveField field in activeSave.header) {
+				fields.Add(field);
+			}
 
 			objectListView1.AddObjects(fields);
+
+			TreeBuilder builder = new TreeBuilder();
+			TreeItem tree = builder.createTree(activeSave);
 
 			/*// headerSize
 			ListViewItem headerSize = new ListViewItem(
@@ -416,6 +420,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		}
 
 		private void resetControls() {
+			objectListView1.ClearObjects();
 			saveName.ResetText();
 			ingameDate.ResetText();
 			saveTime.ResetText();
@@ -439,7 +444,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					item.Remove();
 				}
 			}
-			activeSave = new SaveFile();
 			saveDiff = new SaveFile();
 		}
 	}

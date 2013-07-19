@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Skyrim_Save_Editor.Saves {
 	public partial class SaveFile {
-		public interface SaveFieldType {
+		public interface SaveField {
 			String Type { get; set; }
 		}
-		public class SaveField<T> : SaveFieldType {
+		public class SaveField<T> : SaveField {
 			public String Type { get; set; }
 			public String Key { get; set; }
 			public T Value { get; set; }

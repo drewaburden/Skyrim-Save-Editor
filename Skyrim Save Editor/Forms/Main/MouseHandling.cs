@@ -30,10 +30,10 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		void buttonAdvancedClear_Click(Object  sender, EventArgs  e) {
 			advancedFilter.ForeColor = SystemColors.InactiveCaptionText;
 			advancedFilter.Text = "Filter...";
-			foreach (ListViewItem item in removedListViewItems) {
+			/*foreach (ListViewItem item in removedListViewItems) {
 				advancedKeyValues.Items.Add((ListViewItem)item.Clone());
 			}
-			removedListViewItems.Clear();
+			removedListViewItems.Clear();*/
 			advancedFilterClear.Enabled = false;
 		}
 	}

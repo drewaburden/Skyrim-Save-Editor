@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace Skyrim_Save_Editor.Forms.Main {
 	partial class MainForm {
 		void advancedFilter_KeyUp(Object sender, KeyEventArgs e) {
-			foreach (ListViewItem item in advancedKeyValues.Items) {
+			/*foreach (ListViewItem item in advancedKeyValues.Items) {
 				if (!item.Text.ToLower().Contains(advancedFilter.Text.ToLower())) {
 					removedListViewItems.Add(item.Clone());
 					item.Remove();
@@ -21,7 +21,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					removedListViewItems.Remove(item);
 					--itemIndex;
 				}
-			}
+			}*/
 		}
 		private void MainForm_KeyDown(Object sender, System.Windows.Forms.KeyEventArgs e) {
 			if (e.KeyCode == Keys.O && e.Modifiers == Keys.Control && openMenuItem.Enabled) {

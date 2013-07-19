@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Skyrim_Save_Editor.Saves {
 	public partial class SaveFile {
-		public class PlayerLocation {
+		public class PlayerLocation : TreeNode, IEnumerable {
+			public String blockName = "Player Location";
 			public SaveField<UInt32> type;
 			public SaveField<UInt32> length;
 			public SaveField<UInt32> unknown;
-			public SaveField<RefID> worldSpace1;
+			public RefID worldSpace1; // RefID
 			public SaveField<Int32> coorX;
 			public SaveField<Int32> coorY;
-			public SaveField<RefID> worldSpace2;
+			public RefID worldSpace2; // RefID
 			public SaveField<Single> posX;
 			public SaveField<Single> posY;
 			public SaveField<Single> posZ;
@@ -23,10 +24,8 @@ namespace Skyrim_Save_Editor.Saves {
 				type = new SaveField<UInt32>("type");
 				length = new SaveField<UInt32>("length");
 				unknown = new SaveField<UInt32>("unknown");
-				worldSpace1 = new SaveField<RefID>("worldSpace1");
 				coorX = new SaveField<Int32>("coorX");
 				coorY = new SaveField<Int32>("coorY");
-				worldSpace2 = new SaveField<RefID>("worldSpace2");
 				posX = new SaveField<Single>("posX");
 				posY = new SaveField<Single>("posY");
 				posZ = new SaveField<Single>("posZ");
@@ -37,14 +36,25 @@ namespace Skyrim_Save_Editor.Saves {
 				type.Value = saveReader.ReadUInt32();
 				length.Value = saveReader.ReadUInt32();
 				unknown.Value = saveReader.ReadUInt32();
-				worldSpace1.Value = saveReader.ReadRefID();
+				worldSpace1 = saveReader.ReadRefID("worldSpace1");
 				coorX.Value = saveReader.ReadInt32();
 				coorY.Value = saveReader.ReadInt32();
-				worldSpace2.Value = saveReader.ReadRefID();
+				worldSpace2 = saveReader.ReadRefID("worldSpace2");
 				posX.Value = saveReader.ReadSingle();
 				posY.Value = saveReader.ReadSingle();
 				posZ.Value = saveReader.ReadSingle();
 				unk.Value = saveReader.ReadByte();
+			}
+
+			public override IEnumerator GetEnumerator() {
+				return (new Object[11] {
+					type, length, unknown, worldSpace1, coorX,
+					coorY, worldSpace2, posX, posY, posZ, unk
+				}).GetEnumerator();
+			}
+
+			public override TreeNode[] GetNodes() {
+				return new TreeNode[0];
 			}
 		}
 	}

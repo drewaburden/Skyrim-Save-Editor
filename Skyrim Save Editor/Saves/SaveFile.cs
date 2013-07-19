@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,13 +14,14 @@ namespace Skyrim_Save_Editor.Saves {
 		AltmerRace, ArgonianRace, BosmerRace, BretonRace, DunmerRace, ImperialRace, KhajiitRace, NordRace, OrcRace, RedguardRace
 	};
 
-	public partial class SaveFile {
-		public Header header;
-		public PluginInfo pluginInfo;
-		public FileLocationTable fileLocationTable;
-		public MiscStats miscStats;
-		public PlayerLocation playerLocation;
-		public TES tes;
+	public partial class SaveFile : TreeNode {
+		public String blockName = "Save File";
+		public TreeNode header;
+		public TreeNode pluginInfo;
+		public TreeNode fileLocationTable;
+		public TreeNode miscStats;
+		public TreeNode playerLocation;
+		public TreeNode tes;
 
 		public SaveFile() {
 			header = new Header();
@@ -50,10 +51,11 @@ namespace Skyrim_Save_Editor.Saves {
 					saveReader = new SaveReader(file);
 				}
 
-				header.loadFields(saveReader);
-				fileLocationTable.loadFields(saveReader);
-				miscStats.loadFields(saveReader);
-				playerLocation.loadFields(saveReader);
+				(header as Header).loadFields(saveReader);
+				(pluginInfo as PluginInfo).loadFields(saveReader);
+				(fileLocationTable as FileLocationTable).loadFields(saveReader);
+				(miscStats as MiscStats).loadFields(saveReader);
+				(playerLocation as PlayerLocation).loadFields(saveReader);
 
 				/*loadTES(saveReader);
 				loadGlobalVariables(binaryReader);
@@ -102,5 +104,18 @@ namespace Skyrim_Save_Editor.Saves {
 
 			return this;
 		}
-	};
+
+		public IEnumerator GetEnumerator() {
+			return (new Object[5] {
+					header, pluginInfo, fileLocationTable, miscStats,
+					playerLocation
+				}).GetEnumerator();
+		}
+		public TreeNode[] GetNodes() {
+			return new TreeNode[5] {
+					header, pluginInfo, fileLocationTable, miscStats,
+					playerLocation
+			};
+		}
+	}
 }

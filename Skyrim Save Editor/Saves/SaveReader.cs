@@ -15,7 +15,7 @@ namespace Skyrim_Save_Editor.Saves {
 			return ReadString(length);
 		}
 		public String ReadString(int length) {
-			return new String(ReadChars(length));
+			return (String) (new String(ReadChars(length))).Clone();
 		}
 
 		public FILETIME ReadFILETIME() {
@@ -53,9 +53,9 @@ namespace Skyrim_Save_Editor.Saves {
 		public SaveFile.MiscStat[] ReadMiscStat(int num) {
 			SaveFile.MiscStat[] miscStats = new SaveFile.MiscStat[num];
 			for (int elementIndex = 0; elementIndex < miscStats.Length; ++elementIndex) {
-				miscStats[elementIndex].name = ReadString();
-				miscStats[elementIndex].category = ReadByte();
-				miscStats[elementIndex].value = ReadInt32();
+				miscStats[elementIndex] = new SaveFile.MiscStat(ReadString());
+				miscStats[elementIndex].Category = ReadByte();
+				miscStats[elementIndex].Value = ReadInt32();
 			}
 			return miscStats;
 		}
@@ -71,8 +71,8 @@ namespace Skyrim_Save_Editor.Saves {
 			return plugins;
 		}
 
-		public SaveFile.RefID ReadRefID() {
-			SaveFile.RefID refID = new SaveFile.RefID();
+		public SaveFile.RefID ReadRefID(String name) {
+			SaveFile.RefID refID = new SaveFile.RefID(name);
 			refID.formID = new Byte[3];
 
 			BaseStream.Read(refID.formID, 0, 3); // Read only 3 bytes into the buffer
@@ -81,7 +81,7 @@ namespace Skyrim_Save_Editor.Saves {
 			refID.formID[0] <<= 2; // Get the remaining lower 6 bits to form the completed "22-bit" byte array
 
 			// Convert the "22-bit" byte array to a readable hex string for easy lookup in the Creation Kit, etc.
-			refID.hexFormID = "0x" +
+			refID.Value = "0x" +
 				BitConverter.ToString(refID.formID, 0)
 				.Replace("-", String.Empty).PadLeft(8, '0');
 

@@ -54,6 +54,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			closeToolButton.Enabled = false;
 			tabControl.Visible = false;
 
+			
+
 			resetControls();
 		}
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Skyrim_Save_Editor.Saves {
 	public partial class SaveFile {
-		public class MiscStat : SaveField<Int32> {
-			public Byte Category { get; set; }
-
-			public MiscStat(String key) : base(key) { }
+		public abstract class TreeNode : IEnumerable {
+			public String blockName;
+			public abstract IEnumerator GetEnumerator();
+			public abstract TreeNode[] GetNodes();
 		}
 	}
 }

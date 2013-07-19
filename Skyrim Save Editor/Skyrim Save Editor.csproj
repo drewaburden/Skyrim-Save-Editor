@@ -77,6 +77,8 @@
     <Compile Include="Forms\KeyEdit\KeyEditForm.Designer.cs">
       <DependentUpon>KeyEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Main\Advanced\PopulateTree.cs" />
+    <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
     <Compile Include="Forms\Main\KeyHandling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,7 +121,7 @@
     <Compile Include="Saves\Data Types\PlayerLocation.cs" />
     <Compile Include="Saves\Data Types\PluginInfo.cs" />
     <Compile Include="Saves\Data Types\RefID.cs" />
-    <Compile Include="Saves\SaveBlock.cs" />
+    <Compile Include="Saves\TreeNode.cs" />
     <Compile Include="Saves\SaveField.cs" />
     <Compile Include="Saves\SaveReader.cs" />
     <Compile Include="Saves\Data Types\ScreenshotData.cs" />

@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Skyrim_Save_Editor.Saves {
 	public partial class SaveFile {
-		public class FileLocationTable : SaveBlock {
+		public class FileLocationTable : TreeNode {
+			public String blockName = "File Location Table";
 			public SaveField<UInt32> formIDArrayCountOffset;
 			public SaveField<UInt32> unknownTable3Offset;
 			public SaveField<UInt32> globalDataTable1Offset;
@@ -49,6 +50,19 @@ namespace Skyrim_Save_Editor.Saves {
 					unused.Value[elementIndex] = saveReader.ReadUInt32();
 				}
 			}
-		};
+
+			public override IEnumerator GetEnumerator() {
+				return (new Object[11] {
+					formIDArrayCountOffset, unknownTable3Offset, globalDataTable1Offset,
+					globalDataTable2Offset, changeFormsOffset, globalDataTable3Offset,
+					globalDataTable1Count, globalDataTable2Count, globalDataTable3Count,
+					changeFormCount, unused
+				}).GetEnumerator();
+			}
+
+			public override TreeNode[] GetNodes() {
+				return new TreeNode[0];
+			}
+		}
 	}
 }

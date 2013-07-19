@@ -17,40 +17,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		
 		public MainForm() {
 			InitializeComponent();
-
-			this.typeColumn.AspectGetter = delegate(object x) {
-				return ((SaveFile.SaveFieldType) x).Type;
-			};
-			this.typeColumn.AspectToStringConverter = delegate(object x) {
-				return String.Empty;
-			};
-			this.typeColumn.ImageGetter = delegate(object x) {
-				String type = ((SaveFile.SaveFieldType) x).Type;
-				switch (type) {
-					case "String":
-					case "Byte":
-					case "Single":
-					case "Double":
-						return type;
-
-					case "UInt16":
-					case "UInt32":
-					case "UInt64":
-					case "Int16":
-					case "Int32":
-					case "Int64":
-						return "Int";
-
-					case "ScreenshotData":
-						return "Image";
-
-					case "FILETIME":
-						return "Filetime";
-
-					default:
-						return "Unknown";
-				}
-			};
 		}
 
 		/// <summary>
