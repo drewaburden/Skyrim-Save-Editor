@@ -23,29 +23,16 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				TES = 6;
 		};
 		void populateControls() {
-			listViewItems = new ArrayList();
-			removedListViewItems = new ArrayList();
-
-			//int numFields = calcNumFields(activeSave.GetType());
-			//Console.WriteLine(numFields);
-
-			/*Object[] olvObjects = new Object[numFields];
-
-			for (int x = 0; x < numFields; ++x) {
-				olvObjects[x] = 
-			}*/
-
-			List<Object> fields = new List<Object>();
-			foreach (SaveField field in activeSave.header.GetFields()) {
-				fields.Add(field);
-			}
-
-			objectListView1.AddObjects(fields);
-
 			TreeBuilder builder = new TreeBuilder();
 			TreeItem tree = builder.createTree(activeSave);
+			treeListView.SetObjects(tree);
 
-			builder.displayDebugTree(tree);
+			List<Object> fields = new List<Object>();
+			foreach (SaveField field in activeSave.GetFields()) {
+				fields.Add(field);
+			}
+			fieldListView.AddObjects(fields);
+
 
 			/*// headerSize
 			ListViewItem headerSize = new ListViewItem(

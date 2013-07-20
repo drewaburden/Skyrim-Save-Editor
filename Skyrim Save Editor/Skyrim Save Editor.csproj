@@ -79,6 +79,9 @@
     </Compile>
     <Compile Include="Forms\Main\Advanced\TreeBuilder.cs" />
     <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
+    <Compile Include="Forms\Main\LineRenderer.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Main\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

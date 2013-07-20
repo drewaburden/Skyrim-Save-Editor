@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,13 +10,15 @@ using Skyrim_Save_Editor.Saves.SaveFields;
 namespace Skyrim_Save_Editor.Forms.Main.Advanced {
 	public class TreeBuilder {
 		public TreeItem createTree(SaveFile save) {
-			TreeItem root = buildTree(null, save);
+			TreeItem root = new TreeItem(null);
+			root.Children = new ArrayList();
+			root.Children.Add(buildTree(null, save));
 
 			return root;
 		}
 		public TreeItem buildTree(TreeItem tree, SaveSection saveBlock) {
 			TreeItem child = new TreeItem(saveBlock);
-			child.Children = new List<TreeItem>();
+			child.Children = new ArrayList();
 			foreach (SaveSection childnode in saveBlock.GetSections()) {
 				child.Children.Add(buildTree(child, childnode));
 			}

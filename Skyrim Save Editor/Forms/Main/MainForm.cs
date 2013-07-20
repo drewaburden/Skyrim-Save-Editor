@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +15,39 @@ using Skyrim_Save_Editor.Saves.SaveSections;
 using Skyrim_Save_Editor.Forms.Settings;
 using Skyrim_Save_Editor.Forms.About;
 using Skyrim_Save_Editor.Forms.KeyEdit;
+using Skyrim_Save_Editor.Forms.Main.Advanced;
+using BrightIdeasSoftware;
 
 namespace Skyrim_Save_Editor.Forms.Main {
 	public partial class MainForm : Form {
 		private SaveFile activeSave;
 		private SaveFile saveDiff; // Changes made that are different from the originally loaded save will be stored here
-		private ArrayList listViewItems;
-		private ArrayList removedListViewItems;
 
 		#region Constructor/Destructor
 		public MainForm() {
 			InitializeComponent();
+
+			this.treeListView.CanExpandGetter = delegate(object x) {
+				return (x as TreeItem).Children != null && (x as TreeItem).Children.Count > 0;
+			};
+			this.treeListView.ChildrenGetter = delegate(object x) {
+				return new ArrayList((x as TreeItem).Children);
+			};
+			this.treeColumn.AspectGetter = delegate(object x) {
+				return ((x as TreeItem).NodeData as SaveSection).blockName;
+			};
+			this.typeImageColumn.AspectToStringConverter = delegate(object x) {
+				return String.Empty;
+			};
+
+			this.treeListView.TreeColumnRenderer = new LineRenderer();
+			Pen pen = new Pen(Color.Gray, 1.0f);
+			pen.DashStyle = DashStyle.Dot;
+			this.treeListView.TreeColumnRenderer.LinePen = pen;
+
+			HotItemStyle style = new HotItemStyle();
+			style.BackColor = SystemColors.Control;
+			this.fieldListView.HotItemStyle = style;
 
 			this.typeColumn.AspectGetter = delegate(object x) {
 				return (x as SaveField).Type;
@@ -42,6 +66,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					case "Single":
 					case "Double":
 					case "DateTime":
+					case "RefID":
 						return type;
 
 					case "UInt16":
@@ -57,6 +82,72 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 					default:
 						return "Unknown";
+				}
+			};
+
+			this.valueColumn.AspectToStringConverter = delegate(object x) {
+				if (x is DateTime) {
+					return ((DateTime) x).ToString("ddd, MMM dd, yyyy h:mmtt");
+				}
+				else if (x is ScreenshotData) {
+					return "[RGB Data]";
+				}
+
+				return String.Format("{0}", x);
+			};
+			fieldListView.CellEditStarting += delegate(object sender, CellEditEventArgs e) {
+				if (e.Value is DateTime) {
+					DateTimePicker picker = new DateTimePicker();
+					picker.CustomFormat = "ddd, MMM dd, yyyy h:mmtt";
+					picker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+					picker.Bounds = e.CellBounds;
+					picker.Value = (DateTime) e.Value;
+					e.Control = picker;
+				}
+				else if (e.Value is ScreenshotData || e.Value is Byte) {
+					Label label = new Label();
+					label.Text = "Value not editable.";
+					label.TextAlign = ContentAlignment.MiddleLeft;
+					label.Bounds = e.CellBounds;
+					e.Control = label;
+				}
+				else if (e.Value is String && (e.RowObject as SaveField<String>).Key == "gameDate") {
+					MaskedTextBox masked = new MaskedTextBox();
+					masked.Mask = "000.00.00";
+					masked.BeepOnError = true;
+					masked.Text = (String) e.Value;
+					masked.Bounds = e.CellBounds;
+					e.Control = masked;
+				}
+				else if (e.Value is String && (e.RowObject as SaveField<String>).Key == "playerRace") {
+					ComboBox race = new ComboBox();
+					race.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+					race.FormattingEnabled = true;
+					int position;
+					for (position = 0; position < 10; ++position) {
+						String raceString = ((Race) position).ToString("g");
+						race.Items.Add(raceString);
+						if ((e.Value as String) == raceString) {
+							race.SelectedIndex = position;
+						}
+					}
+					race.Bounds = e.CellBounds;
+					e.Control = race;
+				}
+			};
+			fieldListView.CellEditFinishing += delegate(object x, CellEditEventArgs e) {
+				if (!e.Cancel && e.Value is String &&
+					(e.RowObject as SaveField<String>).Key == "gameDate") {
+					String value = e.NewValue as String;
+					value = value.Replace(' ', '0');
+					value = value.PadRight(9, '0');
+					e.NewValue = (Object) value;
+				}
+				else if (!e.Cancel && e.Value is String &&
+					(e.RowObject as SaveField<String>).Key == "playerRace") {
+					String value = e.NewValue as String;
+					value = ((Race) ((ComboBox) e.Control).SelectedIndex).ToString("g");
+					e.NewValue = (Object) value;
 				}
 			};
 		}
@@ -90,7 +181,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 		#region Component Lifetime Actions
 		private void resetControls() {
-			objectListView1.ClearObjects();
+			fieldListView.ClearObjects();
 			saveName.ResetText();
 			ingameDate.ResetText();
 			saveTime.ResetText();
@@ -106,14 +197,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			screenshot.Image = (Image) image.Clone();
 			labelScreenshot.Visible = true;
 			pluginsList.Items.Clear();
-			foreach (ListViewItem item in advancedKeyValues.Items) {
-				item.Remove();
-			}
-			if (removedListViewItems != null) {
-				foreach (ListViewItem item in removedListViewItems) {
-					item.Remove();
-				}
-			}
 			saveDiff = new SaveFile();
 		}
 		#endregion
@@ -168,8 +251,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		#region Mouse Handling
 		// Todo: Separate all Advanced tab filtering methods into their own custom component class.
 		void advancedKeyValues_MouseDoubleClick(Object sender, MouseEventArgs e) {
-			KeyEditForm keyEditForm = new KeyEditForm(advancedKeyValues.SelectedItems[0]);
-			keyEditForm.ShowDialog(this);
+			/*KeyEditForm keyEditForm = new KeyEditForm(advancedKeyValues.SelectedItems[0]);
+			keyEditForm.ShowDialog(this);*/
 		}
 		void advancedFilter_Enter(Object sender, EventArgs e) {
 			if (advancedFilter.ForeColor == SystemColors.InactiveCaptionText) {
@@ -193,6 +276,17 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			}
 			removedListViewItems.Clear();*/
 			advancedFilterClear.Enabled = false;
+		}
+
+		private void treeListView_SelectedIndexChanged(object sender, EventArgs e) {
+			fieldListView.ClearObjects();
+			TreeItem treeItem = (TreeItem) treeListView.SelectedObject;
+			SaveSection section = (SaveSection) treeItem.NodeData;
+			List<Object> fields = new List<Object>();
+			foreach (SaveField field in section.GetFields()) {
+				fields.Add(field);
+			}
+			fieldListView.AddObjects(fields);
 		}
 		#endregion
 
@@ -232,5 +326,21 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			}
 		}
 		#endregion
+
+		private void contextMenuStrip1_Opening(object sender, CancelEventArgs e) {
+			if (fieldListView.GetItemCount() <= 0) {
+				e.Cancel = true;
+			}
+		}
+
+		private void contextMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
+			if (e.ClickedItem == editToolStripMenuItem) {
+				// Somehow programmatically start the cell editing. None of the ObjectListView's functions seem to work.
+			}
+		}
+
+		private void buttonAdvancedClear_Click(object sender, MouseEventArgs e) {
+
+		}
 	}
 }
