@@ -3,8 +3,9 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Skyrim_Save_Editor.Saves.SaveFields;
 
-namespace Skyrim_Save_Editor.Saves {
+namespace Skyrim_Save_Editor.Saves.SaveSections {
 	public class FileLocationTable : SaveSection {
 		public SaveField<UInt32> formIDArrayCountOffset;
 		public SaveField<UInt32> unknownTable3Offset;

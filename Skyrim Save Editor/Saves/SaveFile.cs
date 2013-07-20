@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Resources;
 using System.Diagnostics;
+using Skyrim_Save_Editor.Saves.SaveFields;
+using Skyrim_Save_Editor.Saves.SaveSections;
 
 namespace Skyrim_Save_Editor.Saves {
 	public enum Race {

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
+using Skyrim_Save_Editor.Saves.SaveFields;
 
 namespace Skyrim_Save_Editor.Saves {
 	public class SaveReader : BinaryReader {

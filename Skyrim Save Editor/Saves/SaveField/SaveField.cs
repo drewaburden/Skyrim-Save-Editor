@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Skyrim_Save_Editor.Saves {
+namespace Skyrim_Save_Editor.Saves.SaveFields {
 	public interface SaveField {
 		String Type { get; set; }
 	}

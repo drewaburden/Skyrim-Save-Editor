@@ -7,6 +7,7 @@ using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
 using Skyrim_Save_Editor.Saves;
+using Skyrim_Save_Editor.Saves.SaveFields;
 using Skyrim_Save_Editor.Forms.Main.Advanced;
 
 namespace Skyrim_Save_Editor.Forms.Main {
@@ -417,34 +418,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			unk.Group = advancedKeyValues.Groups[ListViewGroups.PLAYER_LOCATION];
 			listViewItems.Add(unk);
 			advancedKeyValues.Items.Add((ListViewItem)unk.Clone());*/
-		}
-
-		private void resetControls() {
-			objectListView1.ClearObjects();
-			saveName.ResetText();
-			ingameDate.ResetText();
-			saveTime.ResetText();
-			playerName.ResetText();
-			playerLevel.Value = 0;
-			playerExperienceBar.Maximum = 100;
-			playerExperienceBox.Maximum = 100;
-			playerExperienceBox.Value = 0;
-			playerRace.SelectedIndex = -1;
-			maleSex.Checked = false;
-			femaleSex.Checked = false;
-			Bitmap image = new Bitmap(320, 192);
-			screenshot.Image = (Image) image.Clone();
-			labelScreenshot.Visible = true;
-			pluginsList.Items.Clear();
-			foreach (ListViewItem item in advancedKeyValues.Items) {
-				item.Remove();
-			}
-			if (removedListViewItems != null) {
-				foreach (ListViewItem item in removedListViewItems) {
-					item.Remove();
-				}
-			}
-			saveDiff = new SaveFile();
 		}
 	}
 }

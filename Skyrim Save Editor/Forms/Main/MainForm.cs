@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Skyrim_Save_Editor.Saves;
+using Skyrim_Save_Editor.Saves.SaveFields;
+using Skyrim_Save_Editor.Saves.SaveSections;
 using Skyrim_Save_Editor.Forms.Settings;
 using Skyrim_Save_Editor.Forms.About;
 using Skyrim_Save_Editor.Forms.KeyEdit;
@@ -80,6 +82,36 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private void showAboutForm(object sender, EventArgs e) {
 			AboutForm aboutForm = new AboutForm();
 			aboutForm.ShowDialog(this);
+		}
+		#endregion
+
+		#region Component Lifetime Actions
+		private void resetControls() {
+			objectListView1.ClearObjects();
+			saveName.ResetText();
+			ingameDate.ResetText();
+			saveTime.ResetText();
+			playerName.ResetText();
+			playerLevel.Value = 0;
+			playerExperienceBar.Maximum = 100;
+			playerExperienceBox.Maximum = 100;
+			playerExperienceBox.Value = 0;
+			playerRace.SelectedIndex = -1;
+			maleSex.Checked = false;
+			femaleSex.Checked = false;
+			Bitmap image = new Bitmap(320, 192);
+			screenshot.Image = (Image) image.Clone();
+			labelScreenshot.Visible = true;
+			pluginsList.Items.Clear();
+			foreach (ListViewItem item in advancedKeyValues.Items) {
+				item.Remove();
+			}
+			if (removedListViewItems != null) {
+				foreach (ListViewItem item in removedListViewItems) {
+					item.Remove();
+				}
+			}
+			saveDiff = new SaveFile();
 		}
 		#endregion
 

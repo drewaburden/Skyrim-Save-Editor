@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Skyrim_Save_Editor.Saves;
+using Skyrim_Save_Editor.Saves.SaveSections;
 
 namespace Skyrim_Save_Editor.Forms.Main.Advanced {
 	public class TreeBuilder {

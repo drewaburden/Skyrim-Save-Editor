@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices.ComTypes;
+using Skyrim_Save_Editor.Saves.SaveFields;
 
-namespace Skyrim_Save_Editor.Saves {
+namespace Skyrim_Save_Editor.Saves.SaveSections {
 	public class Header : SaveSection {
 		public SaveField<String> magic;
 		public SaveField<UInt32> headerSize;

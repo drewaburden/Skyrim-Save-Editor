@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace Skyrim_Save_Editor.Saves {
+namespace Skyrim_Save_Editor.Saves.SaveFields {
 	using Hex = String;
 	public class RefID : SaveField<Hex> {
 		public Byte type { get; set; }

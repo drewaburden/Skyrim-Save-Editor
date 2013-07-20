@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Drawing;
 
-namespace Skyrim_Save_Editor.Saves {
+namespace Skyrim_Save_Editor.Saves.SaveFields {
 	public class ScreenshotData {
 		public UInt32 shotWidth { get; set; }
 		public UInt32 shotHeight { get; set; }
