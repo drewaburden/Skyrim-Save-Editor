@@ -106,6 +106,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Saves\SaveField\SaveField.cs" />
     <Compile Include="Saves\SaveSection\Types\FileLocationTable.cs" />
     <Compile Include="Saves\SaveField\Types\MiscStat.cs" />
     <Compile Include="Saves\SaveSection\Types\MiscStats.cs" />
@@ -113,7 +114,6 @@
     <Compile Include="Saves\SaveSection\Types\PluginInfo.cs" />
     <Compile Include="Saves\SaveField\Types\RefID.cs" />
     <Compile Include="Saves\SaveSection\SaveSection.cs" />
-    <Compile Include="Saves\SaveField\SaveField.cs" />
     <Compile Include="Saves\SaveReader.cs" />
     <Compile Include="Saves\SaveField\Types\ScreenshotData.cs" />
     <Compile Include="Saves\SaveSection\Types\Header.cs" />
