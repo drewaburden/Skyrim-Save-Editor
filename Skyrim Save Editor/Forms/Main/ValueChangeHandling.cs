@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Skyrim_Save_Editor.Saves;
 
 namespace Skyrim_Save_Editor.Forms.Main {
+	[System.ComponentModel.DesignerCategory("Code")]
 	partial class MainForm {
 		void playerExperience_ValueChanged(Object sender, EventArgs e) {
 			playerExperienceBar.Value = Convert.ToInt32(playerExperienceBox.Value);

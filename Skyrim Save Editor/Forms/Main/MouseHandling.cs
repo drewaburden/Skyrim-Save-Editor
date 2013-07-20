@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using Skyrim_Save_Editor.Forms.KeyEdit;
 
 namespace Skyrim_Save_Editor.Forms.Main {
+	[System.ComponentModel.DesignerCategory("Code")]
 	partial class MainForm {
 		void advancedKeyValues_MouseDoubleClick(Object sender, MouseEventArgs  e) {
 			KeyEditForm keyEditForm = new KeyEditForm(advancedKeyValues.SelectedItems[0]);

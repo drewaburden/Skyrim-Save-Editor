@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Skyrim_Save_Editor.Forms.Main {
+	[System.ComponentModel.DesignerCategory("Code")]
 	partial class MainForm {
 		void advancedFilter_KeyUp(Object sender, KeyEventArgs e) {
 			/*foreach (ListViewItem item in advancedKeyValues.Items) {
