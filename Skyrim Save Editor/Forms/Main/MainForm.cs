@@ -280,13 +280,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 		private void treeListView_SelectedIndexChanged(object sender, EventArgs e) {
 			fieldListView.ClearObjects();
-			TreeItem treeItem = (TreeItem) treeListView.SelectedObject;
-			SaveSection section = (SaveSection) treeItem.NodeData;
-			List<Object> fields = new List<Object>();
-			foreach (SaveField field in section.GetFields()) {
-				fields.Add(field);
+			if (treeListView.SelectedObject is TreeItem) {
+				TreeItem treeItem = (TreeItem) treeListView.SelectedObject;
+				SaveSection section = (SaveSection) treeItem.NodeData;
+				List<Object> fields = new List<Object>();
+				foreach (SaveField field in section.GetFields()) {
+					fields.Add(field);
+				}
+				fieldListView.AddObjects(fields);
 			}
-			fieldListView.AddObjects(fields);
 		}
 		#endregion
 
