@@ -24,7 +24,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			plugins.Value = saveReader.ReadPlugin(pluginCount.Value);
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[3] {
 				pluginInfoSize, pluginCount, plugins
 			};

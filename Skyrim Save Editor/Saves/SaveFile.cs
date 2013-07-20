@@ -34,6 +34,7 @@ namespace Skyrim_Save_Editor.Saves {
 		public SaveSection tes;
 
 		public SaveFile() {
+			blockName = "Save File";
 			header = new Header();
 			pluginInfo = new PluginInfo();
 			fileLocationTable = new FileLocationTable();
@@ -86,7 +87,7 @@ namespace Skyrim_Save_Editor.Saves {
 			(playerLocation as PlayerLocation).Load(saveReader);
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[0];
 		}
 		public override SaveSection[] GetSections() {

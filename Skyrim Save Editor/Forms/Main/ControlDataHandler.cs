@@ -36,7 +36,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			}*/
 
 			List<Object> fields = new List<Object>();
-			foreach (SaveField field in activeSave.header.GetValues()) {
+			foreach (SaveField field in activeSave.header.GetFields()) {
 				fields.Add(field);
 			}
 
@@ -44,6 +44,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 			TreeBuilder builder = new TreeBuilder();
 			TreeItem tree = builder.createTree(activeSave);
+
+			builder.displayDebugTree(tree);
 
 			/*// headerSize
 			ListViewItem headerSize = new ListViewItem(

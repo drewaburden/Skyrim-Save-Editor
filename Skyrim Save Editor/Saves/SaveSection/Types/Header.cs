@@ -61,7 +61,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			formVersion.Value = saveReader.ReadByte();
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[15] {
 				magic, headerSize, version, saveNumber, playerName,
 				playerLevel, playerLocation, gameDate, saveTime,

@@ -26,13 +26,16 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			InitializeComponent();
 
 			this.typeColumn.AspectGetter = delegate(object x) {
-				return ((SaveField) x).Type;
+				return (x as SaveField).Type;
 			};
-			this.typeColumn.AspectToStringConverter = delegate(object x) {
+			this.typeImageColumn.AspectGetter = delegate(object x) {
+				return (x as SaveField).Type;
+			};
+			this.typeImageColumn.AspectToStringConverter = delegate(object x) {
 				return String.Empty;
 			};
-			this.typeColumn.ImageGetter = delegate(object x) {
-				String type = ((SaveField) x).Type;
+			this.typeImageColumn.ImageGetter = delegate(object x) {
+				String type = (x as SaveField).Type;
 				switch (type) {
 					case "String":
 					case "Byte":

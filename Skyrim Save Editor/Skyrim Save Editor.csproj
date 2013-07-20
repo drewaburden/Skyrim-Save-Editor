@@ -77,7 +77,7 @@
     <Compile Include="Forms\KeyEdit\KeyEditForm.Designer.cs">
       <DependentUpon>KeyEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main\Advanced\PopulateTree.cs" />
+    <Compile Include="Forms\Main\Advanced\TreeBuilder.cs" />
     <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
     <Compile Include="Forms\Main\MainForm.cs">
       <SubType>Form</SubType>

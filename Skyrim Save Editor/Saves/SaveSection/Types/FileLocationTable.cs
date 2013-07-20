@@ -51,7 +51,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			}
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[11] {
 				formIDArrayCountOffset, unknownTable3Offset, globalDataTable1Offset,
 				globalDataTable2Offset, changeFormsOffset, globalDataTable3Offset,

@@ -46,7 +46,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			unk.Value = saveReader.ReadByte();
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[11] {
 				type, length, unknown, worldSpace1, coorX,
 				coorY, worldSpace2, posX, posY, posZ, unk

@@ -8,7 +8,7 @@ using Skyrim_Save_Editor.Saves.SaveFields;
 namespace Skyrim_Save_Editor.Saves.SaveSections {
 	public abstract class SaveSection {
 		public String blockName;
-		public abstract SaveField[] GetValues();
+		public abstract SaveField[] GetFields();
 		public abstract SaveSection[] GetSections();
 		public abstract void Load(SaveReader saveReader);
 	}

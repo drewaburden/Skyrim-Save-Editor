@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Skyrim_Save_Editor.Saves.SaveFields {
 	public interface SaveField {
 		String Type { get; set; }
+		String Key { get; set; }
 	}
 	public class SaveField<T> : SaveField {
 		public String Type { get; set; }

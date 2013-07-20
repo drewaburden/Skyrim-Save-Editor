@@ -27,7 +27,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			statData.Value = saveReader.ReadMiscStat((int) miscStatsCount.Value);
 		}
 
-		public override SaveField[] GetValues() {
+		public override SaveField[] GetFields() {
 			return new SaveField[4] {
 				type, length, miscStatsCount, statData
 			};

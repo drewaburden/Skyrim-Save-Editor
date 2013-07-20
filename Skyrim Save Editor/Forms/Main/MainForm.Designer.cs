@@ -151,8 +151,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+			this.typeImageColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.typeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-			this.olvColumn2 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.olvColumn3 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -1101,15 +1101,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// objectListView1
 			// 
+			this.objectListView1.AllColumns.Add(this.typeImageColumn);
 			this.objectListView1.AllColumns.Add(this.typeColumn);
-			this.objectListView1.AllColumns.Add(this.olvColumn2);
 			this.objectListView1.AllColumns.Add(this.olvColumn1);
 			this.objectListView1.AllColumns.Add(this.olvColumn3);
 			this.objectListView1.AllColumns.Add(this.olvColumn4);
 			this.objectListView1.AllowColumnReorder = true;
 			this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.typeImageColumn,
             this.typeColumn,
-            this.olvColumn2,
             this.olvColumn1,
             this.olvColumn3});
 			this.objectListView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1124,23 +1124,23 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.objectListView1.UseCompatibleStateImageBehavior = false;
 			this.objectListView1.View = System.Windows.Forms.View.Details;
 			// 
+			// typeImageColumn
+			// 
+			this.typeImageColumn.Hideable = false;
+			this.typeImageColumn.IsEditable = false;
+			this.typeImageColumn.MaximumWidth = 20;
+			this.typeImageColumn.MinimumWidth = 20;
+			this.typeImageColumn.Searchable = false;
+			this.typeImageColumn.ShowTextInHeader = false;
+			this.typeImageColumn.Text = "";
+			this.typeImageColumn.UseFiltering = false;
+			this.typeImageColumn.Width = 20;
+			// 
 			// typeColumn
 			// 
-			this.typeColumn.Hideable = false;
-			this.typeColumn.IsEditable = false;
-			this.typeColumn.MaximumWidth = 20;
-			this.typeColumn.MinimumWidth = 20;
-			this.typeColumn.Searchable = false;
-			this.typeColumn.ShowTextInHeader = false;
-			this.typeColumn.Text = "";
-			this.typeColumn.UseFiltering = false;
-			this.typeColumn.Width = 20;
-			// 
-			// olvColumn2
-			// 
-			this.olvColumn2.AspectName = "Type";
-			this.olvColumn2.Text = "Type";
-			this.olvColumn2.Width = 81;
+			this.typeColumn.AspectName = "Type";
+			this.typeColumn.Text = "Type";
+			this.typeColumn.Width = 81;
 			// 
 			// olvColumn1
 			// 
@@ -1356,11 +1356,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private ImageList imageList1;
 		private BrightIdeasSoftware.ObjectListView objectListView1;
 		private BrightIdeasSoftware.OLVColumn olvColumn1;
-		private BrightIdeasSoftware.OLVColumn olvColumn2;
+		private BrightIdeasSoftware.OLVColumn typeColumn;
 		private BrightIdeasSoftware.OLVColumn olvColumn3;
 		private BrightIdeasSoftware.OLVColumn olvColumn4;
 		private ImageList imageList2;
-		private BrightIdeasSoftware.OLVColumn typeColumn;
+		private BrightIdeasSoftware.OLVColumn typeImageColumn;
 		private Button advancedFilterClear;
 		private TextBox advancedFilter;
 		#endregion
