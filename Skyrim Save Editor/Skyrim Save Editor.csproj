@@ -79,27 +79,15 @@
     </Compile>
     <Compile Include="Forms\Main\Advanced\PopulateTree.cs" />
     <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
-    <Compile Include="Forms\Main\KeyHandling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Main\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Forms\Main\KeyHandling.cs" />
+    <Compile Include="Forms\Main\MainForm.cs" />
     <Compile Include="Forms\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main\MouseHandling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Main\ControlDataHandler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Main\Actions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Main\ValueChangeHandling.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Forms\Main\MouseHandling.cs" />
+    <Compile Include="Forms\Main\ControlDataHandler.cs" />
+    <Compile Include="Forms\Main\Actions.cs" />
+    <Compile Include="Forms\Main\ValueChangeHandling.cs" />
     <Compile Include="Forms\Settings\LocaleComboBox.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -8,7 +8,6 @@ using Skyrim_Save_Editor.Saves;
 using Skyrim_Save_Editor.Forms.About;
 
 namespace Skyrim_Save_Editor.Forms.Main {
-	[System.ComponentModel.DesignerCategory("Code")]
 	public partial class MainForm {
 		void createSave(Object sender, EventArgs e) {
 			resetControls();

@@ -10,7 +10,6 @@ using Skyrim_Save_Editor.Saves;
 using Skyrim_Save_Editor.Forms.Main.Advanced;
 
 namespace Skyrim_Save_Editor.Forms.Main {
-	[System.ComponentModel.DesignerCategory("Code")]
 	public partial class MainForm {
 		public static class ListViewGroups { // This would be an enum, but you can't index arrays with enums.
 			public const int
