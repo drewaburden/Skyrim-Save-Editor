@@ -12,7 +12,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		void createSave(Object sender, EventArgs e) {
 			resetControls();
 
-			activeSave = new SaveFile().create();
+			activeSave = new SaveFile().CreateNew();
 
 			saveMenuItem.Enabled = true;
 			closeMenuItem.Enabled = true;
@@ -27,7 +27,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		void openSave(Object sender, EventArgs e) {
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
 				try {
-					SaveFile saveFile = new SaveFile().load(openFileDialog.FileName);
+					SaveFile saveFile = new SaveFile().LoadFromFile(openFileDialog.FileName);
 					activeSave = saveFile;
 
 					resetControls();
@@ -46,7 +46,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				openFileDialog.FileName = "";
 			}
 		}
-		
+
 		private void closeSave(Object sender, EventArgs e) {
 			saveMenuItem.Enabled = false;
 			closeMenuItem.Enabled = false;
@@ -54,14 +54,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			closeToolButton.Enabled = false;
 			tabControl.Visible = false;
 
-			
+
 
 			resetControls();
 		}
 
-		private void showAboutForm(object sender, EventArgs e) {
-			AboutForm aboutForm = new AboutForm();
-			aboutForm.ShowDialog(this);
-		}
+
 	}
 }

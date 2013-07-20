@@ -35,7 +35,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			}*/
 
 			List<Object> fields = new List<Object>();
-			foreach (SaveFile.SaveField field in activeSave.header) {
+			foreach (SaveField field in activeSave.header.GetValues()) {
 				fields.Add(field);
 			}
 

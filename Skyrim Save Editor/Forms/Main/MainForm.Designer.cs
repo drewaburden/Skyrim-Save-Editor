@@ -11,80 +11,6 @@ using System.Collections;
 
 namespace Skyrim_Save_Editor.Forms.Main {
 	partial class MainForm {
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
-
-		#region Variables
-		private ArrayList listViewItems;
-		private ArrayList removedListViewItems;
-
-		private System.Windows.Forms.MenuStrip menuStrip;
-		private System.Windows.Forms.ToolStripMenuItem fileMenu;
-		private System.Windows.Forms.ToolStripMenuItem openMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
-		private System.Windows.Forms.OpenFileDialog openFileDialog;
-		private System.Windows.Forms.ToolStripMenuItem saveMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem closeMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-		private System.Windows.Forms.ToolStripMenuItem newMenuItem;
-		private System.Windows.Forms.ToolStrip toolStrip;
-		private System.Windows.Forms.ToolStripButton newToolButton;
-		private System.Windows.Forms.ToolStripButton openToolButton;
-		private System.Windows.Forms.ToolStripButton saveToolButton;
-		private System.Windows.Forms.ToolStripButton closeToolButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripButton settingsToolButton;
-		private System.Windows.Forms.ToolStripButton aboutToolButton;
-		private System.Windows.Forms.ToolStripMenuItem helpMenu;
-		private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem toolsMenu;
-		private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-		private System.Windows.Forms.ToolStripMenuItem recentFilesMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem undoMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem redoMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-		private System.Windows.Forms.ToolStripMenuItem filePropertiesMenuItem;
-		private System.Windows.Forms.TabPage pluginsTab;
-		private System.Windows.Forms.CheckedListBox pluginsList;
-		private System.Windows.Forms.TabPage generalTab;
-		private System.Windows.Forms.SplitContainer splitContainer;
-		private System.Windows.Forms.Label labelScreenshot;
-		private System.Windows.Forms.TextBox saveName;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.MaskedTextBox ingameDate;
-		private System.Windows.Forms.Label label6;
-		private System.Windows.Forms.DateTimePicker saveTime;
-		private System.Windows.Forms.PictureBox screenshot;
-		private System.Windows.Forms.Panel leftPanel;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Panel rightPanel;
-		private System.Windows.Forms.RadioButton maleSex;
-		private System.Windows.Forms.TextBox playerName;
-		private System.Windows.Forms.RadioButton femaleSex;
-		private System.Windows.Forms.ComboBox playerRace;
-		private System.Windows.Forms.NumericUpDown playerLevel;
-		private System.Windows.Forms.ProgressBar playerExperienceBar;
-		private System.Windows.Forms.NumericUpDown playerExperienceBox;
-		private System.Windows.Forms.TabControl tabControl;
-		private System.Windows.Forms.TabPage advancedTab;
-		private System.Windows.Forms.ListView advancedKeyValues;
-		private System.Windows.Forms.ColumnHeader advancedKeyHeader;
-		private System.Windows.Forms.ColumnHeader advancedValueHeader;
-		private System.Windows.Forms.ToolStripButton undoToolButton;
-		private System.Windows.Forms.ToolStripButton redoToolButton;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-		private System.Windows.Forms.ToolStripMenuItem saveAsMenuItem;
-		#endregion
-
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -413,7 +339,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsMenuItem.ShortcutKeyDisplayString = "Ctrl+P";
 			this.settingsMenuItem.Size = new System.Drawing.Size(157, 22);
 			this.settingsMenuItem.Text = "&Settings";
-			this.settingsMenuItem.Click += new System.EventHandler(this.openSettings);
+			this.settingsMenuItem.Click += new System.EventHandler(this.showSettingsForm);
 			// 
 			// helpMenu
 			// 
@@ -540,7 +466,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsToolButton.Name = "settingsToolButton";
 			this.settingsToolButton.Size = new System.Drawing.Size(23, 22);
 			this.settingsToolButton.Text = "Settings";
-			this.settingsToolButton.Click += new System.EventHandler(this.openSettings);
+			this.settingsToolButton.Click += new System.EventHandler(this.showSettingsForm);
 			// 
 			// aboutToolButton
 			// 
@@ -1350,6 +1276,75 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 		#endregion
 
+		#region Windows Form Designer generated variables
+		/// <summary>
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
+
+		private System.Windows.Forms.MenuStrip menuStrip;
+		private System.Windows.Forms.ToolStripMenuItem fileMenu;
+		private System.Windows.Forms.ToolStripMenuItem openMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private System.Windows.Forms.ToolStripMenuItem saveMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem closeMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem newMenuItem;
+		private System.Windows.Forms.ToolStrip toolStrip;
+		private System.Windows.Forms.ToolStripButton newToolButton;
+		private System.Windows.Forms.ToolStripButton openToolButton;
+		private System.Windows.Forms.ToolStripButton saveToolButton;
+		private System.Windows.Forms.ToolStripButton closeToolButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripButton settingsToolButton;
+		private System.Windows.Forms.ToolStripButton aboutToolButton;
+		private System.Windows.Forms.ToolStripMenuItem helpMenu;
+		private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem toolsMenu;
+		private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+		private System.Windows.Forms.ToolStripMenuItem recentFilesMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem undoMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem redoMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+		private System.Windows.Forms.ToolStripMenuItem filePropertiesMenuItem;
+		private System.Windows.Forms.TabPage pluginsTab;
+		private System.Windows.Forms.CheckedListBox pluginsList;
+		private System.Windows.Forms.TabPage generalTab;
+		private System.Windows.Forms.SplitContainer splitContainer;
+		private System.Windows.Forms.Label labelScreenshot;
+		private System.Windows.Forms.TextBox saveName;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.MaskedTextBox ingameDate;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.DateTimePicker saveTime;
+		private System.Windows.Forms.PictureBox screenshot;
+		private System.Windows.Forms.Panel leftPanel;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Panel rightPanel;
+		private System.Windows.Forms.RadioButton maleSex;
+		private System.Windows.Forms.TextBox playerName;
+		private System.Windows.Forms.RadioButton femaleSex;
+		private System.Windows.Forms.ComboBox playerRace;
+		private System.Windows.Forms.NumericUpDown playerLevel;
+		private System.Windows.Forms.ProgressBar playerExperienceBar;
+		private System.Windows.Forms.NumericUpDown playerExperienceBox;
+		private System.Windows.Forms.TabControl tabControl;
+		private System.Windows.Forms.TabPage advancedTab;
+		private System.Windows.Forms.ListView advancedKeyValues;
+		private System.Windows.Forms.ColumnHeader advancedKeyHeader;
+		private System.Windows.Forms.ColumnHeader advancedValueHeader;
+		private System.Windows.Forms.ToolStripButton undoToolButton;
+		private System.Windows.Forms.ToolStripButton redoToolButton;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripMenuItem saveAsMenuItem;
 		private TabPage tabPage1;
 		private SplitContainer splitContainer1;
 		private TreeView treeView1;
@@ -1368,7 +1363,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private BrightIdeasSoftware.OLVColumn typeColumn;
 		private Button advancedFilterClear;
 		private TextBox advancedFilter;
-
+		#endregion
 	}
 }
 

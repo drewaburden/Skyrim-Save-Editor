@@ -27,8 +27,8 @@ namespace Skyrim_Save_Editor.Saves {
 			return fileTime;
 		}
 
-		public SaveFile.ScreenshotData ReadScreenshotData() {
-			SaveFile.ScreenshotData screenshotData = new SaveFile.ScreenshotData();
+		public ScreenshotData ReadScreenshotData() {
+			ScreenshotData screenshotData = new ScreenshotData();
 
 			screenshotData.shotWidth = ReadUInt32();
 			screenshotData.shotHeight = ReadUInt32();
@@ -47,13 +47,13 @@ namespace Skyrim_Save_Editor.Saves {
 			return screenshotData;
 		}
 
-		public SaveFile.MiscStat ReadMiscStat() {
+		public MiscStat ReadMiscStat() {
 			return ReadMiscStat(1)[0];
 		}
-		public SaveFile.MiscStat[] ReadMiscStat(int num) {
-			SaveFile.MiscStat[] miscStats = new SaveFile.MiscStat[num];
+		public MiscStat[] ReadMiscStat(int num) {
+			MiscStat[] miscStats = new MiscStat[num];
 			for (int elementIndex = 0; elementIndex < miscStats.Length; ++elementIndex) {
-				miscStats[elementIndex] = new SaveFile.MiscStat(ReadString());
+				miscStats[elementIndex] = new MiscStat(ReadString());
 				miscStats[elementIndex].Category = ReadByte();
 				miscStats[elementIndex].Value = ReadInt32();
 			}
@@ -71,8 +71,8 @@ namespace Skyrim_Save_Editor.Saves {
 			return plugins;
 		}
 
-		public SaveFile.RefID ReadRefID(String name) {
-			SaveFile.RefID refID = new SaveFile.RefID(name);
+		public RefID ReadRefID(String name) {
+			RefID refID = new RefID(name);
 			refID.formID = new Byte[3];
 
 			BaseStream.Read(refID.formID, 0, 3); // Read only 3 bytes into the buffer

@@ -79,15 +79,18 @@
     </Compile>
     <Compile Include="Forms\Main\Advanced\PopulateTree.cs" />
     <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
-    <Compile Include="Forms\Main\KeyHandling.cs" />
-    <Compile Include="Forms\Main\MainForm.cs" />
+    <Compile Include="Forms\Main\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Main\MouseHandling.cs" />
-    <Compile Include="Forms\Main\ControlDataHandler.cs" />
-    <Compile Include="Forms\Main\Actions.cs" />
-    <Compile Include="Forms\Main\ValueChangeHandling.cs" />
+    <Compile Include="Forms\Main\ControlDataHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\Actions.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Settings\LocaleComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -103,19 +106,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Saves\Data Types\FileLocationTable.cs" />
-    <Compile Include="Saves\Data Types\MiscStat.cs" />
-    <Compile Include="Saves\Data Types\MiscStats.cs" />
-    <Compile Include="Saves\Data Types\PlayerLocation.cs" />
-    <Compile Include="Saves\Data Types\PluginInfo.cs" />
-    <Compile Include="Saves\Data Types\RefID.cs" />
-    <Compile Include="Saves\TreeNode.cs" />
-    <Compile Include="Saves\SaveField.cs" />
+    <Compile Include="Saves\SaveSection\Types\FileLocationTable.cs" />
+    <Compile Include="Saves\SaveField\Types\MiscStat.cs" />
+    <Compile Include="Saves\SaveSection\Types\MiscStats.cs" />
+    <Compile Include="Saves\SaveSection\Types\PlayerLocation.cs" />
+    <Compile Include="Saves\SaveSection\Types\PluginInfo.cs" />
+    <Compile Include="Saves\SaveField\Types\RefID.cs" />
+    <Compile Include="Saves\SaveSection\SaveSection.cs" />
+    <Compile Include="Saves\SaveField\SaveField.cs" />
     <Compile Include="Saves\SaveReader.cs" />
-    <Compile Include="Saves\Data Types\ScreenshotData.cs" />
-    <Compile Include="Saves\Data Types\Header.cs" />
+    <Compile Include="Saves\SaveField\Types\ScreenshotData.cs" />
+    <Compile Include="Saves\SaveSection\Types\Header.cs" />
     <Compile Include="Saves\SaveFile.cs" />
-    <Compile Include="Saves\SaveFileDataTypes.cs" />
     <Compile Include="SkyrimSaveEditor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\About\AboutForm.resx">
@@ -184,7 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="Saves\Converters\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

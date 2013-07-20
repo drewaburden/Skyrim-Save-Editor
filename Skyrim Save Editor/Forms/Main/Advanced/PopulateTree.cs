@@ -10,22 +10,22 @@ namespace Skyrim_Save_Editor.Forms.Main.Advanced {
 		public TreeItem createTree(SaveFile save) {
 			TreeItem root = new TreeItem(save);
 			root.Children = new List<TreeItem>();
-			foreach (SaveFile.TreeNode node in save) {
+			foreach (SaveSection node in save.GetSections()) {
 				root.Children.Add(buildTree(root, node));
 			}
-			
+
 			return root;
 		}
-		public TreeItem buildTree(TreeItem tree, SaveFile.TreeNode saveBlock) {
+		public TreeItem buildTree(TreeItem tree, SaveSection saveBlock) {
 			tree.Children = new List<TreeItem>();
-			foreach (SaveFile.TreeNode node in saveBlock.GetNodes()) {
+			foreach (SaveSection node in saveBlock.GetSections()) {
 				TreeItem child = null;
 
 				foreach (TreeItem innerTree in tree.Children) {
 					child = buildTree(innerTree, node);
 					child.NodeData = node;
 				}
-				
+
 				tree.Children.Add(child);
 			}
 

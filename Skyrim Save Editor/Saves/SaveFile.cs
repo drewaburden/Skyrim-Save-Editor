@@ -11,17 +11,25 @@ using System.Diagnostics;
 
 namespace Skyrim_Save_Editor.Saves {
 	public enum Race {
-		AltmerRace, ArgonianRace, BosmerRace, BretonRace, DunmerRace, ImperialRace, KhajiitRace, NordRace, OrcRace, RedguardRace
+		AltmerRace,
+		ArgonianRace,
+		BosmerRace,
+		BretonRace,
+		DunmerRace,
+		ImperialRace,
+		KhajiitRace,
+		NordRace,
+		OrcRace,
+		RedguardRace
 	};
 
-	public partial class SaveFile : TreeNode {
-		public String blockName = "Save File";
-		public TreeNode header;
-		public TreeNode pluginInfo;
-		public TreeNode fileLocationTable;
-		public TreeNode miscStats;
-		public TreeNode playerLocation;
-		public TreeNode tes;
+	public partial class SaveFile : SaveSection {
+		public SaveSection header;
+		public SaveSection pluginInfo;
+		public SaveSection fileLocationTable;
+		public SaveSection miscStats;
+		public SaveSection playerLocation;
+		public SaveSection tes;
 
 		public SaveFile() {
 			header = new Header();
@@ -29,71 +37,34 @@ namespace Skyrim_Save_Editor.Saves {
 			fileLocationTable = new FileLocationTable();
 			miscStats = new MiscStats();
 			playerLocation = new PlayerLocation();
-			//tes = new TES();
 		}
-		public SaveFile create() {
-			return load(null);
-		}
-		public SaveFile load(String filename) {
-			FileStream file = null;
+		public SaveFile CreateNew() {
 			try {
-				ResourceManager resourceManager;
-				SaveReader saveReader;
-				Byte[] resource;
+				ResourceManager resourceManager = new ResourceManager("Skyrim_Save_Editor.Resources.Resource", Assembly.GetExecutingAssembly());
+				Byte[] resource = (Byte[]) resourceManager.GetObject("DefaultSave");
+				SaveReader saveReader = new SaveReader(new MemoryStream(resource));
 
-				if (filename == null) {
-					resourceManager = new ResourceManager("Skyrim_Save_Editor.Resources.Resource", Assembly.GetExecutingAssembly());
-					resource = (Byte[]) resourceManager.GetObject("DefaultSave");
-					saveReader = new SaveReader(new MemoryStream(resource));
-				}
-				else {
-					file = new FileStream(filename, FileMode.Open);
-					saveReader = new SaveReader(file);
-				}
-
-				(header as Header).loadFields(saveReader);
-				(pluginInfo as PluginInfo).loadFields(saveReader);
-				(fileLocationTable as FileLocationTable).loadFields(saveReader);
-				(miscStats as MiscStats).loadFields(saveReader);
-				(playerLocation as PlayerLocation).loadFields(saveReader);
-
-				/*loadTES(saveReader);
-				loadGlobalVariables(binaryReader);
-				loadCreatedObjects(binaryReader);
-				loadEffects(binaryReader);
-				loadWeather(binaryReader);
-				loadAudio(binaryReader);
-				loadSkyCells(binaryReader);
-				loadProcessLists(binaryReader);
-				loadCombat(binaryReader);
-				loadInterface(binaryReader);
-				loadActorCauses(binaryReader);
-				loadUnknown104(binaryReader);
-				loadDetectionManager(binaryReader);
-				loadLocationMetaData(binaryReader);
-				loadQuestStatic (binaryReader);
-				loadStoryTeller(binaryReader);
-				loadMagicFavorites(binaryReader);
-				loadPlayerControls(binaryReader);
-				loadStoryEvent (binaryReader);
-				loadIngredientShared(binaryReader);
-				loadMenuControls(binaryReader);
-				loadMenuTopicManager(binaryReader);
-				loadTempEffects(binaryReader);
-				loadPapyrus(binaryReader);
-				loadAnimObjects(binaryReader);
-				loadTimer(binaryReader);
-				loadSynchronizedAnimations(binaryReader);
-				loadMain(binaryReader);*/
+				Load(saveReader);
 			}
 			catch (Exception exception) {
 				/* todo: write custom error dialog */
-				if (filename == null) {
-					MessageBox.Show("Error accessing resources:\n" + exception.Message + "\n\n" + exception.StackTrace);
-				}
-				else {
-					MessageBox.Show("Error loading save file:\n" + exception.Message + "\n\n" + exception.StackTrace);
-				}
+				MessageBox.Show("Error accessing resources:\n" + exception.Message + "\n\n" + exception.StackTrace);
+				return default(SaveFile);
+			}
+
+			return this;
+		}
+		public SaveFile LoadFromFile(String filename) {
+			FileStream file = null;
+			try {
+				file = new FileStream(filename, FileMode.Open);
+				SaveReader saveReader = new SaveReader(file);
+
+				Load(saveReader);
+			}
+			catch (Exception exception) {
+				/* todo: write custom error dialog */
+				MessageBox.Show("Error loading save file:\n" + exception.Message + "\n\n" + exception.StackTrace);
 				return default(SaveFile);
 			}
 			finally {
@@ -105,14 +76,19 @@ namespace Skyrim_Save_Editor.Saves {
 			return this;
 		}
 
-		public IEnumerator GetEnumerator() {
-			return (new Object[5] {
-					header, pluginInfo, fileLocationTable, miscStats,
-					playerLocation
-				}).GetEnumerator();
+		public override void Load(SaveReader saveReader) {
+			(header as Header).Load(saveReader);
+			(pluginInfo as PluginInfo).Load(saveReader);
+			(fileLocationTable as FileLocationTable).Load(saveReader);
+			(miscStats as MiscStats).Load(saveReader);
+			(playerLocation as PlayerLocation).Load(saveReader);
 		}
-		public TreeNode[] GetNodes() {
-			return new TreeNode[5] {
+
+		public override SaveField[] GetValues() {
+			return new SaveField[0];
+		}
+		public override SaveSection[] GetSections() {
+			return new SaveSection[5] {
 					header, pluginInfo, fileLocationTable, miscStats,
 					playerLocation
 			};
