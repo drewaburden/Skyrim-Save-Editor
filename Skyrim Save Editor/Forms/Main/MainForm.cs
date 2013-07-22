@@ -22,10 +22,21 @@ namespace Skyrim_Save_Editor.Forms.Main {
 	public partial class MainForm : Form {
 		private SaveFile activeSave;
 		private SaveFile saveDiff; // Changes made that are different from the originally loaded save will be stored here
+		private TreeListViewFilter filter;
 
 		#region Constructor/Destructor
 		public MainForm() {
 			InitializeComponent();
+
+			filter = new TreeListViewFilter(advancedFilter.Text);
+			this.fieldListView.ModelFilter = new ModelFilter(delegate(object x) {
+				if (filter.IsFiltering) {
+					return ((SaveField) x).Key.Contains(advancedFilter.Text);
+				}
+				else {
+					return true;
+				}
+			});
 
 			this.treeListView.CanExpandGetter = delegate(object x) {
 				return (x as TreeItem).Children != null && (x as TreeItem).Children.Count > 0;
@@ -96,6 +107,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				return String.Format("{0}", x);
 			};
 			fieldListView.CellEditStarting += delegate(object sender, CellEditEventArgs e) {
+				// saveTime DateTimePicker
 				if (e.Value is DateTime) {
 					DateTimePicker picker = new DateTimePicker();
 					picker.CustomFormat = "ddd, MMM dd, yyyy h:mmtt";
@@ -104,6 +116,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					picker.Value = (DateTime) e.Value;
 					e.Control = picker;
 				}
+				// ScreenshotData not editable
 				else if (e.Value is ScreenshotData || e.Value is Byte) {
 					Label label = new Label();
 					label.Text = "Value not editable.";
@@ -111,6 +124,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					label.Bounds = e.CellBounds;
 					e.Control = label;
 				}
+				// gameDate MaskedTextBox
 				else if (e.Value is String && (e.RowObject as SaveField<String>).Key == "gameDate") {
 					MaskedTextBox masked = new MaskedTextBox();
 					masked.Mask = "000.00.00";
@@ -119,6 +133,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					masked.Bounds = e.CellBounds;
 					e.Control = masked;
 				}
+				// playerRace ComboBox
 				else if (e.Value is String && (e.RowObject as SaveField<String>).Key == "playerRace") {
 					ComboBox race = new ComboBox();
 					race.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -134,8 +149,16 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					race.Bounds = e.CellBounds;
 					e.Control = race;
 				}
+				// RefID HexBox
+				else if (e.Value is String && (e.RowObject as SaveField<String>).Type == "RefID") {
+					HexBox hexbox = new HexBox();
+					hexbox.Text = (e.RowObject as SaveField<String>).Value.Substring(2);
+					hexbox.Bounds = e.CellBounds;
+					e.Control = hexbox;
+				}
 			};
 			fieldListView.CellEditFinishing += delegate(object x, CellEditEventArgs e) {
+				// Make sure the gameDate is correctly padded
 				if (!e.Cancel && e.Value is String &&
 					(e.RowObject as SaveField<String>).Key == "gameDate") {
 					String value = e.NewValue as String;
@@ -143,6 +166,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					value = value.PadRight(9, '0');
 					e.NewValue = (Object) value;
 				}
+				// Convert playerRace combo box selection to text
 				else if (!e.Cancel && e.Value is String &&
 					(e.RowObject as SaveField<String>).Key == "playerRace") {
 					String value = e.NewValue as String;
@@ -204,20 +228,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		#region Key Handling
 		// Todo: Separate all Advanced tab filtering methods into their own custom component class.
 		void advancedFilter_KeyUp(Object sender, KeyEventArgs e) {
-			/*foreach (ListViewItem item in advancedKeyValues.Items) {
-				if (!item.Text.ToLower().Contains(advancedFilter.Text.ToLower())) {
-					removedListViewItems.Add(item.Clone());
-					item.Remove();
-				}
-			}
-			for (int itemIndex = 0; itemIndex < removedListViewItems.Count; ++itemIndex) {
-				ListViewItem item = (ListViewItem) removedListViewItems[itemIndex];
-				if (item.Text.ToLower().Contains(advancedFilter.Text.ToLower())) {
-					advancedKeyValues.Items.Add((ListViewItem) item.Clone());
-					removedListViewItems.Remove(item);
-					--itemIndex;
-				}
-			}*/
+			treeListView.UpdateColumnFiltering();
 		}
 
 		private void MainForm_KeyDown(Object sender, System.Windows.Forms.KeyEventArgs e) {
@@ -250,34 +261,22 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 		#region Mouse Handling
 		// Todo: Separate all Advanced tab filtering methods into their own custom component class.
-		void advancedKeyValues_MouseDoubleClick(Object sender, MouseEventArgs e) {
-			/*KeyEditForm keyEditForm = new KeyEditForm(advancedKeyValues.SelectedItems[0]);
-			keyEditForm.ShowDialog(this);*/
-		}
 		void advancedFilter_Enter(Object sender, EventArgs e) {
-			if (advancedFilter.ForeColor == SystemColors.InactiveCaptionText) {
+			if (!filter.IsFiltering) {
 				advancedFilter.Text = "";
 				advancedFilter.ForeColor = SystemColors.WindowText;
-				advancedFilterClear.Enabled = true;
+				clearButton.ButtonEnabled = true;
+				filter.IsFiltering = true;
 			}
 		}
 		void advancedFilter_Leave(Object sender, EventArgs e) {
 			if (advancedFilter.Text == "") {
-				advancedFilter.ForeColor = SystemColors.InactiveCaptionText;
-				advancedFilter.Text = "Filter...";
-				advancedFilterClear.Enabled = false;
+				advancedFilter.ForeColor = Color.Gray;
+				advancedFilter.Text = "Key filter...";
+				clearButton.ButtonEnabled = false;
+				filter.IsFiltering = false;
 			}
 		}
-		void buttonAdvancedClear_Click(Object sender, EventArgs e) {
-			advancedFilter.ForeColor = SystemColors.InactiveCaptionText;
-			advancedFilter.Text = "Filter...";
-			/*foreach (ListViewItem item in removedListViewItems) {
-				advancedKeyValues.Items.Add((ListViewItem)item.Clone());
-			}
-			removedListViewItems.Clear();*/
-			advancedFilterClear.Enabled = false;
-		}
-
 		private void treeListView_SelectedIndexChanged(object sender, EventArgs e) {
 			fieldListView.ClearObjects();
 			if (treeListView.SelectedObject is TreeItem) {
@@ -341,8 +340,16 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			}
 		}
 
-		private void buttonAdvancedClear_Click(object sender, MouseEventArgs e) {
-
+		private void clearButton_Click(object sender, EventArgs e) {
+			advancedFilter.ForeColor = Color.Gray;
+			advancedFilter.Text = "Key filter...";
+			/*foreach (ListViewItem item in removedListViewItems) {
+				advancedKeyValues.Items.Add((ListViewItem)item.Clone());
+			}
+			removedListViewItems.Clear();*/
+			clearButton.ButtonEnabled = false;
+			filter.IsFiltering = false;
+			clearButton.Focus();
 		}
 	}
 }

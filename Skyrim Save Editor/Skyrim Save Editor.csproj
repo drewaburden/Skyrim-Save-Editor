@@ -79,6 +79,15 @@
     </Compile>
     <Compile Include="Forms\Main\Advanced\TreeBuilder.cs" />
     <Compile Include="Forms\Main\Advanced\TreeItem.cs" />
+    <Compile Include="Forms\Main\Controls\ClearButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\Controls\ClearButton.Designer.cs">
+      <DependentUpon>ClearButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Main\LineRenderer.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -94,6 +103,7 @@
     <Compile Include="Forms\Main\Actions.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Main\TreeListViewFilter.cs" />
     <Compile Include="Forms\Settings\LocaleComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -128,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeyEdit\KeyEditForm.resx">
       <DependentUpon>KeyEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\Controls\ClearButton.resx">
+      <DependentUpon>ClearButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

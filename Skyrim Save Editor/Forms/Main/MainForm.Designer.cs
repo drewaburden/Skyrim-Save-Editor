@@ -20,7 +20,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "test",
             "test",
             "test",
@@ -58,26 +58,26 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsToolButton = new System.Windows.Forms.ToolStripButton();
 			this.aboutToolButton = new System.Windows.Forms.ToolStripButton();
 			this.treeImageList = new System.Windows.Forms.ImageList(this.components);
-			this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
+			this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeImageList = new System.Windows.Forms.ImageList(this.components);
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.advancedFilterClear = new System.Windows.Forms.Button();
-			this.advancedFilter = new System.Windows.Forms.TextBox();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.treeListView = new BrightIdeasSoftware.TreeListView();
-			this.treeColumn = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
+			this.treeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.fieldListView = new BrightIdeasSoftware.ObjectListView();
-			this.typeImageColumn = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
-			this.typeColumn = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
-			this.keyColumn = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
-			this.valueColumn = ((BrightIdeasSoftware.OLVColumn) (new BrightIdeasSoftware.OLVColumn()));
+			this.typeImageColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.typeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.keyColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.valueColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.listView1 = new System.Windows.Forms.ListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader) (new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader) (new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader) (new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader) (new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.advancedFilter = new System.Windows.Forms.TextBox();
+			this.clearButtonImageList = new System.Windows.Forms.ImageList(this.components);
 			this.pluginsTab = new System.Windows.Forms.TabPage();
 			this.pluginsList = new System.Windows.Forms.CheckedListBox();
 			this.generalTab = new System.Windows.Forms.TabPage();
@@ -105,27 +105,28 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.playerExperienceBar = new System.Windows.Forms.ProgressBar();
 			this.playerExperienceBox = new System.Windows.Forms.NumericUpDown();
 			this.tabControl = new System.Windows.Forms.TabControl();
+			this.clearButton = new Skyrim_Save_Editor.Forms.Main.Controls.ClearButton();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			this.contextMenuStrip.SuspendLayout();
 			this.tabPage1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize) (this.splitContainer1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize) (this.treeListView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize) (this.fieldListView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.treeListView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.fieldListView)).BeginInit();
 			this.pluginsTab.SuspendLayout();
 			this.generalTab.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize) (this.splitContainer)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
 			this.splitContainer.Panel1.SuspendLayout();
 			this.splitContainer.Panel2.SuspendLayout();
 			this.splitContainer.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize) (this.screenshot)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.screenshot)).BeginInit();
 			this.leftPanel.SuspendLayout();
 			this.rightPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize) (this.playerLevel)).BeginInit();
-			((System.ComponentModel.ISupportInitialize) (this.playerExperienceBox)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.playerLevel)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.playerExperienceBox)).BeginInit();
 			this.tabControl.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -160,7 +161,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// newMenuItem
 			// 
-			this.newMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("newMenuItem.Image")));
+			this.newMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newMenuItem.Image")));
 			this.newMenuItem.Name = "newMenuItem";
 			this.newMenuItem.ShortcutKeyDisplayString = "Ctrl+N";
 			this.newMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -169,7 +170,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// openMenuItem
 			// 
-			this.openMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("openMenuItem.Image")));
+			this.openMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openMenuItem.Image")));
 			this.openMenuItem.Name = "openMenuItem";
 			this.openMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
 			this.openMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -179,7 +180,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// saveMenuItem
 			// 
 			this.saveMenuItem.Enabled = false;
-			this.saveMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("saveMenuItem.Image")));
+			this.saveMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveMenuItem.Image")));
 			this.saveMenuItem.Name = "saveMenuItem";
 			this.saveMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
 			this.saveMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -188,7 +189,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// saveAsMenuItem
 			// 
 			this.saveAsMenuItem.Enabled = false;
-			this.saveAsMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("saveAsMenuItem.Image")));
+			this.saveAsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveAsMenuItem.Image")));
 			this.saveAsMenuItem.Name = "saveAsMenuItem";
 			this.saveAsMenuItem.ShortcutKeyDisplayString = "Ctrl+Shift+S";
 			this.saveAsMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -197,7 +198,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// closeMenuItem
 			// 
 			this.closeMenuItem.Enabled = false;
-			this.closeMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("closeMenuItem.Image")));
+			this.closeMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("closeMenuItem.Image")));
 			this.closeMenuItem.Name = "closeMenuItem";
 			this.closeMenuItem.ShortcutKeyDisplayString = "Ctrl+W";
 			this.closeMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -222,7 +223,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// exitMenuItem
 			// 
-			this.exitMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("exitMenuItem.Image")));
+			this.exitMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitMenuItem.Image")));
 			this.exitMenuItem.Name = "exitMenuItem";
 			this.exitMenuItem.ShortcutKeyDisplayString = "Alt+F4";
 			this.exitMenuItem.Size = new System.Drawing.Size(193, 22);
@@ -242,7 +243,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// undoMenuItem
 			// 
-			this.undoMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("undoMenuItem.Image")));
+			this.undoMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("undoMenuItem.Image")));
 			this.undoMenuItem.Name = "undoMenuItem";
 			this.undoMenuItem.ShortcutKeyDisplayString = "Ctrl+Z";
 			this.undoMenuItem.Size = new System.Drawing.Size(148, 22);
@@ -250,7 +251,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// redoMenuItem
 			// 
-			this.redoMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("redoMenuItem.Image")));
+			this.redoMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("redoMenuItem.Image")));
 			this.redoMenuItem.Name = "redoMenuItem";
 			this.redoMenuItem.ShortcutKeyDisplayString = "Ctrl+Y";
 			this.redoMenuItem.Size = new System.Drawing.Size(148, 22);
@@ -263,7 +264,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// filePropertiesMenuItem
 			// 
-			this.filePropertiesMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("filePropertiesMenuItem.Image")));
+			this.filePropertiesMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("filePropertiesMenuItem.Image")));
 			this.filePropertiesMenuItem.Name = "filePropertiesMenuItem";
 			this.filePropertiesMenuItem.Size = new System.Drawing.Size(148, 22);
 			this.filePropertiesMenuItem.Text = "File Properties";
@@ -278,7 +279,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// settingsMenuItem
 			// 
-			this.settingsMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("settingsMenuItem.Image")));
+			this.settingsMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("settingsMenuItem.Image")));
 			this.settingsMenuItem.Name = "settingsMenuItem";
 			this.settingsMenuItem.ShortcutKeyDisplayString = "Ctrl+P";
 			this.settingsMenuItem.Size = new System.Drawing.Size(157, 22);
@@ -295,7 +296,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// aboutMenuItem
 			// 
-			this.aboutMenuItem.Image = ((System.Drawing.Image) (resources.GetObject("aboutMenuItem.Image")));
+			this.aboutMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutMenuItem.Image")));
 			this.aboutMenuItem.Name = "aboutMenuItem";
 			this.aboutMenuItem.Size = new System.Drawing.Size(107, 22);
 			this.aboutMenuItem.Text = "About";
@@ -330,7 +331,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// newToolButton
 			// 
 			this.newToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.newToolButton.Image = ((System.Drawing.Image) (resources.GetObject("newToolButton.Image")));
+			this.newToolButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolButton.Image")));
 			this.newToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.newToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.newToolButton.Name = "newToolButton";
@@ -341,7 +342,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// openToolButton
 			// 
 			this.openToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.openToolButton.Image = ((System.Drawing.Image) (resources.GetObject("openToolButton.Image")));
+			this.openToolButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolButton.Image")));
 			this.openToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.openToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.openToolButton.Name = "openToolButton";
@@ -353,7 +354,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			this.saveToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.saveToolButton.Enabled = false;
-			this.saveToolButton.Image = ((System.Drawing.Image) (resources.GetObject("saveToolButton.Image")));
+			this.saveToolButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolButton.Image")));
 			this.saveToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.saveToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.saveToolButton.Name = "saveToolButton";
@@ -364,7 +365,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			this.closeToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.closeToolButton.Enabled = false;
-			this.closeToolButton.Image = ((System.Drawing.Image) (resources.GetObject("closeToolButton.Image")));
+			this.closeToolButton.Image = ((System.Drawing.Image)(resources.GetObject("closeToolButton.Image")));
 			this.closeToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.closeToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.closeToolButton.Name = "closeToolButton";
@@ -381,7 +382,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// undoToolButton
 			// 
 			this.undoToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.undoToolButton.Image = ((System.Drawing.Image) (resources.GetObject("undoToolButton.Image")));
+			this.undoToolButton.Image = ((System.Drawing.Image)(resources.GetObject("undoToolButton.Image")));
 			this.undoToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.undoToolButton.Name = "undoToolButton";
 			this.undoToolButton.Size = new System.Drawing.Size(23, 22);
@@ -390,7 +391,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// redoToolButton
 			// 
 			this.redoToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.redoToolButton.Image = ((System.Drawing.Image) (resources.GetObject("redoToolButton.Image")));
+			this.redoToolButton.Image = ((System.Drawing.Image)(resources.GetObject("redoToolButton.Image")));
 			this.redoToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.redoToolButton.Name = "redoToolButton";
 			this.redoToolButton.Size = new System.Drawing.Size(23, 22);
@@ -404,7 +405,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// settingsToolButton
 			// 
 			this.settingsToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.settingsToolButton.Image = ((System.Drawing.Image) (resources.GetObject("settingsToolButton.Image")));
+			this.settingsToolButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsToolButton.Image")));
 			this.settingsToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.settingsToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.settingsToolButton.Name = "settingsToolButton";
@@ -415,7 +416,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// aboutToolButton
 			// 
 			this.aboutToolButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.aboutToolButton.Image = ((System.Drawing.Image) (resources.GetObject("aboutToolButton.Image")));
+			this.aboutToolButton.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolButton.Image")));
 			this.aboutToolButton.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.aboutToolButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
 			this.aboutToolButton.Name = "aboutToolButton";
@@ -425,7 +426,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// treeImageList
 			// 
-			this.treeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer) (resources.GetObject("treeImageList.ImageStream")));
+			this.treeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("treeImageList.ImageStream")));
 			this.treeImageList.TransparentColor = System.Drawing.Color.Transparent;
 			this.treeImageList.Images.SetKeyName(0, "tree_red.png");
 			this.treeImageList.Images.SetKeyName(1, "bricks.png");
@@ -448,6 +449,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.olvColumn4.Sortable = false;
 			this.olvColumn4.Text = "Description";
 			this.olvColumn4.Width = 440;
+			this.keyColumn.UseFiltering = true;
 			// 
 			// contextMenuStrip
 			// 
@@ -467,7 +469,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// typeImageList
 			// 
-			this.typeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer) (resources.GetObject("typeImageList.ImageStream")));
+			this.typeImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("typeImageList.ImageStream")));
 			this.typeImageList.TransparentColor = System.Drawing.Color.Transparent;
 			this.typeImageList.Images.SetKeyName(0, "String");
 			this.typeImageList.Images.SetKeyName(1, "Image");
@@ -481,9 +483,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// tabPage1
 			// 
-			this.tabPage1.Controls.Add(this.advancedFilterClear);
-			this.tabPage1.Controls.Add(this.advancedFilter);
+			this.tabPage1.Controls.Add(this.clearButton);
 			this.tabPage1.Controls.Add(this.splitContainer1);
+			this.tabPage1.Controls.Add(this.advancedFilter);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -492,44 +494,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.tabPage1.Text = "Advanced";
 			this.tabPage1.UseVisualStyleBackColor = true;
 			// 
-			// advancedFilterClear
-			// 
-			this.advancedFilterClear.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.advancedFilterClear.BackColor = System.Drawing.SystemColors.ButtonFace;
-			this.advancedFilterClear.Enabled = false;
-			this.advancedFilterClear.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-			this.advancedFilterClear.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ScrollBar;
-			this.advancedFilterClear.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.advancedFilterClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.advancedFilterClear.Image = ((System.Drawing.Image) (resources.GetObject("advancedFilterClear.Image")));
-			this.advancedFilterClear.Location = new System.Drawing.Point(635, 3);
-			this.advancedFilterClear.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
-			this.advancedFilterClear.Name = "advancedFilterClear";
-			this.advancedFilterClear.Size = new System.Drawing.Size(20, 20);
-			this.advancedFilterClear.TabIndex = 8;
-			this.advancedFilterClear.UseVisualStyleBackColor = false;
-			this.advancedFilterClear.MouseClick += new System.Windows.Forms.MouseEventHandler(this.buttonAdvancedClear_Click);
-			// 
-			// advancedFilter
-			// 
-			this.advancedFilter.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
-			this.advancedFilter.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-			this.advancedFilter.Location = new System.Drawing.Point(3, 3);
-			this.advancedFilter.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-			this.advancedFilter.Name = "advancedFilter";
-			this.advancedFilter.Size = new System.Drawing.Size(633, 20);
-			this.advancedFilter.TabIndex = 7;
-			this.advancedFilter.Text = "Filter...";
-			this.advancedFilter.Enter += new System.EventHandler(this.advancedFilter_Enter);
-			this.advancedFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.advancedFilter_KeyUp);
-			this.advancedFilter.Leave += new System.EventHandler(this.advancedFilter_Leave);
-			// 
 			// splitContainer1
 			// 
-			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
 			this.splitContainer1.Location = new System.Drawing.Point(3, 29);
 			this.splitContainer1.Name = "splitContainer1";
@@ -553,17 +522,28 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.treeColumn});
 			this.treeListView.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.treeListView.HeaderMaximumHeight = 0;
 			this.treeListView.Location = new System.Drawing.Point(0, 0);
+			this.treeListView.MultiSelect = false;
 			this.treeListView.Name = "treeListView";
 			this.treeListView.OwnerDraw = true;
+			this.treeListView.RowHeight = 17;
+			this.treeListView.SelectColumnsOnRightClick = false;
+			this.treeListView.SelectColumnsOnRightClickBehaviour = BrightIdeasSoftware.ObjectListView.ColumnSelectBehaviour.None;
+			this.treeListView.ShowFilterMenuOnRightClick = false;
 			this.treeListView.ShowGroups = false;
 			this.treeListView.Size = new System.Drawing.Size(175, 253);
 			this.treeListView.SmallImageList = this.treeImageList;
 			this.treeListView.TabIndex = 0;
 			this.treeListView.UseCompatibleStateImageBehavior = false;
+			this.treeListView.UseExplorerTheme = true;
+			this.treeListView.UseFiltering = true;
+			this.treeListView.UseHotItem = true;
+			this.treeListView.UseOverlays = false;
+			this.treeListView.UseTranslucentHotItem = true;
+			this.treeListView.UseTranslucentSelection = true;
 			this.treeListView.View = System.Windows.Forms.View.Details;
 			this.treeListView.VirtualMode = true;
-			this.treeListView.MultiSelect = false;
 			this.treeListView.SelectedIndexChanged += new System.EventHandler(this.treeListView_SelectedIndexChanged);
 			// 
 			// treeColumn
@@ -574,10 +554,11 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeColumn.Hideable = false;
 			this.treeColumn.IsEditable = false;
 			this.treeColumn.IsVisible = false;
-			this.treeColumn.Searchable = false;
 			this.treeColumn.ShowTextInHeader = false;
 			this.treeColumn.Sortable = false;
 			this.treeColumn.Text = "";
+			this.treeColumn.Width = 0;
+			this.treeColumn.UseFiltering = true;
 			// 
 			// fieldListView
 			// 
@@ -588,23 +569,32 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.fieldListView.AllColumns.Add(this.olvColumn4);
 			this.fieldListView.AllowColumnReorder = true;
 			this.fieldListView.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
+			this.fieldListView.CellEditTabChangesRows = true;
 			this.fieldListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.typeImageColumn,
             this.typeColumn,
             this.keyColumn,
             this.valueColumn});
 			this.fieldListView.ContextMenuStrip = this.contextMenuStrip;
+			this.fieldListView.Cursor = System.Windows.Forms.Cursors.Default;
 			this.fieldListView.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.fieldListView.FullRowSelect = true;
 			this.fieldListView.Location = new System.Drawing.Point(0, 0);
+			this.fieldListView.MultiSelect = false;
 			this.fieldListView.Name = "fieldListView";
 			this.fieldListView.RowHeight = 20;
+			this.fieldListView.ShowFilterMenuOnRightClick = false;
 			this.fieldListView.ShowGroups = false;
 			this.fieldListView.Size = new System.Drawing.Size(473, 253);
 			this.fieldListView.SmallImageList = this.typeImageList;
 			this.fieldListView.TabIndex = 7;
-			this.fieldListView.MultiSelect = false;
 			this.fieldListView.UseCompatibleStateImageBehavior = false;
+			this.fieldListView.UseExplorerTheme = true;
+			this.fieldListView.UseFiltering = true;
+			this.fieldListView.UseHotItem = true;
+			this.fieldListView.UseOverlays = false;
+			this.fieldListView.UseTranslucentHotItem = true;
+			this.fieldListView.UseTranslucentSelection = true;
 			this.fieldListView.View = System.Windows.Forms.View.Details;
 			// 
 			// typeImageColumn
@@ -625,6 +615,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.typeColumn.IsEditable = false;
 			this.typeColumn.Text = "Type";
 			this.typeColumn.Width = 81;
+			this.keyColumn.UseFiltering = true;
 			// 
 			// keyColumn
 			// 
@@ -633,6 +624,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.keyColumn.IsEditable = false;
 			this.keyColumn.Text = "Key";
 			this.keyColumn.Width = 113;
+			this.keyColumn.UseFiltering = true;
 			// 
 			// valueColumn
 			// 
@@ -642,6 +634,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.valueColumn.Sortable = false;
 			this.valueColumn.Text = "Value";
 			this.valueColumn.Width = 149;
+			this.keyColumn.UseFiltering = true;
 			// 
 			// listView1
 			// 
@@ -654,7 +647,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.listView1.FullRowSelect = true;
 			this.listView1.GridLines = true;
 			this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
 			this.listView1.Location = new System.Drawing.Point(0, 0);
 			this.listView1.Name = "listView1";
 			this.listView1.ShowGroups = false;
@@ -683,6 +676,30 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.columnHeader4.Text = "Description";
 			this.columnHeader4.Width = 206;
 			// 
+			// advancedFilter
+			// 
+			this.advancedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.advancedFilter.ForeColor = System.Drawing.Color.Gray;
+			this.advancedFilter.Location = new System.Drawing.Point(3, 3);
+			this.advancedFilter.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+			this.advancedFilter.Name = "advancedFilter";
+			this.advancedFilter.Size = new System.Drawing.Size(652, 20);
+			this.advancedFilter.TabIndex = 7;
+			this.advancedFilter.Text = "Key filter...";
+			this.advancedFilter.Enter += new System.EventHandler(this.advancedFilter_Enter);
+			this.advancedFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.advancedFilter_KeyUp);
+			this.advancedFilter.Leave += new System.EventHandler(this.advancedFilter_Leave);
+			// 
+			// clearButtonImageList
+			// 
+			this.clearButtonImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("clearButtonImageList.ImageStream")));
+			this.clearButtonImageList.TransparentColor = System.Drawing.Color.Transparent;
+			this.clearButtonImageList.Images.SetKeyName(0, "cross8-disabled.png");
+			this.clearButtonImageList.Images.SetKeyName(1, "cross8.png");
+			this.clearButtonImageList.Images.SetKeyName(2, "cross8-over.png");
+			this.clearButtonImageList.Images.SetKeyName(3, "cross8-down.png");
+			// 
 			// pluginsTab
 			// 
 			this.pluginsTab.Controls.Add(this.pluginsList);
@@ -696,9 +713,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// pluginsList
 			// 
-			this.pluginsList.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.pluginsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pluginsList.CheckOnClick = true;
 			this.pluginsList.FormattingEnabled = true;
 			this.pluginsList.Location = new System.Drawing.Point(3, 4);
@@ -751,7 +768,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			this.labelScreenshot.Anchor = System.Windows.Forms.AnchorStyles.Top;
 			this.labelScreenshot.BackColor = System.Drawing.SystemColors.Control;
-			this.labelScreenshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+			this.labelScreenshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelScreenshot.Location = new System.Drawing.Point(7, 9);
 			this.labelScreenshot.Name = "labelScreenshot";
 			this.labelScreenshot.Size = new System.Drawing.Size(310, 182);
@@ -761,8 +778,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// saveName
 			// 
-			this.saveName.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.saveName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.saveName.Location = new System.Drawing.Point(83, 202);
 			this.saveName.Name = "saveName";
 			this.saveName.ReadOnly = true;
@@ -790,8 +807,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// ingameDate
 			// 
-			this.ingameDate.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.ingameDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.ingameDate.Location = new System.Drawing.Point(83, 254);
 			this.ingameDate.Mask = "000-00-00";
 			this.ingameDate.Name = "ingameDate";
@@ -809,8 +826,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// saveTime
 			// 
-			this.saveTime.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.saveTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.saveTime.CustomFormat = "ddd, MMM dd, yyyy h:mmtt";
 			this.saveTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
 			this.saveTime.Location = new System.Drawing.Point(83, 228);
@@ -844,7 +861,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// label1
 			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.AutoSize = true;
 			this.label1.Location = new System.Drawing.Point(3, 9);
 			this.label1.Name = "label1";
@@ -854,7 +871,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// label2
 			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label2.AutoSize = true;
 			this.label2.Location = new System.Drawing.Point(3, 34);
 			this.label2.Name = "label2";
@@ -864,7 +881,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// label3
 			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label3.AutoSize = true;
 			this.label3.Location = new System.Drawing.Point(3, 61);
 			this.label3.Name = "label3";
@@ -874,7 +891,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// label4
 			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label4.AutoSize = true;
 			this.label4.Location = new System.Drawing.Point(3, 88);
 			this.label4.Name = "label4";
@@ -884,7 +901,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// label5
 			// 
-			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label5.AutoSize = true;
 			this.label5.Location = new System.Drawing.Point(3, 114);
 			this.label5.Name = "label5";
@@ -909,8 +926,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// maleSex
 			// 
-			this.maleSex.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.maleSex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.maleSex.AutoSize = true;
 			this.maleSex.Location = new System.Drawing.Point(78, 112);
 			this.maleSex.Name = "maleSex";
@@ -923,8 +940,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// playerName
 			// 
-			this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerName.Location = new System.Drawing.Point(78, 6);
 			this.playerName.Name = "playerName";
 			this.playerName.Size = new System.Drawing.Size(244, 20);
@@ -945,8 +962,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// playerRace
 			// 
-			this.playerRace.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.playerRace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerRace.DisplayMember = "1";
 			this.playerRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.playerRace.FormattingEnabled = true;
@@ -969,8 +986,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// playerLevel
 			// 
-			this.playerLevel.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.playerLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerLevel.Location = new System.Drawing.Point(78, 32);
 			this.playerLevel.Name = "playerLevel";
 			this.playerLevel.Size = new System.Drawing.Size(244, 20);
@@ -980,8 +997,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// playerExperienceBar
 			// 
-			this.playerExperienceBar.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.playerExperienceBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerExperienceBar.Location = new System.Drawing.Point(78, 60);
 			this.playerExperienceBar.Name = "playerExperienceBar";
 			this.playerExperienceBar.Size = new System.Drawing.Size(171, 17);
@@ -991,7 +1008,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// playerExperienceBox
 			// 
-			this.playerExperienceBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.playerExperienceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.playerExperienceBox.Location = new System.Drawing.Point(255, 59);
 			this.playerExperienceBox.Name = "playerExperienceBox";
 			this.playerExperienceBox.Size = new System.Drawing.Size(67, 20);
@@ -1001,9 +1018,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			// tabControl
 			// 
-			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tabControl.Controls.Add(this.generalTab);
 			this.tabControl.Controls.Add(this.pluginsTab);
 			this.tabControl.Controls.Add(this.tabPage1);
@@ -1015,6 +1032,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.tabControl.TabIndex = 0;
 			this.tabControl.Visible = false;
 			// 
+			// clearButton
+			// 
+			this.clearButton.ButtonEnabled = false;
+			this.clearButton.Location = new System.Drawing.Point(635, 4);
+			this.clearButton.Name = "clearButton";
+			this.clearButton.Size = new System.Drawing.Size(18, 18);
+			this.clearButton.TabIndex = 8;
+			this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1024,7 +1050,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.Controls.Add(this.toolStrip);
 			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.menuStrip);
-			this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
 			this.MainMenuStrip = this.menuStrip;
 			this.MinimumSize = new System.Drawing.Size(682, 400);
@@ -1041,24 +1067,24 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.tabPage1.PerformLayout();
 			this.splitContainer1.Panel1.ResumeLayout(false);
 			this.splitContainer1.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize) (this.splitContainer1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize) (this.treeListView)).EndInit();
-			((System.ComponentModel.ISupportInitialize) (this.fieldListView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.treeListView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.fieldListView)).EndInit();
 			this.pluginsTab.ResumeLayout(false);
 			this.generalTab.ResumeLayout(false);
 			this.splitContainer.Panel1.ResumeLayout(false);
 			this.splitContainer.Panel1.PerformLayout();
 			this.splitContainer.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize) (this.splitContainer)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
 			this.splitContainer.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize) (this.screenshot)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.screenshot)).EndInit();
 			this.leftPanel.ResumeLayout(false);
 			this.leftPanel.PerformLayout();
 			this.rightPanel.ResumeLayout(false);
 			this.rightPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize) (this.playerLevel)).EndInit();
-			((System.ComponentModel.ISupportInitialize) (this.playerExperienceBox)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.playerLevel)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.playerExperienceBox)).EndInit();
 			this.tabControl.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -1113,7 +1139,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private ContextMenuStrip contextMenuStrip;
 		private ToolStripMenuItem toolStripMenuItem4;
 		private TabPage tabPage1;
-		private Button advancedFilterClear;
 		private TextBox advancedFilter;
 		private SplitContainer splitContainer1;
 		private BrightIdeasSoftware.TreeListView treeListView;
@@ -1155,6 +1180,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private ProgressBar playerExperienceBar;
 		private NumericUpDown playerExperienceBox;
 		private TabControl tabControl;
+		private ImageList clearButtonImageList;
+		private Controls.ClearButton clearButton;
 	}
 }
 
