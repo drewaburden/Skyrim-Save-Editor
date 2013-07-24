@@ -88,12 +88,12 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("TrajanusBricks", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(52, 12);
+			this.label1.Font = new System.Drawing.Font("Century Schoolbook", 16.25F);
+			this.label1.Location = new System.Drawing.Point(50, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(229, 22);
+			this.label1.Size = new System.Drawing.Size(215, 27);
 			this.label1.TabIndex = 4;
-			this.label1.Text = "skyrim save editor";
+			this.label1.Text = "Skyrim Save Editor";
 			// 
 			// richTextBox1
 			// 
