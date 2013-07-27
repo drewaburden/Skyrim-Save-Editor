@@ -88,10 +88,10 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Century Schoolbook", 16.25F);
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
 			this.label1.Location = new System.Drawing.Point(50, 9);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(215, 27);
+			this.label1.Size = new System.Drawing.Size(199, 26);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "Skyrim Save Editor";
 			// 
@@ -107,7 +107,35 @@
 			this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
 			this.richTextBox1.Size = new System.Drawing.Size(354, 161);
 			this.richTextBox1.TabIndex = 0;
-			this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 12.00F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "Credits:\n";
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "Programmer, UI Designer\n";
+			this.richTextBox1.SelectionIndent = 25;
+			this.richTextBox1.SelectedText = "Drew Burden\n";
+			this.richTextBox1.SelectionIndent = 0;
+			this.richTextBox1.SelectedText = "Icon Set\n";
+			this.richTextBox1.SelectionIndent = 25;
+			this.richTextBox1.SelectedText = "FatCow.com\n" +
+				  "http://www.fatcow.com/free-icons\n" +
+				  "License: Creative Commons Attributions 3.0\n\n";
+			this.richTextBox1.SelectionIndent = 0;
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 12.00F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "Copyright:\n";
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "All work is copyright of Drew Burden, with the exception of:\n";
+			this.richTextBox1.BulletIndent = 10;
+			this.richTextBox1.SelectionIndent = 25;
+			this.richTextBox1.SelectionBullet = true;
+			this.richTextBox1.SelectedText = "all the embedded icons and images, which are copyright of their respective owner(s)\n";
+			this.richTextBox1.SelectedText = "the ObjectListView.dll file and all code written to create it.\n";
+			this.richTextBox1.SelectionBullet = false;
+			this.richTextBox1.SelectionIndent = 0;
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 12.00F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "\nLicense:\n";
+			this.richTextBox1.SelectionFont = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.richTextBox1.SelectedText = "This work, with the exception of the icons, is offered under the terms of the GNU General Public License version 3. You should have received a LICENSE.txt file with this application detailing the license terms. If you did not receive this file, please go to http://www.gnu.org/licenses/gpl.html\n\n";
+			this.richTextBox1.SelectedText = "The icons are licensed under the Creative Commons Attributions 3.0 license. To view the terms of this license, please go to http://creativecommons.org/licenses/by/3.0/us/\n";
 			this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
 			// 
 			// panel1
