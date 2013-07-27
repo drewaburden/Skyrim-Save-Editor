@@ -105,17 +105,19 @@ namespace Skyrim_Save_Editor.Saves {
             VSVal vsval;
             switch (numBytes) {
                 case 0:
-                    vsval = new VSVal<Byte>(name);
-                    (vsval as VSVal<Byte>).Value = bytes[0];
-                    (vsval as VSVal<Byte>).ValueType = "UInt8";
+                    vsval = new VSVal(name);
+                    vsval.Value = bytes[0];
+                    vsval.ValueType = "UInt8";
                     break;
                 case 1:
-                    vsval = new VSVal<UInt16>(name);
-                    (vsval as VSVal<UInt16>).Value = BitConverter.ToUInt16(bytes, 0);
+                    vsval = new VSVal(name);
+                    vsval.Value = BitConverter.ToUInt16(bytes, 0);
+					vsval.ValueType = "UInt16";
                     break;
                 case 2:
-                    vsval = new VSVal<UInt32>(name);
-                    (vsval as VSVal<UInt32>).Value = BitConverter.ToUInt32(bytes, 0);
+                    vsval = new VSVal(name);
+                    vsval.Value = BitConverter.ToUInt32(bytes, 0);
+					vsval.ValueType = "UInt32";
                     break;
                 default:
                     throw new InvalidDataException();

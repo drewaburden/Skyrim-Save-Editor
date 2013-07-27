@@ -25,22 +25,24 @@ namespace Skyrim_Save_Editor.Saves {
 		RedguardRace
 	};
 
-	public partial class SaveFile : SaveSection {
+	public class SaveFile : SaveSection {
 		public SaveSection header;
 		public SaveSection pluginInfo;
 		public SaveSection fileLocationTable;
-		public SaveSection miscStats;
-		public SaveSection playerLocation;
-		public SaveSection tes;
+		public SaveSection globalDataTable1;
+		public SaveSection globalDataTable2;
+		public SaveSection changeForms;
+		public SaveSection globalDataTable3;
 
 		public SaveFile() {
 			blockName = "Save File";
 			header = new Header();
 			pluginInfo = new PluginInfo();
 			fileLocationTable = new FileLocationTable();
-			miscStats = new MiscStats();
-			playerLocation = new PlayerLocation();
-            tes = new TES();
+			globalDataTable1 = new GlobalDataTable1();
+			globalDataTable2 = new GlobalDataTable2();
+			changeForms = new ChangeForms();
+			globalDataTable3 = new GlobalDataTable3();
 		}
 		public SaveFile CreateNew() {
 			try {
@@ -84,18 +86,19 @@ namespace Skyrim_Save_Editor.Saves {
 			(header as Header).Load(saveReader);
 			(pluginInfo as PluginInfo).Load(saveReader);
 			(fileLocationTable as FileLocationTable).Load(saveReader);
-			(miscStats as MiscStats).Load(saveReader);
-			(playerLocation as PlayerLocation).Load(saveReader);
-            (tes as TES).Load(saveReader);
+			(globalDataTable1 as GlobalDataTable1).Load(saveReader);
+			(globalDataTable2 as GlobalDataTable2).Load(saveReader);
+			(changeForms as ChangeForms).Load(saveReader);
+			(globalDataTable3 as GlobalDataTable3).Load(saveReader);
 		}
 
 		public override SaveField[] GetFields() {
 			return new SaveField[0];
 		}
 		public override SaveSection[] GetSections() {
-			return new SaveSection[6] {
-					header, pluginInfo, fileLocationTable, miscStats,
-					playerLocation, tes
+			return new SaveSection[7] {
+					header, pluginInfo, fileLocationTable, globalDataTable1,
+					globalDataTable2, changeForms, globalDataTable3
 			};
 		}
 	}

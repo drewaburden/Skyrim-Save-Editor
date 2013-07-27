@@ -120,14 +120,20 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Saves\SaveField\SaveField.cs" />
+    <Compile Include="Saves\SaveField\Types\RefID.cs" />
+    <Compile Include="Saves\SaveField\Types\TESUnknown1.cs" />
     <Compile Include="Saves\SaveField\Types\VSVal.cs" />
-    <Compile Include="Saves\SaveSection\Types\TES.cs" />
+    <Compile Include="Saves\SaveSection\Types\ChangeForms.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable3\GlobalDataTable3.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\GlobalDataTable1.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES.cs" />
     <Compile Include="Saves\SaveSection\Types\FileLocationTable.cs" />
     <Compile Include="Saves\SaveField\Types\MiscStat.cs" />
-    <Compile Include="Saves\SaveSection\Types\MiscStats.cs" />
-    <Compile Include="Saves\SaveSection\Types\PlayerLocation.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\MiscStats.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\PlayerLocation.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable2\GlobalDataTable2.cs" />
     <Compile Include="Saves\SaveSection\Types\PluginInfo.cs" />
-    <Compile Include="Saves\SaveField\Types\RefID.cs" />
+    <Compile Include="Saves\SaveField\Types\TESUnknown0.cs" />
     <Compile Include="Saves\SaveSection\SaveSection.cs" />
     <Compile Include="Saves\SaveReader.cs" />
     <Compile Include="Saves\SaveField\Types\ScreenshotData.cs" />

@@ -290,6 +290,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 				fieldListView.AddObjects(fields);
 			}
 		}
+
+		private void clearButton_Click(object sender, EventArgs e) {
+			advancedFilter.ForeColor = Color.Gray;
+			advancedFilter.Text = "Key filter...";
+			clearButton.ButtonEnabled = false;
+			filter.IsFiltering = false;
+			treeListView.UpdateColumnFiltering();
+			clearButton.Focus();
+		}
 		#endregion
 
 		#region Value Change Handling
@@ -339,18 +348,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			if (e.ClickedItem == editToolStripMenuItem) {
 				// Somehow programmatically start the cell editing. None of the ObjectListView's functions seem to work.
 			}
-		}
-
-		private void clearButton_Click(object sender, EventArgs e) {
-			advancedFilter.ForeColor = Color.Gray;
-			advancedFilter.Text = "Key filter...";
-			/*foreach (ListViewItem item in removedListViewItems) {
-				advancedKeyValues.Items.Add((ListViewItem)item.Clone());
-			}
-			removedListViewItems.Clear();*/
-			clearButton.ButtonEnabled = false;
-			filter.IsFiltering = false;
-			clearButton.Focus();
 		}
 	}
 }
