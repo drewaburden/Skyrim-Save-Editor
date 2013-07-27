@@ -10,7 +10,7 @@ namespace Skyrim_Save_Editor.Saves.SaveFields {
 		public Byte type { get; set; }
 		public Byte[] formID; // 22-bit value. Not displayed in UI, so not a property.
 
-		public RefID(String name) : base(name) {
+		public RefID(String key) : base(key) {
             Type = "RefID";
         }
 	}

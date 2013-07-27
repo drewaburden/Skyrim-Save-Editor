@@ -125,5 +125,25 @@ namespace Skyrim_Save_Editor.Saves {
 
             return vsval;
         }
+
+		public TESUnknown0[] readUnknown0(UInt32 count) {
+			TESUnknown0[] unknown0 = new TESUnknown0[count];
+			for (int index = 0; index < unknown0.Length; ++index) {
+				unknown0[index] = new TESUnknown0(ReadRefID("unknown"));
+				unknown0[index].unknown = ReadUInt16();
+			}
+
+			return unknown0;
+		}
+
+		public TESUnknown1[] readUnknown1(UInt32 count) {
+			TESUnknown1[] unknown1 = new TESUnknown1[count];
+			for (int index = 0; index < unknown1.Length; ++index) {
+				unknown1[index] = new TESUnknown1(ReadRefID("unknown"));
+				unknown1[index].unknown = ReadBytes(12);
+			}
+
+			return unknown1;
+		}
 	}
 }

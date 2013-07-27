@@ -124,9 +124,12 @@
     <Compile Include="Saves\SaveField\Types\TESUnknown1.cs" />
     <Compile Include="Saves\SaveField\Types\VSVal.cs" />
     <Compile Include="Saves\SaveSection\Types\ChangeForms.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown2Section.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown1Section.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown0Section.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable3\GlobalDataTable3.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\GlobalDataTable1.cs" />
-    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\TES.cs" />
     <Compile Include="Saves\SaveSection\Types\FileLocationTable.cs" />
     <Compile Include="Saves\SaveField\Types\MiscStat.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\MiscStats.cs" />
