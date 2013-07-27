@@ -145,5 +145,16 @@ namespace Skyrim_Save_Editor.Saves {
 
 			return unknown1;
 		}
+
+		public GlobalVariable[] readGlobalVariable(UInt32 count) {
+			GlobalVariable[] globals = new GlobalVariable[count];
+			for (int index = 0; index < globals.Length; ++index) {
+				RefID refID = ReadRefID("globalVariable");
+				globals[index] = new GlobalVariable(refID);
+				globals[index].Value = ReadSingle();
+			}
+
+			return globals;
+		}
 	}
 }

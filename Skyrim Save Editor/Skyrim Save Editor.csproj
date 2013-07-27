@@ -120,10 +120,12 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Saves\SaveField\SaveField.cs" />
+    <Compile Include="Saves\SaveField\Types\GlobalVariable.cs" />
     <Compile Include="Saves\SaveField\Types\RefID.cs" />
     <Compile Include="Saves\SaveField\Types\TESUnknown1.cs" />
     <Compile Include="Saves\SaveField\Types\VSVal.cs" />
     <Compile Include="Saves\SaveSection\Types\ChangeForms.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\GlobalVariables.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown2Section.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown1Section.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown0Section.cs" />
