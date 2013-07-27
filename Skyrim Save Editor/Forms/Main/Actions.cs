@@ -18,8 +18,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			closeMenuItem.Enabled = true;
 			saveToolButton.Enabled = true;
 			closeToolButton.Enabled = true;
-			tabControl.Visible = true;
-			tabControl.SelectedTab = generalTab;
+			panel.Visible = true;
 
 			populateControls();
 		}
@@ -35,9 +34,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					closeMenuItem.Enabled = true;
 					saveToolButton.Enabled = true;
 					closeToolButton.Enabled = true;
-					tabControl.Visible = true;
-					tabControl.SelectedTab = generalTab;
-					labelScreenshot.Visible = false;
+					panel.Visible = true;
 
 					populateControls();
 				}
@@ -52,7 +49,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			closeMenuItem.Enabled = false;
 			saveToolButton.Enabled = false;
 			closeToolButton.Enabled = false;
-			tabControl.Visible = false;
+			panel.Visible = false;
 
 			resetControls();
 		}

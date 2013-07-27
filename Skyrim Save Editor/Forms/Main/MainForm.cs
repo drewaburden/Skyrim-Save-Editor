@@ -207,21 +207,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		#region Component Lifetime Actions
 		private void resetControls() {
 			fieldListView.ClearObjects();
-			saveName.ResetText();
-			ingameDate.ResetText();
-			saveTime.ResetText();
-			playerName.ResetText();
-			playerLevel.Value = 0;
-			playerExperienceBar.Maximum = 100;
-			playerExperienceBox.Maximum = 100;
-			playerExperienceBox.Value = 0;
-			playerRace.SelectedIndex = -1;
-			maleSex.Checked = false;
-			femaleSex.Checked = false;
-			Bitmap image = new Bitmap(320, 192);
-			screenshot.Image = (Image) image.Clone();
-			labelScreenshot.Visible = true;
-			pluginsList.Items.Clear();
 			saveDiff = new SaveFile();
 		}
 		#endregion
@@ -302,26 +287,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		#endregion
 
 		#region Value Change Handling
-		void playerExperience_ValueChanged(Object sender, EventArgs e) {
-			playerExperienceBar.Value = Convert.ToInt32(playerExperienceBox.Value);
-			(activeSave.header as Header).playerCurExp.Value = (float) Convert.ToDouble(playerExperienceBox.Value);
-		}
-		void playerName_TextChanged(Object sender, EventArgs e) {
-			if ((activeSave.header as Header).playerName.Value != playerName.Text) {
-				(saveDiff.header as Header).playerName.Value = playerName.Text;
-			}
-		}
-		void playerLevel_ValueChanged(Object sender, EventArgs e) {
-			if ((activeSave.header as Header).playerLevel.Value != playerLevel.Value) {
-				(saveDiff.header as Header).playerLevel.Value = Convert.ToUInt32(playerLevel.Value);
-			}
-		}
-		void playerRace_SelectedIndexChanged(Object sender, EventArgs e) {
-			/*String selectedRace = static_cast<Race>(playerRace.SelectedIndex).ToString("g");
-			if (activeSave.header.playerRace != selectedRace) {
-				saveDiff.header.playerRace = selectedRace;
-			}*/
-		}
 		#endregion
 
 		#region Minor Component Tweaks

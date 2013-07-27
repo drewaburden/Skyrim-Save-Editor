@@ -20,11 +20,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private void InitializeComponent() {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "test",
-            "test",
-            "test",
-            "test"}, -1);
 			this.menuStrip = new System.Windows.Forms.MenuStrip();
 			this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
 			this.newMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -32,14 +27,14 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.saveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.closeMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuSeperator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.recentFilesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuSeperator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.undoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.redoMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuSeperator3 = new System.Windows.Forms.ToolStripSeparator();
 			this.filePropertiesMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolsMenu = new System.Windows.Forms.ToolStripMenuItem();
 			this.settingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,11 +53,10 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.settingsToolButton = new System.Windows.Forms.ToolStripButton();
 			this.aboutToolButton = new System.Windows.Forms.ToolStripButton();
 			this.treeImageList = new System.Windows.Forms.ImageList(this.components);
-			this.olvColumn4 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+			this.descriptionColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripContextEdit = new System.Windows.Forms.ToolStripMenuItem();
 			this.typeImageList = new System.Windows.Forms.ImageList(this.components);
-			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
 			this.treeListView = new BrightIdeasSoftware.TreeListView();
 			this.treeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -71,63 +65,20 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.typeColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.keyColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
 			this.valueColumn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-			this.listView1 = new System.Windows.Forms.ListView();
-			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.advancedFilter = new System.Windows.Forms.TextBox();
 			this.clearButtonImageList = new System.Windows.Forms.ImageList(this.components);
-			this.pluginsTab = new System.Windows.Forms.TabPage();
-			this.pluginsList = new System.Windows.Forms.CheckedListBox();
-			this.generalTab = new System.Windows.Forms.TabPage();
-			this.splitContainer = new System.Windows.Forms.SplitContainer();
-			this.labelScreenshot = new System.Windows.Forms.Label();
-			this.saveName = new System.Windows.Forms.TextBox();
-			this.label8 = new System.Windows.Forms.Label();
-			this.label7 = new System.Windows.Forms.Label();
-			this.ingameDate = new System.Windows.Forms.MaskedTextBox();
-			this.label6 = new System.Windows.Forms.Label();
-			this.saveTime = new System.Windows.Forms.DateTimePicker();
-			this.screenshot = new System.Windows.Forms.PictureBox();
-			this.leftPanel = new System.Windows.Forms.Panel();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
-			this.rightPanel = new System.Windows.Forms.Panel();
-			this.maleSex = new System.Windows.Forms.RadioButton();
-			this.playerName = new System.Windows.Forms.TextBox();
-			this.femaleSex = new System.Windows.Forms.RadioButton();
-			this.playerRace = new System.Windows.Forms.ComboBox();
-			this.playerLevel = new System.Windows.Forms.NumericUpDown();
-			this.playerExperienceBar = new System.Windows.Forms.ProgressBar();
-			this.playerExperienceBox = new System.Windows.Forms.NumericUpDown();
-			this.tabControl = new System.Windows.Forms.TabControl();
+			this.panel = new System.Windows.Forms.Panel();
 			this.clearButton = new Skyrim_Save_Editor.Forms.Main.Controls.ClearButton();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			this.contextMenuStrip.SuspendLayout();
-			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.treeListView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.fieldListView)).BeginInit();
-			this.pluginsTab.SuspendLayout();
-			this.generalTab.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
-			this.splitContainer.Panel1.SuspendLayout();
-			this.splitContainer.Panel2.SuspendLayout();
-			this.splitContainer.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.screenshot)).BeginInit();
-			this.leftPanel.SuspendLayout();
-			this.rightPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.playerLevel)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.playerExperienceBox)).BeginInit();
-			this.tabControl.SuspendLayout();
+			this.panel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip
@@ -151,9 +102,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
             this.saveMenuItem,
             this.saveAsMenuItem,
             this.closeMenuItem,
-            this.toolStripMenuItem2,
+            this.toolStripMenuSeperator1,
             this.recentFilesMenuItem,
-            this.toolStripMenuItem1,
+            this.toolStripMenuSeperator2,
             this.exitMenuItem});
 			this.fileMenu.Name = "fileMenu";
 			this.fileMenu.Size = new System.Drawing.Size(37, 20);
@@ -205,10 +156,10 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.closeMenuItem.Text = "&Close";
 			this.closeMenuItem.Click += new System.EventHandler(this.closeSave);
 			// 
-			// toolStripMenuItem2
+			// toolStripMenuSeperator1
 			// 
-			this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-			this.toolStripMenuItem2.Size = new System.Drawing.Size(190, 6);
+			this.toolStripMenuSeperator1.Name = "toolStripMenuSeperator1";
+			this.toolStripMenuSeperator1.Size = new System.Drawing.Size(190, 6);
 			// 
 			// recentFilesMenuItem
 			// 
@@ -216,10 +167,10 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.recentFilesMenuItem.Size = new System.Drawing.Size(193, 22);
 			this.recentFilesMenuItem.Text = "&Recent Files";
 			// 
-			// toolStripMenuItem1
+			// toolStripMenuSeperator2
 			// 
-			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-			this.toolStripMenuItem1.Size = new System.Drawing.Size(190, 6);
+			this.toolStripMenuSeperator2.Name = "toolStripMenuSeperator2";
+			this.toolStripMenuSeperator2.Size = new System.Drawing.Size(190, 6);
 			// 
 			// exitMenuItem
 			// 
@@ -235,7 +186,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoMenuItem,
             this.redoMenuItem,
-            this.toolStripMenuItem3,
+            this.toolStripMenuSeperator3,
             this.filePropertiesMenuItem});
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
 			this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
@@ -246,7 +197,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.undoMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("undoMenuItem.Image")));
 			this.undoMenuItem.Name = "undoMenuItem";
 			this.undoMenuItem.ShortcutKeyDisplayString = "Ctrl+Z";
-			this.undoMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.undoMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.undoMenuItem.Text = "&Undo";
 			// 
 			// redoMenuItem
@@ -254,19 +205,19 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.redoMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("redoMenuItem.Image")));
 			this.redoMenuItem.Name = "redoMenuItem";
 			this.redoMenuItem.ShortcutKeyDisplayString = "Ctrl+Y";
-			this.redoMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.redoMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.redoMenuItem.Text = "&Redo";
 			// 
-			// toolStripMenuItem3
+			// toolStripMenuSeperator3
 			// 
-			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-			this.toolStripMenuItem3.Size = new System.Drawing.Size(145, 6);
+			this.toolStripMenuSeperator3.Name = "toolStripMenuSeperator3";
+			this.toolStripMenuSeperator3.Size = new System.Drawing.Size(149, 6);
 			// 
 			// filePropertiesMenuItem
 			// 
 			this.filePropertiesMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("filePropertiesMenuItem.Image")));
 			this.filePropertiesMenuItem.Name = "filePropertiesMenuItem";
-			this.filePropertiesMenuItem.Size = new System.Drawing.Size(148, 22);
+			this.filePropertiesMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.filePropertiesMenuItem.Text = "File Properties";
 			// 
 			// toolsMenu
@@ -298,7 +249,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// 
 			this.aboutMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutMenuItem.Image")));
 			this.aboutMenuItem.Name = "aboutMenuItem";
-			this.aboutMenuItem.Size = new System.Drawing.Size(107, 22);
+			this.aboutMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.aboutMenuItem.Text = "About";
 			this.aboutMenuItem.Click += new System.EventHandler(this.showAboutForm);
 			// 
@@ -439,33 +390,32 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeImageList.Images.SetKeyName(8, "brick.png");
 			this.treeImageList.Images.SetKeyName(9, "brick_go.png");
 			// 
-			// olvColumn4
+			// descriptionColumn
 			// 
-			this.olvColumn4.AspectName = "Description";
-			this.olvColumn4.DisplayIndex = 4;
-			this.olvColumn4.FillsFreeSpace = true;
-			this.olvColumn4.IsEditable = false;
-			this.olvColumn4.IsVisible = false;
-			this.olvColumn4.Sortable = false;
-			this.olvColumn4.Text = "Description";
-			this.olvColumn4.Width = 440;
-			this.keyColumn.UseFiltering = true;
+			this.descriptionColumn.AspectName = "Description";
+			this.descriptionColumn.DisplayIndex = 4;
+			this.descriptionColumn.FillsFreeSpace = true;
+			this.descriptionColumn.IsEditable = false;
+			this.descriptionColumn.IsVisible = false;
+			this.descriptionColumn.Sortable = false;
+			this.descriptionColumn.Text = "Description";
+			this.descriptionColumn.Width = 440;
 			// 
 			// contextMenuStrip
 			// 
 			this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4});
+            this.toolStripContextEdit});
 			this.contextMenuStrip.Name = "contextMenuStrip1";
 			this.contextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
 			this.contextMenuStrip.Size = new System.Drawing.Size(95, 26);
 			this.contextMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
 			this.contextMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip_ItemClicked);
 			// 
-			// toolStripMenuItem4
+			// toolStripContextEdit
 			// 
-			this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-			this.toolStripMenuItem4.Size = new System.Drawing.Size(94, 22);
-			this.toolStripMenuItem4.Text = "Edit";
+			this.toolStripContextEdit.Name = "toolStripContextEdit";
+			this.toolStripContextEdit.Size = new System.Drawing.Size(94, 22);
+			this.toolStripContextEdit.Text = "Edit";
 			// 
 			// typeImageList
 			// 
@@ -481,26 +431,13 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.typeImageList.Images.SetKeyName(7, "RefID");
 			this.typeImageList.Images.SetKeyName(8, "Byte");
 			// 
-			// tabPage1
-			// 
-			this.tabPage1.Controls.Add(this.clearButton);
-			this.tabPage1.Controls.Add(this.splitContainer1);
-			this.tabPage1.Controls.Add(this.advancedFilter);
-			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(658, 285);
-			this.tabPage1.TabIndex = 3;
-			this.tabPage1.Text = "Advanced";
-			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
 			// splitContainer1
 			// 
 			this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-			this.splitContainer1.Location = new System.Drawing.Point(3, 29);
+			this.splitContainer1.Location = new System.Drawing.Point(3, 30);
 			this.splitContainer1.Name = "splitContainer1";
 			// 
 			// splitContainer1.Panel1
@@ -510,8 +447,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			// splitContainer1.Panel2
 			// 
 			this.splitContainer1.Panel2.Controls.Add(this.fieldListView);
-			this.splitContainer1.Panel2.Controls.Add(this.listView1);
-			this.splitContainer1.Size = new System.Drawing.Size(652, 253);
+			this.splitContainer1.Size = new System.Drawing.Size(660, 280);
 			this.splitContainer1.SplitterDistance = 175;
 			this.splitContainer1.TabIndex = 6;
 			// 
@@ -532,7 +468,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeListView.SelectColumnsOnRightClickBehaviour = BrightIdeasSoftware.ObjectListView.ColumnSelectBehaviour.None;
 			this.treeListView.ShowFilterMenuOnRightClick = false;
 			this.treeListView.ShowGroups = false;
-			this.treeListView.Size = new System.Drawing.Size(175, 253);
+			this.treeListView.Size = new System.Drawing.Size(175, 280);
 			this.treeListView.SmallImageList = this.treeImageList;
 			this.treeListView.TabIndex = 0;
 			this.treeListView.UseCompatibleStateImageBehavior = false;
@@ -558,7 +494,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.treeColumn.Sortable = false;
 			this.treeColumn.Text = "";
 			this.treeColumn.Width = 0;
-			this.treeColumn.UseFiltering = true;
 			// 
 			// fieldListView
 			// 
@@ -566,7 +501,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.fieldListView.AllColumns.Add(this.typeColumn);
 			this.fieldListView.AllColumns.Add(this.keyColumn);
 			this.fieldListView.AllColumns.Add(this.valueColumn);
-			this.fieldListView.AllColumns.Add(this.olvColumn4);
+			this.fieldListView.AllColumns.Add(this.descriptionColumn);
 			this.fieldListView.AllowColumnReorder = true;
 			this.fieldListView.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
 			this.fieldListView.CellEditTabChangesRows = true;
@@ -585,7 +520,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.fieldListView.RowHeight = 20;
 			this.fieldListView.ShowFilterMenuOnRightClick = false;
 			this.fieldListView.ShowGroups = false;
-			this.fieldListView.Size = new System.Drawing.Size(473, 253);
+			this.fieldListView.Size = new System.Drawing.Size(481, 280);
 			this.fieldListView.SmallImageList = this.typeImageList;
 			this.fieldListView.TabIndex = 7;
 			this.fieldListView.UseCompatibleStateImageBehavior = false;
@@ -615,7 +550,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.typeColumn.IsEditable = false;
 			this.typeColumn.Text = "Type";
 			this.typeColumn.Width = 81;
-			this.keyColumn.UseFiltering = true;
 			// 
 			// keyColumn
 			// 
@@ -624,7 +558,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.keyColumn.IsEditable = false;
 			this.keyColumn.Text = "Key";
 			this.keyColumn.Width = 113;
-			this.keyColumn.UseFiltering = true;
 			// 
 			// valueColumn
 			// 
@@ -634,57 +567,15 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.valueColumn.Sortable = false;
 			this.valueColumn.Text = "Value";
 			this.valueColumn.Width = 149;
-			this.keyColumn.UseFiltering = true;
-			// 
-			// listView1
-			// 
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listView1.FullRowSelect = true;
-			this.listView1.GridLines = true;
-			this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-			this.listView1.Location = new System.Drawing.Point(0, 0);
-			this.listView1.Name = "listView1";
-			this.listView1.ShowGroups = false;
-			this.listView1.Size = new System.Drawing.Size(473, 253);
-			this.listView1.TabIndex = 0;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			this.listView1.View = System.Windows.Forms.View.Details;
-			// 
-			// columnHeader1
-			// 
-			this.columnHeader1.Text = "Key";
-			this.columnHeader1.Width = 110;
-			// 
-			// columnHeader2
-			// 
-			this.columnHeader2.Text = "Type";
-			this.columnHeader2.Width = 41;
-			// 
-			// columnHeader3
-			// 
-			this.columnHeader3.Text = "Value";
-			this.columnHeader3.Width = 80;
-			// 
-			// columnHeader4
-			// 
-			this.columnHeader4.Text = "Description";
-			this.columnHeader4.Width = 206;
 			// 
 			// advancedFilter
 			// 
 			this.advancedFilter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.advancedFilter.ForeColor = System.Drawing.Color.Gray;
-			this.advancedFilter.Location = new System.Drawing.Point(3, 3);
-			this.advancedFilter.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+			this.advancedFilter.Location = new System.Drawing.Point(3, 5);
 			this.advancedFilter.Name = "advancedFilter";
-			this.advancedFilter.Size = new System.Drawing.Size(652, 20);
+			this.advancedFilter.Size = new System.Drawing.Size(660, 20);
 			this.advancedFilter.TabIndex = 7;
 			this.advancedFilter.Text = "Key filter...";
 			this.advancedFilter.Enter += new System.EventHandler(this.advancedFilter_Enter);
@@ -700,342 +591,25 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.clearButtonImageList.Images.SetKeyName(2, "cross8-over.png");
 			this.clearButtonImageList.Images.SetKeyName(3, "cross8-down.png");
 			// 
-			// pluginsTab
+			// panel
 			// 
-			this.pluginsTab.Controls.Add(this.pluginsList);
-			this.pluginsTab.Location = new System.Drawing.Point(4, 22);
-			this.pluginsTab.Name = "pluginsTab";
-			this.pluginsTab.Padding = new System.Windows.Forms.Padding(3);
-			this.pluginsTab.Size = new System.Drawing.Size(658, 285);
-			this.pluginsTab.TabIndex = 1;
-			this.pluginsTab.Text = "Plugins";
-			this.pluginsTab.UseVisualStyleBackColor = true;
-			// 
-			// pluginsList
-			// 
-			this.pluginsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.pluginsList.CheckOnClick = true;
-			this.pluginsList.FormattingEnabled = true;
-			this.pluginsList.Location = new System.Drawing.Point(3, 4);
-			this.pluginsList.Name = "pluginsList";
-			this.pluginsList.Size = new System.Drawing.Size(652, 274);
-			this.pluginsList.TabIndex = 1;
-			// 
-			// generalTab
-			// 
-			this.generalTab.Controls.Add(this.splitContainer);
-			this.generalTab.Location = new System.Drawing.Point(4, 22);
-			this.generalTab.Name = "generalTab";
-			this.generalTab.Size = new System.Drawing.Size(658, 285);
-			this.generalTab.TabIndex = 0;
-			this.generalTab.Text = "General";
-			this.generalTab.UseVisualStyleBackColor = true;
-			// 
-			// splitContainer
-			// 
-			this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.splitContainer.Location = new System.Drawing.Point(0, 0);
-			this.splitContainer.Name = "splitContainer";
-			// 
-			// splitContainer.Panel1
-			// 
-			this.splitContainer.Panel1.Controls.Add(this.labelScreenshot);
-			this.splitContainer.Panel1.Controls.Add(this.saveName);
-			this.splitContainer.Panel1.Controls.Add(this.label8);
-			this.splitContainer.Panel1.Controls.Add(this.label7);
-			this.splitContainer.Panel1.Controls.Add(this.ingameDate);
-			this.splitContainer.Panel1.Controls.Add(this.label6);
-			this.splitContainer.Panel1.Controls.Add(this.saveTime);
-			this.splitContainer.Panel1.Controls.Add(this.screenshot);
-			this.splitContainer.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.splitContainer.Panel1MinSize = 327;
-			// 
-			// splitContainer.Panel2
-			// 
-			this.splitContainer.Panel2.Controls.Add(this.leftPanel);
-			this.splitContainer.Panel2.Controls.Add(this.rightPanel);
-			this.splitContainer.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.splitContainer.Panel2MinSize = 327;
-			this.splitContainer.Size = new System.Drawing.Size(658, 285);
-			this.splitContainer.SplitterDistance = 327;
-			this.splitContainer.TabIndex = 5;
-			this.splitContainer.TabStop = false;
-			this.splitContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer_Paint);
-			// 
-			// labelScreenshot
-			// 
-			this.labelScreenshot.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.labelScreenshot.BackColor = System.Drawing.SystemColors.Control;
-			this.labelScreenshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.labelScreenshot.Location = new System.Drawing.Point(7, 9);
-			this.labelScreenshot.Name = "labelScreenshot";
-			this.labelScreenshot.Size = new System.Drawing.Size(310, 182);
-			this.labelScreenshot.TabIndex = 7;
-			this.labelScreenshot.Text = "Screenshot";
-			this.labelScreenshot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// saveName
-			// 
-			this.saveName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveName.Location = new System.Drawing.Point(83, 202);
-			this.saveName.Name = "saveName";
-			this.saveName.ReadOnly = true;
-			this.saveName.Size = new System.Drawing.Size(236, 20);
-			this.saveName.TabIndex = 0;
-			this.saveName.TabStop = false;
-			// 
-			// label8
-			// 
-			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(3, 207);
-			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(35, 13);
-			this.label8.TabIndex = 5;
-			this.label8.Text = "Save:";
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(3, 257);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(72, 13);
-			this.label7.TabIndex = 4;
-			this.label7.Text = "In-game date:";
-			// 
-			// ingameDate
-			// 
-			this.ingameDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.ingameDate.Location = new System.Drawing.Point(83, 254);
-			this.ingameDate.Mask = "000-00-00";
-			this.ingameDate.Name = "ingameDate";
-			this.ingameDate.Size = new System.Drawing.Size(236, 20);
-			this.ingameDate.TabIndex = 2;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(3, 232);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(57, 13);
-			this.label6.TabIndex = 2;
-			this.label6.Text = "Save time:";
-			// 
-			// saveTime
-			// 
-			this.saveTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.saveTime.CustomFormat = "ddd, MMM dd, yyyy h:mmtt";
-			this.saveTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.saveTime.Location = new System.Drawing.Point(83, 228);
-			this.saveTime.Name = "saveTime";
-			this.saveTime.Size = new System.Drawing.Size(236, 20);
-			this.saveTime.TabIndex = 1;
-			// 
-			// screenshot
-			// 
-			this.screenshot.Anchor = System.Windows.Forms.AnchorStyles.Top;
-			this.screenshot.BackColor = System.Drawing.SystemColors.Control;
-			this.screenshot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.screenshot.Location = new System.Drawing.Point(2, 4);
-			this.screenshot.Name = "screenshot";
-			this.screenshot.Size = new System.Drawing.Size(320, 192);
-			this.screenshot.TabIndex = 0;
-			this.screenshot.TabStop = false;
-			// 
-			// leftPanel
-			// 
-			this.leftPanel.Controls.Add(this.label1);
-			this.leftPanel.Controls.Add(this.label2);
-			this.leftPanel.Controls.Add(this.label3);
-			this.leftPanel.Controls.Add(this.label4);
-			this.leftPanel.Controls.Add(this.label5);
-			this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
-			this.leftPanel.Location = new System.Drawing.Point(0, 0);
-			this.leftPanel.Name = "leftPanel";
-			this.leftPanel.Size = new System.Drawing.Size(72, 285);
-			this.leftPanel.TabIndex = 2;
-			// 
-			// label1
-			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(3, 9);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(38, 13);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "Name:";
-			// 
-			// label2
-			// 
-			this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 34);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(36, 13);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Level:";
-			// 
-			// label3
-			// 
-			this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(3, 61);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(63, 13);
-			this.label3.TabIndex = 3;
-			this.label3.Text = "Experience:";
-			// 
-			// label4
-			// 
-			this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(3, 88);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(36, 13);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "Race:";
-			// 
-			// label5
-			// 
-			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(3, 114);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(28, 13);
-			this.label5.TabIndex = 5;
-			this.label5.Text = "Sex:";
-			// 
-			// rightPanel
-			// 
-			this.rightPanel.Controls.Add(this.maleSex);
-			this.rightPanel.Controls.Add(this.playerName);
-			this.rightPanel.Controls.Add(this.femaleSex);
-			this.rightPanel.Controls.Add(this.playerRace);
-			this.rightPanel.Controls.Add(this.playerLevel);
-			this.rightPanel.Controls.Add(this.playerExperienceBar);
-			this.rightPanel.Controls.Add(this.playerExperienceBox);
-			this.rightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.rightPanel.Location = new System.Drawing.Point(0, 0);
-			this.rightPanel.Name = "rightPanel";
-			this.rightPanel.Size = new System.Drawing.Size(327, 285);
-			this.rightPanel.TabIndex = 3;
-			// 
-			// maleSex
-			// 
-			this.maleSex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.maleSex.AutoSize = true;
-			this.maleSex.Location = new System.Drawing.Point(78, 112);
-			this.maleSex.Name = "maleSex";
-			this.maleSex.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-			this.maleSex.Size = new System.Drawing.Size(68, 17);
-			this.maleSex.TabIndex = 7;
-			this.maleSex.TabStop = true;
-			this.maleSex.Text = "Male";
-			this.maleSex.UseVisualStyleBackColor = true;
-			// 
-			// playerName
-			// 
-			this.playerName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerName.Location = new System.Drawing.Point(78, 6);
-			this.playerName.Name = "playerName";
-			this.playerName.Size = new System.Drawing.Size(244, 20);
-			this.playerName.TabIndex = 3;
-			this.playerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.playerName.TextChanged += new System.EventHandler(this.playerName_TextChanged);
-			// 
-			// femaleSex
-			// 
-			this.femaleSex.AutoSize = true;
-			this.femaleSex.Location = new System.Drawing.Point(152, 112);
-			this.femaleSex.Name = "femaleSex";
-			this.femaleSex.Size = new System.Drawing.Size(59, 17);
-			this.femaleSex.TabIndex = 7;
-			this.femaleSex.TabStop = true;
-			this.femaleSex.Text = "Female";
-			this.femaleSex.UseVisualStyleBackColor = true;
-			// 
-			// playerRace
-			// 
-			this.playerRace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerRace.DisplayMember = "1";
-			this.playerRace.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.playerRace.FormattingEnabled = true;
-			this.playerRace.Items.AddRange(new object[] {
-            "Altmer (High Elf)",
-            "Argonian (Saxhleel)",
-            "Bosmer (Wood Elf)",
-            "Breton (Manmer)",
-            "Dunmer (Dark Elf)",
-            "Imperial (Cyrodiils)",
-            "Khajiit",
-            "Nord",
-            "Orc (Orsimer)",
-            "Redguard (Yokudans)"});
-			this.playerRace.Location = new System.Drawing.Point(78, 85);
-			this.playerRace.Name = "playerRace";
-			this.playerRace.Size = new System.Drawing.Size(244, 21);
-			this.playerRace.TabIndex = 6;
-			this.playerRace.SelectedIndexChanged += new System.EventHandler(this.playerRace_SelectedIndexChanged);
-			// 
-			// playerLevel
-			// 
-			this.playerLevel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerLevel.Location = new System.Drawing.Point(78, 32);
-			this.playerLevel.Name = "playerLevel";
-			this.playerLevel.Size = new System.Drawing.Size(244, 20);
-			this.playerLevel.TabIndex = 4;
-			this.playerLevel.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.playerLevel.ValueChanged += new System.EventHandler(this.playerLevel_ValueChanged);
-			// 
-			// playerExperienceBar
-			// 
-			this.playerExperienceBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerExperienceBar.Location = new System.Drawing.Point(78, 60);
-			this.playerExperienceBar.Name = "playerExperienceBar";
-			this.playerExperienceBar.Size = new System.Drawing.Size(171, 17);
-			this.playerExperienceBar.Step = 1;
-			this.playerExperienceBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-			this.playerExperienceBar.TabIndex = 6;
-			// 
-			// playerExperienceBox
-			// 
-			this.playerExperienceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.playerExperienceBox.Location = new System.Drawing.Point(255, 59);
-			this.playerExperienceBox.Name = "playerExperienceBox";
-			this.playerExperienceBox.Size = new System.Drawing.Size(67, 20);
-			this.playerExperienceBox.TabIndex = 5;
-			this.playerExperienceBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.playerExperienceBox.ValueChanged += new System.EventHandler(this.playerExperience_ValueChanged);
-			// 
-			// tabControl
-			// 
-			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.tabControl.Controls.Add(this.generalTab);
-			this.tabControl.Controls.Add(this.pluginsTab);
-			this.tabControl.Controls.Add(this.tabPage1);
-			this.tabControl.Location = new System.Drawing.Point(0, 52);
-			this.tabControl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
-			this.tabControl.Name = "tabControl";
-			this.tabControl.SelectedIndex = 0;
-			this.tabControl.Size = new System.Drawing.Size(666, 311);
-			this.tabControl.TabIndex = 0;
-			this.tabControl.Visible = false;
+			this.panel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.panel.Controls.Add(this.clearButton);
+			this.panel.Controls.Add(this.splitContainer1);
+			this.panel.Controls.Add(this.advancedFilter);
+			this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel.Location = new System.Drawing.Point(0, 49);
+			this.panel.Name = "panel";
+			this.panel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+			this.panel.Size = new System.Drawing.Size(666, 313);
+			this.panel.TabIndex = 3;
+			this.panel.Visible = false;
 			// 
 			// clearButton
 			// 
+			this.clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.clearButton.ButtonEnabled = false;
-			this.clearButton.Location = new System.Drawing.Point(635, 4);
+			this.clearButton.Location = new System.Drawing.Point(643, 6);
 			this.clearButton.Name = "clearButton";
 			this.clearButton.Size = new System.Drawing.Size(18, 18);
 			this.clearButton.TabIndex = 8;
@@ -1047,8 +621,8 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ClientSize = new System.Drawing.Size(666, 362);
+			this.Controls.Add(this.panel);
 			this.Controls.Add(this.toolStrip);
-			this.Controls.Add(this.tabControl);
 			this.Controls.Add(this.menuStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.KeyPreview = true;
@@ -1063,29 +637,14 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			this.toolStrip.ResumeLayout(false);
 			this.toolStrip.PerformLayout();
 			this.contextMenuStrip.ResumeLayout(false);
-			this.tabPage1.ResumeLayout(false);
-			this.tabPage1.PerformLayout();
 			this.splitContainer1.Panel1.ResumeLayout(false);
 			this.splitContainer1.Panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.treeListView)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.fieldListView)).EndInit();
-			this.pluginsTab.ResumeLayout(false);
-			this.generalTab.ResumeLayout(false);
-			this.splitContainer.Panel1.ResumeLayout(false);
-			this.splitContainer.Panel1.PerformLayout();
-			this.splitContainer.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
-			this.splitContainer.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.screenshot)).EndInit();
-			this.leftPanel.ResumeLayout(false);
-			this.leftPanel.PerformLayout();
-			this.rightPanel.ResumeLayout(false);
-			this.rightPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.playerLevel)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.playerExperienceBox)).EndInit();
-			this.tabControl.ResumeLayout(false);
+			this.panel.ResumeLayout(false);
+			this.panel.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1106,7 +665,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		private System.Windows.Forms.ToolStripMenuItem saveMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem closeMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuSeperator2;
 		private System.Windows.Forms.ToolStripMenuItem newMenuItem;
 		private System.Windows.Forms.ToolStrip toolStrip;
 		private System.Windows.Forms.ToolStripButton newToolButton;
@@ -1120,25 +679,24 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private System.Windows.Forms.ToolStripMenuItem aboutMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolsMenu;
 		private System.Windows.Forms.ToolStripMenuItem settingsMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuSeperator1;
 		private System.Windows.Forms.ToolStripMenuItem recentFilesMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem undoMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem redoMenuItem;
-		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuSeperator3;
 		private System.Windows.Forms.ToolStripMenuItem filePropertiesMenuItem;
 		private System.Windows.Forms.ToolStripButton undoToolButton;
 		private System.Windows.Forms.ToolStripButton redoToolButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		private System.Windows.Forms.ToolStripMenuItem saveAsMenuItem;
 		private ImageList treeImageList;
-		private BrightIdeasSoftware.OLVColumn olvColumn4;
+		private BrightIdeasSoftware.OLVColumn descriptionColumn;
 		private ImageList typeImageList;
 		#endregion
 
 		private ContextMenuStrip contextMenuStrip;
-		private ToolStripMenuItem toolStripMenuItem4;
-		private TabPage tabPage1;
+		private ToolStripMenuItem toolStripContextEdit;
 		private TextBox advancedFilter;
 		private SplitContainer splitContainer1;
 		private BrightIdeasSoftware.TreeListView treeListView;
@@ -1148,40 +706,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 		private BrightIdeasSoftware.OLVColumn typeColumn;
 		private BrightIdeasSoftware.OLVColumn keyColumn;
 		private BrightIdeasSoftware.OLVColumn valueColumn;
-		private ListView listView1;
-		private ColumnHeader columnHeader1;
-		private ColumnHeader columnHeader2;
-		private ColumnHeader columnHeader3;
-		private ColumnHeader columnHeader4;
-		private TabPage pluginsTab;
-		private CheckedListBox pluginsList;
-		private TabPage generalTab;
-		private SplitContainer splitContainer;
-		private Label labelScreenshot;
-		private TextBox saveName;
-		private Label label8;
-		private Label label7;
-		private MaskedTextBox ingameDate;
-		private Label label6;
-		private DateTimePicker saveTime;
-		private PictureBox screenshot;
-		private Panel leftPanel;
-		private Label label1;
-		private Label label2;
-		private Label label3;
-		private Label label4;
-		private Label label5;
-		private Panel rightPanel;
-		private RadioButton maleSex;
-		private TextBox playerName;
-		private RadioButton femaleSex;
-		private ComboBox playerRace;
-		private NumericUpDown playerLevel;
-		private ProgressBar playerExperienceBar;
-		private NumericUpDown playerExperienceBox;
-		private TabControl tabControl;
 		private ImageList clearButtonImageList;
 		private Controls.ClearButton clearButton;
+		private Panel panel;
 	}
 }
 
