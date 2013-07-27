@@ -88,5 +88,40 @@ namespace Skyrim_Save_Editor.Saves {
 
 			return refID;
 		}
+
+        public VSVal ReadVSVal(String name) {
+            Byte[] bytes = new Byte[4] { 0x00, 0x00, 0x00, 0x00 };
+            bytes[0] = ReadByte();
+            int numBytes = bytes[0] & 0x03;
+            bytes[0] >>= 2;
+            for (int currentByte = 1; currentByte < (numBytes * 2); ++currentByte) {
+                bytes[currentByte] = ReadByte();
+            }
+
+            if (!BitConverter.IsLittleEndian) {
+                Array.Reverse(bytes);
+            }
+
+            VSVal vsval;
+            switch (numBytes) {
+                case 0:
+                    vsval = new VSVal<Byte>(name);
+                    (vsval as VSVal<Byte>).Value = bytes[0];
+                    (vsval as VSVal<Byte>).ValueType = "UInt8";
+                    break;
+                case 1:
+                    vsval = new VSVal<UInt16>(name);
+                    (vsval as VSVal<UInt16>).Value = BitConverter.ToUInt16(bytes, 0);
+                    break;
+                case 2:
+                    vsval = new VSVal<UInt32>(name);
+                    (vsval as VSVal<UInt32>).Value = BitConverter.ToUInt32(bytes, 0);
+                    break;
+                default:
+                    throw new InvalidDataException();
+            }
+
+            return vsval;
+        }
 	}
 }

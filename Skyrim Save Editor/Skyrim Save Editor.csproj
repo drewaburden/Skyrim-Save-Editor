@@ -120,6 +120,8 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Compile Include="Saves\SaveField\SaveField.cs" />
+    <Compile Include="Saves\SaveField\Types\VSVal.cs" />
+    <Compile Include="Saves\SaveSection\Types\TES.cs" />
     <Compile Include="Saves\SaveSection\Types\FileLocationTable.cs" />
     <Compile Include="Saves\SaveField\Types\MiscStat.cs" />
     <Compile Include="Saves\SaveSection\Types\MiscStats.cs" />

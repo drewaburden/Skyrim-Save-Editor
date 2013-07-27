@@ -37,11 +37,9 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			length.Value = saveReader.ReadUInt32();
 			unknown.Value = saveReader.ReadUInt32();
 			worldSpace1 = saveReader.ReadRefID("worldSpace1");
-			worldSpace1.Type = "RefID";
 			coorX.Value = saveReader.ReadInt32();
 			coorY.Value = saveReader.ReadInt32();
 			worldSpace2 = saveReader.ReadRefID("worldSpace2");
-			worldSpace2.Type = "RefID";
 			posX.Value = saveReader.ReadSingle();
 			posY.Value = saveReader.ReadSingle();
 			posZ.Value = saveReader.ReadSingle();

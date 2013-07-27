@@ -86,6 +86,7 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					case "Int16":
 					case "Int32":
 					case "Int64":
+                    case "VSVal":
 						return "Int";
 
 					case "ScreenshotData":

@@ -40,6 +40,7 @@ namespace Skyrim_Save_Editor.Saves {
 			fileLocationTable = new FileLocationTable();
 			miscStats = new MiscStats();
 			playerLocation = new PlayerLocation();
+            tes = new TES();
 		}
 		public SaveFile CreateNew() {
 			try {
@@ -85,15 +86,16 @@ namespace Skyrim_Save_Editor.Saves {
 			(fileLocationTable as FileLocationTable).Load(saveReader);
 			(miscStats as MiscStats).Load(saveReader);
 			(playerLocation as PlayerLocation).Load(saveReader);
+            (tes as TES).Load(saveReader);
 		}
 
 		public override SaveField[] GetFields() {
 			return new SaveField[0];
 		}
 		public override SaveSection[] GetSections() {
-			return new SaveSection[5] {
+			return new SaveSection[6] {
 					header, pluginInfo, fileLocationTable, miscStats,
-					playerLocation
+					playerLocation, tes
 			};
 		}
 	}

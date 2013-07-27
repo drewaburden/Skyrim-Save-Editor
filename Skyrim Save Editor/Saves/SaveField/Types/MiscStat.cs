@@ -8,6 +8,8 @@ namespace Skyrim_Save_Editor.Saves.SaveFields {
 	public class MiscStat : SaveField<Int32> {
 		public Byte Category { get; set; }
 
-		public MiscStat(String key) : base(key) { }
+		public MiscStat(String key) : base(key) {
+            Type = "MiscStat";
+        }
 	}
 }
