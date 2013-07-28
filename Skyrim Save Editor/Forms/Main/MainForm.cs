@@ -178,11 +178,6 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					e.NewValue = (Object) value;
 				}
 			};
-
-
-
-			Error.ErrorForm errwin = new Error.ErrorForm(0, true);
-			errwin.ShowDialog(this);
 		}
 
 		/// <summary>

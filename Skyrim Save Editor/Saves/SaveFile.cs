@@ -10,6 +10,7 @@ using System.Resources;
 using System.Diagnostics;
 using Skyrim_Save_Editor.Saves.SaveFields;
 using Skyrim_Save_Editor.Saves.SaveSections;
+using Skyrim_Save_Editor.Forms.ErrorDisplay;
 
 namespace Skyrim_Save_Editor.Saves {
 	public enum Race {
@@ -53,8 +54,7 @@ namespace Skyrim_Save_Editor.Saves {
 				Load(saveReader);
 			}
 			catch (Exception exception) {
-				/* todo: write custom error dialog */
-				MessageBox.Show("Error accessing resources:\n" + exception.Message + "\n\n" + exception.StackTrace);
+				new ErrorForm(20110, exception).ShowDialog();
 				return default(SaveFile);
 			}
 
@@ -69,8 +69,7 @@ namespace Skyrim_Save_Editor.Saves {
 				Load(saveReader);
 			}
 			catch (Exception exception) {
-				/* todo: write custom error dialog */
-				MessageBox.Show("Error loading save file:\n" + exception.Message + "\n\n" + exception.StackTrace);
+				new ErrorForm(20210, exception).ShowDialog();
 				return default(SaveFile);
 			}
 			finally {

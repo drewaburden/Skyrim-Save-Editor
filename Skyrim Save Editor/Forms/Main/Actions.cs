@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Skyrim_Save_Editor.Saves;
 using Skyrim_Save_Editor.Forms.About;
+using Skyrim_Save_Editor.Forms.ErrorDisplay;
 
 namespace Skyrim_Save_Editor.Forms.Main {
 	public partial class MainForm {
@@ -13,6 +14,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			resetControls();
 
 			activeSave = new SaveFile().CreateNew();
+			if (activeSave == null) {
+				return;
+			}
 
 			saveMenuItem.Enabled = true;
 			closeMenuItem.Enabled = true;
@@ -27,6 +31,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
 				try {
 					SaveFile saveFile = new SaveFile().LoadFromFile(openFileDialog.FileName);
+					if (saveFile == null) {
+						return;
+					}
 					activeSave = saveFile;
 
 					resetControls();
@@ -38,7 +45,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 
 					populateControls();
 				}
-				catch (Exception exception) { /* todo: write custom error dialog */ }
+				catch (Exception exception) {
+					new ErrorForm(2000, exception).ShowDialog();
+				}
 
 				openFileDialog.FileName = "";
 			}

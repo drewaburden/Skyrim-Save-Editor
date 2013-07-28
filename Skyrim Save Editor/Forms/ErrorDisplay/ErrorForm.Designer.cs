@@ -1,4 +1,4 @@
-﻿namespace Skyrim_Save_Editor.Forms.Error {
+﻿namespace Skyrim_Save_Editor.Forms.ErrorDisplay {
 	partial class ErrorForm {
 		/// <summary>
 		/// Required designer variable.
@@ -27,12 +27,12 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorForm));
 			this.quitButton = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.errorDetails = new System.Windows.Forms.TextBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.label1 = new System.Windows.Forms.Label();
+			this.errorText = new System.Windows.Forms.Label();
 			this.detailsButton = new System.Windows.Forms.Button();
-			this.continueButton = new System.Windows.Forms.Button();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+			this.continueButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -51,25 +51,25 @@
 			// button2
 			// 
 			this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.button2.Location = new System.Drawing.Point(93, 98);
+			this.button2.Location = new System.Drawing.Point(198, 98);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 1;
 			this.button2.Text = "Help";
 			this.button2.UseVisualStyleBackColor = true;
 			// 
-			// textBox1
+			// errorDetails
 			// 
-			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.errorDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox1.Location = new System.Drawing.Point(12, 132);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
-			this.textBox1.Multiline = true;
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-			this.textBox1.Size = new System.Drawing.Size(423, 137);
-			this.textBox1.TabIndex = 2;
+			this.errorDetails.Location = new System.Drawing.Point(12, 132);
+			this.errorDetails.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
+			this.errorDetails.Multiline = true;
+			this.errorDetails.Name = "errorDetails";
+			this.errorDetails.ReadOnly = true;
+			this.errorDetails.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+			this.errorDetails.Size = new System.Drawing.Size(423, 137);
+			this.errorDetails.TabIndex = 2;
 			// 
 			// pictureBox1
 			// 
@@ -80,14 +80,14 @@
 			this.pictureBox1.TabIndex = 4;
 			this.pictureBox1.TabStop = false;
 			// 
-			// label1
+			// errorText
 			// 
-			this.label1.Location = new System.Drawing.Point(76, 17);
-			this.label1.Margin = new System.Windows.Forms.Padding(16, 0, 16, 16);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(346, 62);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Error text";
+			this.errorText.Location = new System.Drawing.Point(76, 17);
+			this.errorText.Margin = new System.Windows.Forms.Padding(16, 0, 16, 16);
+			this.errorText.Name = "errorText";
+			this.errorText.Size = new System.Drawing.Size(346, 62);
+			this.errorText.TabIndex = 5;
+			this.errorText.Text = "Error text";
 			// 
 			// detailsButton
 			// 
@@ -100,7 +100,15 @@
 			this.detailsButton.TabIndex = 6;
 			this.detailsButton.Text = "Details";
 			this.detailsButton.UseVisualStyleBackColor = true;
+			this.detailsButton.Visible = false;
 			this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
+			// 
+			// imageList1
+			// 
+			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+			this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+			this.imageList1.Images.SetKeyName(0, "arrowdown.png");
+			this.imageList1.Images.SetKeyName(1, "arrowup.png");
 			// 
 			// continueButton
 			// 
@@ -111,13 +119,7 @@
 			this.continueButton.TabIndex = 7;
 			this.continueButton.Text = "Continue";
 			this.continueButton.UseVisualStyleBackColor = true;
-			// 
-			// imageList1
-			// 
-			this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-			this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-			this.imageList1.Images.SetKeyName(0, "arrowdown.png");
-			this.imageList1.Images.SetKeyName(1, "arrowup.png");
+			this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
 			// 
 			// ErrorForm
 			// 
@@ -128,9 +130,9 @@
 			this.ClientSize = new System.Drawing.Size(447, 129);
 			this.Controls.Add(this.continueButton);
 			this.Controls.Add(this.detailsButton);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.errorText);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.errorDetails);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.quitButton);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -140,7 +142,7 @@
 			this.ShowInTaskbar = false;
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "Fatal Error";
+			this.Text = "Error";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -151,9 +153,9 @@
 
 		private System.Windows.Forms.Button quitButton;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox errorDetails;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label errorText;
 		private System.Windows.Forms.Button detailsButton;
 		private System.Windows.Forms.Button continueButton;
 		private System.Windows.Forms.ImageList imageList1;

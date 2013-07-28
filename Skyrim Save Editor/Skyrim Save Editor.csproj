@@ -71,12 +71,13 @@
     <Compile Include="Forms\About\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Error\ErrorForm.cs">
+    <Compile Include="Forms\ErrorDisplay\ErrorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Error\ErrorForm.Designer.cs">
+    <Compile Include="Forms\ErrorDisplay\ErrorForm.Designer.cs">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ErrorDisplay\Errors.cs" />
     <Compile Include="Forms\KeyEdit\KeyEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,7 +159,7 @@
     <EmbeddedResource Include="Forms\About\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Error\ErrorForm.resx">
+    <EmbeddedResource Include="Forms\ErrorDisplay\ErrorForm.resx">
       <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KeyEdit\KeyEditForm.resx">
