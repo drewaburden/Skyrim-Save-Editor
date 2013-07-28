@@ -6,35 +6,34 @@ using System.Threading.Tasks;
 using Skyrim_Save_Editor.Saves.SaveFields;
 
 namespace Skyrim_Save_Editor.Saves.SaveSections {
-	public class GlobalVariables : SaveSection {
+	public class CreatedObjects : SaveSection {
 		public SaveField<UInt32> type;
 		public SaveField<UInt32> length;
-		public VSVal count;
-		public GlobalVariable[] globals;
+		public EnchantmentTable weaponEnchTable;
 
-		public GlobalVariables() {
-			blockName = "Global Variables";
+		public CreatedObjects() {
+			blockName = "Created Objects";
 			type = new SaveField<UInt32>("type");
 			length = new SaveField<UInt32>("length");
+			weaponEnchTable = new EnchantmentTable("weaponEnchTable");
 		}
 
 		public override void Load(SaveReader saveReader) {
 			type.Value = saveReader.ReadUInt32();
 			length.Value = saveReader.ReadUInt32();
-			count = saveReader.ReadVSVal("count");
-			globals = saveReader.readGlobalVariable(count.Value);
+			weaponEnchTable.Load(saveReader);
 		}
 
 		public override SaveField[] GetFields() {
-			SaveField[] fields = new SaveField[3] {
-				type, length, count
+			return new SaveField[2] {
+				type, length
 			};
-			fields = fields.Concat(globals).ToArray();
-			return fields;
 		}
 
 		public override SaveSection[] GetSections() {
-			return new SaveSection[0];
+			return new SaveSection[1] {
+				weaponEnchTable
+			};
 		}
 	}
 }

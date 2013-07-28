@@ -7,15 +7,16 @@ using Skyrim_Save_Editor.Saves.SaveFields;
 
 namespace Skyrim_Save_Editor.Saves.SaveSections {
 	public class Unknown1Section : SaveSection {
-		public VSVal count;
+		public SaveField<UInt32> count;
 		public TESUnknown1[] unknown;
 
 		public Unknown1Section() {
 			blockName = "Unknown 1";
+			count = new SaveField<UInt32>("count");
 		}
 
 		public override void Load(SaveReader saveReader) {
-            count = saveReader.ReadVSVal("count");
+            count.Value = saveReader.ReadUInt32();
 			unknown = saveReader.readUnknown1(count.Value);
 		}
 

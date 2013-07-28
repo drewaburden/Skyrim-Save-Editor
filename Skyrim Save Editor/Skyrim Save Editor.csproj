@@ -131,6 +131,9 @@
     <Compile Include="Saves\SaveField\Types\TESUnknown1.cs" />
     <Compile Include="Saves\SaveField\Types\VSVal.cs" />
     <Compile Include="Saves\SaveSection\Types\ChangeForms.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\CreatedObjects\CreatedObjects.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\CreatedObjects\EnchantmentTable.cs" />
+    <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\CreatedObjects\Enchantment.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\GlobalVariables.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown2Section.cs" />
     <Compile Include="Saves\SaveSection\Types\GlobalDataTable1\TES\Unknown1Section.cs" />

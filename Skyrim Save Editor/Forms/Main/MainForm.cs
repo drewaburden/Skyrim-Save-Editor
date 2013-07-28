@@ -92,6 +92,9 @@ namespace Skyrim_Save_Editor.Forms.Main {
 					case "ScreenshotData":
 						return "Image";
 
+					case "GlobalVariable":
+						return "Single";
+
 					default:
 						return "Unknown";
 				}

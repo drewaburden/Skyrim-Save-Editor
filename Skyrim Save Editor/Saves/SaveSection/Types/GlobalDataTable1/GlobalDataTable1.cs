@@ -12,6 +12,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 		public SaveSection playerLocation;
 		public SaveSection tes;
 		public SaveSection globalVariables;
+		public SaveSection createdObjects;
 
 		public GlobalDataTable1() {
 			blockName = "Global Data Table 1";
@@ -19,6 +20,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			playerLocation = new PlayerLocation();
 			tes = new TES();
 			globalVariables = new GlobalVariables();
+			createdObjects = new CreatedObjects();
 		}
 
 		public override void Load(SaveReader saveReader) {
@@ -26,6 +28,7 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 			(playerLocation as PlayerLocation).Load(saveReader);
 			(tes as TES).Load(saveReader);
 			(globalVariables as GlobalVariables).Load(saveReader);
+			(createdObjects as CreatedObjects).Load(saveReader);
 		}
 
 		public override SaveField[] GetFields() {
@@ -33,8 +36,8 @@ namespace Skyrim_Save_Editor.Saves.SaveSections {
 		}
 
 		public override SaveSection[] GetSections() {
-			return new SaveSection[4] {
-				miscStats, playerLocation, tes, globalVariables
+			return new SaveSection[5] {
+				miscStats, playerLocation, tes, globalVariables, createdObjects
 			};
 		}
 	}

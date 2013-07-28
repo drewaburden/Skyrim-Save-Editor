@@ -93,7 +93,6 @@ namespace Skyrim_Save_Editor.Saves {
             Byte[] bytes = new Byte[4] { 0x00, 0x00, 0x00, 0x00 };
             bytes[0] = ReadByte();
             int numBytes = bytes[0] & 0x03;
-            bytes[0] >>= 2;
             for (int currentByte = 1; currentByte < (numBytes * 2); ++currentByte) {
                 bytes[currentByte] = ReadByte();
             }
@@ -122,6 +121,9 @@ namespace Skyrim_Save_Editor.Saves {
                 default:
                     throw new InvalidDataException();
             }
+			vsval.Value >>= 2;
+
+			Console.WriteLine("vsval = " + vsval.Value);
 
             return vsval;
         }
