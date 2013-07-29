@@ -24,13 +24,15 @@ namespace Skyrim_Save_Editor.Forms.ErrorDisplay {
 			}
 
 			if (error.Fatal) {
+				this.errorImage.Image = this.errorImages.Images[1];
 				this.continueButton.Enabled = false;
 				this.AcceptButton = quitButton;
 				this.Text = "Fatal Error";
 				error.Text += "\nUnfortunately, the editor cannot recover from this error and must close.";
 			}
 			else {
-				error.Text += "\nThe editor can try to continue with normal operation; however, this may cause instability problems. Continue at your own risk.";
+				this.errorImage.Image = this.errorImages.Images[0];
+				error.Text += "\nThe editor can try to continue with normal operation; however, this may cause stability problems. Continue at your own risk.";
 			}
 
 			if (error.Details != null) {
@@ -39,7 +41,7 @@ namespace Skyrim_Save_Editor.Forms.ErrorDisplay {
 			}
 			if (exception != null) {
 				this.detailsButton.Visible = true;
-				this.errorDetails.Text = exception.ToString();
+				this.errorDetails.Text += exception.ToString();
 			}
 
 			this.errorText.Text = error.Text + "\n(Code: " + errNum + ")";
@@ -47,12 +49,14 @@ namespace Skyrim_Save_Editor.Forms.ErrorDisplay {
 
 		private void detailsButton_Click(object sender, EventArgs e) {
 			if (!detailsShowing) {
-				this.Size = new System.Drawing.Size(this.Width, 320);
+				this.Size = new System.Drawing.Size(this.Width, 325);
+				errorDetails.Visible = true;
 				detailsButton.ImageIndex = 1;
 				detailsShowing = true;
 			}
 			else {
-				this.Size = new System.Drawing.Size(this.Width, 168);
+				this.Size = new System.Drawing.Size(this.Width, 185);
+				errorDetails.Visible = false;
 				detailsButton.ImageIndex = 0;
 				detailsShowing = false;
 			}

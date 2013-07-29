@@ -20,7 +20,7 @@ namespace Skyrim_Save_Editor {
 			ErrorNumbers = new Dictionary<int, Error>();
 			ErrorNumbers.Add(10000, new Error("An undocumented error has occurred.", false));
 			ErrorNumbers.Add(10101, new Error("An undocumented error has occurred.", true));
-			ErrorNumbers.Add(10201, new Error("An error has occurred, but the error code given was not found in the error database.", true));
+			ErrorNumbers.Add(10201, new Error("An error has occurred, but the error code given was not found in the error dictionary.", true));
 
 			ErrorNumbers.Add(20000, new Error("An undocumented error has occurred while trying to open a file.", false));
 			ErrorNumbers.Add(20110, new Error("An error has occurred while trying to access internal resources.", false));
