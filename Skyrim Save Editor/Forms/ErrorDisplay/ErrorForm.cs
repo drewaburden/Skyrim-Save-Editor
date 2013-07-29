@@ -18,9 +18,9 @@ namespace Skyrim_Save_Editor.Forms.ErrorDisplay {
 			InitializeComponent();
 
 			if (!Errors.ErrorNumbers.TryGetValue(errNum, out error)) {
-				error = Errors.ErrorNumbers[10000];
+				error = Errors.ErrorNumbers[10201];
 				error.Details = "Attempted error code: " + errNum;
-				errNum = 10000;
+				errNum = 10201;
 			}
 
 			if (error.Fatal) {
