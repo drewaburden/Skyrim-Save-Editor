@@ -23,6 +23,8 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 		public SettingsForm() {
 			InitializeComponent();
 
+			settingTemplate1.SetInformation("Dates and times", "Select how you would like to have dates and times displayed to you.", "Time zone:", null, pictureBox1.Image);
+
 			ResourceManager resourceManager = new ResourceManager("Skyrim_Save_Editor.Resources.Resource", Assembly.GetExecutingAssembly());
 			localeStrings = new String[numLocales] { "English (USA)", "English (UK)", "Español", "Italia", "Deutsch", "русский", "日本語" };
 			localeImages = new Image[numLocales] { 
@@ -88,6 +90,7 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 
 		String[] localeStrings;
 		Image[] localeImages;
+		private SettingTemplate settingTemplate1;
 		const int numLocales = 7;
 
 
@@ -124,11 +127,13 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			this.language = new System.Windows.Forms.ComboBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.languageWithImages = new Skyrim_Save_Editor.Forms.Settings.LocaleComboBox(this.components);
+			this.settingTemplate1 = new Skyrim_Save_Editor.Forms.Settings.SettingTemplate();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// imageList1
@@ -421,11 +426,12 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.settingTemplate1);
 			this.tabPage2.ImageIndex = 1;
 			this.tabPage2.Location = new System.Drawing.Point(4, 23);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage2.Size = new System.Drawing.Size(294, 334);
+			this.tabPage2.Size = new System.Drawing.Size(294, 317);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Editing";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -444,6 +450,14 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			this.languageWithImages.TabIndex = 12;
 			this.languageWithImages.Visible = false;
 			this.languageWithImages.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+			// 
+			// settingTemplate1
+			// 
+			this.settingTemplate1.Control = null;
+			this.settingTemplate1.Location = new System.Drawing.Point(6, 1);
+			this.settingTemplate1.Name = "settingTemplate1";
+			this.settingTemplate1.Size = new System.Drawing.Size(282, 85);
+			this.settingTemplate1.TabIndex = 0;
 			// 
 			// SettingsForm
 			// 
@@ -472,6 +486,7 @@ namespace Skyrim_Save_Editor.Forms.Settings {
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.tabPage2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
